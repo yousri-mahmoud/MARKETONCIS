@@ -1,0 +1,23 @@
+.logo {
+  text-decoration: none;
+  color: red;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+svg {
+  margin: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+}
+
+.closeSearch_icon {
+  color: red;
+}
+
+.search_input {
+  width: 250px;
+}
+/*# sourceMappingURL=style.css.map */
