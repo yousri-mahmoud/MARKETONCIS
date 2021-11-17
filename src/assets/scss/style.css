@@ -77,11 +77,30 @@ svg {
 
 .market h4 {
   text-align: center;
-  margin-top: 1.5rem;
+  margin-top: 2rem;
   font-size: 1.875rem;
   font-weight: bold;
-  text-transform: capitalize;
-  color: #337aaa;
+  text-transform: uppercase;
+}
+
+.buy {
+  background-color: #e5e6e6;
+  padding: 2rem;
+  margin-right: 10px;
+}
+
+.buy h4 {
+  color: #1f455f;
+}
+
+.sell {
+  margin-left: 10px;
+  padding: 2rem;
+  background-color: #e5e6e6;
+}
+
+.sell h4 {
+  color: #206956;
 }
 
 .buy img,

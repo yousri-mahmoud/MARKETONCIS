@@ -10,6 +10,8 @@ import Login from "./views/auth/login";
 import Market from "./views/market/market";
 import Profile from "./views/profile/profile";
 import SocialMedia from "./views/social-media/social-media";
+import Sell from "./views/market/sell";
+import Buy from "./views/market/buy";
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/market" element={<Market />} />
+        <Route path="/market/sell" element={<Sell />} />
+        <Route path="/market/buy" element={<Buy />} />
         <Route path="/social-media" element={<SocialMedia />} />
       </Routes>
       <Footer />

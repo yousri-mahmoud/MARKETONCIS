@@ -1,10 +1,25 @@
 .market h4 {
   text-align: center;
-  margin-top: 1.5rem;
+  margin-top: 2rem;
   font-size: $f-size-xl;
   font-weight: bold;
-  text-transform: capitalize;
-  color: $c-primary;
+  text-transform: uppercase;
+}
+.buy {
+  background-color: $c-gray-4;
+  padding: 2rem;
+  margin-right: 10px;
+  h4 {
+    color: $c-primary-dark;
+  }
+}
+.sell {
+  margin-left: 10px;
+  padding: 2rem;
+  background-color: $c-gray-4;
+  h4 {
+    color: $c-secondary-dark;
+  }
 }
 
 .buy img,
