@@ -1,9 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
+:root {
+  font-family: "Poppins", sans-serif, "Franklin Gothic Medium", "Arial Narrow", Arial;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 500px) {
+  :root {
+    font-size: 5px;
+  }
+}
+
+h1,
+h2 {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 3.125rem;
+  line-height: 3.925rem;
+}
+
+h2 {
+  font-size: 1.875rem;
+  line-height: 2.675rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  line-height: 2.05rem;
+}
+
+h4 {
+  font-size: 0.938rem;
+  line-height: 1.8rem;
+  color: #7d8083;
+  font-weight: 500;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.8rem;
+}
+
 .logo {
   text-decoration: none;
-  color: red;
-  font-weight: bold;
-  font-size: 20px;
-  letter-spacing: 2px;
+  color: #337aaa;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  margin-right: 0.5rem;
+}
+
+.logo:hover {
+  color: #e5e6e6;
+}
+
+.navItem {
+  font-size: 0.938rem;
+  margin-right: 0.2rem;
 }
 
 svg {
@@ -19,5 +73,22 @@ svg {
 
 .search_input {
   width: 250px;
+}
+
+.market h4 {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 1.875rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: #337aaa;
+}
+
+.buy img,
+.sell img {
+  border-radius: 20px 0 20px 0;
+  -webkit-box-shadow: 0 6px 6px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 6px 6px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */

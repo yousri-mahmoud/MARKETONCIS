@@ -4,18 +4,18 @@ $f-weight-thin: 300;
 $f-weight-normal: 500;
 $f-weight-bold: 700;
 
-$f-size-xxs: 1.2rem;
-$f-size-xs: 1.3rem;
-$f-size-sm: 1.5rem;
-$f-size-md: 1.6rem;
-$f-size-lg: 2rem;
-$f-size-xl: 3rem;
-$f-size-xxl: 5rem;
+$f-size-xxs: 0.75rem;
+$f-size-xs: 0.813rem;
+$f-size-sm: 0.938rem;
+$f-size-md: 1rem;
+$f-size-lg: 1.25rem;
+$f-size-xl: 1.875rem;
+$f-size-xxl: 3.125rem;
 
 :root {
   font-family: "Poppins", sans-serif, "Franklin Gothic Medium", "Arial Narrow",
     Arial;
-  font-size: 10px;
+
   font-weight: $f-weight-normal;
 }
 

@@ -1,0 +1,15 @@
+.market h4 {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: $f-size-xl;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: $c-primary;
+}
+
+.buy img,
+.sell img {
+  border-radius: 20px 0 20px 0;
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}

@@ -16,9 +16,15 @@ import {
   FaSnapchatGhost,
 } from "react-icons/fa";
 function NavbarComponent() {
-  const [search, setSearch] = useState(true);
+  const [search, setSearch] = useState(false);
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+    <Navbar
+      collapseOnSelect
+      expand="lg"
+      bg="dark"
+      variant="dark"
+      className="ourNav"
+    >
       <Container>
         {/* <Navbar.Brand href="#home">MARKETONCIS</Navbar.Brand> */}
         <NavLink className="logo nav-link" to="/">
@@ -27,13 +33,13 @@ function NavbarComponent() {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <NavLink className="nav-link" to="/social-media">
+            <NavLink className="nav-link navItem" to="/social-media">
               Blog
             </NavLink>
-            <NavLink className="nav-link" to="/market">
+            <NavLink className="nav-link navItem" to="/market">
               Market
             </NavLink>
-            <NavLink className="nav-link" to="/about-us">
+            <NavLink className="nav-link navItem" to="/about-us">
               About-Us
             </NavLink>
           </Nav>
@@ -60,7 +66,7 @@ function NavbarComponent() {
             )}
 
             <FaSnapchatGhost />
-            <NavLink to="/profile">
+            <NavLink to="/profile" className="navItem">
               <FaUserCircle />
             </NavLink>
           </Nav>

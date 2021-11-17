@@ -1,11 +1,18 @@
 .logo {
   text-decoration: none;
-  color: red;
-  font-weight: bold;
-  font-size: 20px;
-  letter-spacing: 2px;
+  color: $c-primary;
+  font-size: $f-size-lg;
+  font-weight: $f-weight-bold;
+  letter-spacing: 0.2rem;
+  margin-right: 0.5rem;
+  &:hover {
+    color: $c-gray-4;
+  }
 }
-
+.navItem {
+  font-size: $f-size-sm;
+  margin-right: 0.2rem;
+}
 svg {
   margin: 10px;
   font-size: 20px;
