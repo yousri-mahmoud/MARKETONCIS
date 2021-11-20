@@ -12,24 +12,28 @@ import Profile from "./views/profile/profile";
 import SocialMedia from "./views/social-media/social-media";
 import Sell from "./views/market/sell";
 import Buy from "./views/market/buy";
+import SingleProduct from "./components/market-component/single-product";
 
 function App() {
   return (
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about-us" element={<About />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/market" element={<Market />} />
-        <Route path="/market/sell" element={<Sell />} />
-        <Route path="/market/buy" element={<Buy />} />
-        <Route path="/social-media" element={<SocialMedia />} />
-      </Routes>
-      <Footer />
-    </Router>
+    <main className="main">
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about-us" element={<About />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/market" element={<Market />} />
+          <Route path="/market/sell" element={<Sell />} />
+          <Route path="/market/buy/*" element={<Buy />} />
+          <Route path="/market/buy/item/:id" element={<SingleProduct />} />
+          <Route path="/social-media" element={<SocialMedia />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </main>
   );
 }
 

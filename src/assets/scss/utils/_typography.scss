@@ -19,12 +19,6 @@ $f-size-xxl: 3.125rem;
   font-weight: $f-weight-normal;
 }
 
-@media screen and (max-width: 500px) {
-  :root {
-    font-size: 5px;
-  }
-}
-
 h1,
 h2 {
   font-weight: $f-weight-bold;

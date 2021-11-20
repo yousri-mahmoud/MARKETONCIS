@@ -1,7 +1,7 @@
 import React from "react";
 
 function Footer() {
-  return <div>footer</div>;
+  return <section className="footer bg-dark"></section>;
 }
 
 export default Footer;
