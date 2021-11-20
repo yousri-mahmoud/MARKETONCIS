@@ -20,13 +20,6 @@ $f-size-xxl: 3.125rem;
 }
 
 
-@media screen and (max-width: 500px) {
-  :root {
-    font-size: 8px;
-  }
-
-}
-
 h1,
 h2 {
   font-weight: $f-weight-bold;

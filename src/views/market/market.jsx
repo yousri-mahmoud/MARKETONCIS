@@ -1,9 +1,8 @@
 import React from "react";
 import buy from "../../assets/image/buy.jpg";
 import sell from "../../assets/image/sell.jpg";
-import Buy from "./buy";
-import Sell from "./sell";
-import { Routes, Route } from "react-router-dom";
+
+import { Link } from "react-router-dom";
 function Market() {
   return (
     <>
@@ -11,12 +10,16 @@ function Market() {
         <div className="container py-5">
           <div className="row">
             <div className="col buy">
-              <img className="w-100" src={buy} alt="" />
+              <Link to="/market/buy">
+                <img className="w-100 " src={buy} alt="" />
+              </Link>
               <h4>buy your new device</h4>
             </div>
-            <div className="col-lg-6 sell">
+            <div className="col sell">
               {" "}
-              <img className="w-100" src={sell} alt="" />
+              <Link to="/market/sell">
+                <img className="w-100 " src={sell} alt="" />
+              </Link>
               <h4>sell your old device</h4>
             </div>
           </div>
