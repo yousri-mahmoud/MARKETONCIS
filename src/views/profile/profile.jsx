@@ -1,7 +1,13 @@
-import React from "react";
+import React from 'react'
+import ProfileBase from '../../components/Profile/ProfileBase'
 
-function Profile() {
-  return <div>profile</div>;
+const profile = () => {
+  return (
+    <section>
+        <ProfileBase />
+    </section>
+  )
 }
 
-export default Profile;
+export default profile
+
