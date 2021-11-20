@@ -1,0 +1,231 @@
+ul {
+    list-style: none;
+}
+
+
+
+.user  {
+    width: 99%;
+    &__content {
+        &__sections {
+            display: flex;
+            border-right: 1px solid $c-gray-4;
+            flex-direction: column;
+            @media screen and (max-width: 900px) {
+             
+              }
+    
+            &__img {
+                width: 70%;
+                @media screen and (max-width: 900px) {
+                    width: 30%;
+                }
+            }
+            .active {
+                color: $c-primary-light;
+                
+            }
+            .inactive {
+                color: gray;
+            }
+            ul {
+                position: relative;
+            }
+            li a {
+                text-decoration: none;
+                font-weight: bold;
+
+            }
+            li {
+                margin: 0.7rem 0;
+                @media screen and (max-width: 900px) {
+                    margin: 0.7rem 1rem;
+
+                  }
+            }
+            li a span {
+                position: absolute;
+                left: 0;
+
+                @media screen and (max-width: 900px) {
+                    right: 0;
+                    left: unset;
+                  }
+            }
+           
+        }
+        &__biography {
+            border-left: 1px solid $c-gray-4;
+            @media screen and (max-width: 900px) {
+                border-left: none;
+                border-bottom: 1px solid $c-gray-4;
+                padding-bottom: 2rem;
+              }
+
+            &__box {
+                display: flex;
+                flex-direction: column;
+                @media screen and (max-width: 900px) {
+                    align-items: flex-end;
+                    flex-direction: row;
+                    justify-content: space-between;
+
+                  }
+                &__paragraph {
+                    @media screen and (max-width: 900px) {
+                            width: 80%;
+                            margin: 0 auto;
+                      }
+
+                }
+
+                &__location {
+                    p {
+                        color: $c-primary-light;
+                        font-weight: bold;
+                    }
+                 
+
+                    @media screen and (max-width: 900px) {
+                        margin-right: 3rem;
+                        h3 {
+                            font-size: 1.15rem;
+                        }
+                       
+                  }
+                }
+              
+            }
+         
+        }
+    }
+}
+
+.head__tr--primary {
+    background-color: $c-primary-dark;
+
+}
+.head__tr--secondary {
+    background-color: $c-secondary-dark;
+
+}
+
+.shop {
+    &__purchases {
+        &__title {
+            background-color: $c-primary-dark;
+            color: #fff;
+            text-align: center;
+        }
+    }
+
+    &__sales {
+        &__title {
+            background-color: $c-secondary-dark;
+            color: #fff;
+            text-align: center;
+        }
+    }
+}
+
+.table {
+    &__head{
+        font-size: 1rem;
+        color: #fff;
+
+       
+    }
+    &__body {
+        font-weight: bold;
+        &__img {
+            width: 30%;
+        }
+     
+        &__tr:hover {
+            background-color: rgb(240, 240, 240);
+        }
+    }
+}
+
+.whislist {
+    &__content {
+        &__box {
+            border: 1px solid gainsboro;
+            border-radius: 20px;
+            &__info {
+                img {
+                    width:  70%;
+                    max-height: 10rem;
+                    margin: 0.5rem 0;
+                }
+
+                &__user {
+                    color: $c-primary;
+                }
+            }
+            &__price {
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.activity {
+
+   
+    &__content {
+        &__box {
+            box-shadow: grey 1px 2px 5px 1px;
+            padding: 1rem 2rem;
+            width: 100%;
+            
+            &__info {
+                &__votes {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    svg {
+                        font-size: 2.4rem;
+                        margin: 0;
+                    }
+                    .up {
+                        color: $c-primary;
+                    }
+                    .down {
+                        color: rgb(226, 27, 27);
+                    }
+                    .gray {
+                        color: gray;
+                    }
+                    h4 {
+                        margin-bottom: 0;
+                        line-height: 0;
+                        color: $c-primary;
+                        font-weight: bold;
+                    }
+                }
+            }
+            &__footer {
+                color: grey;
+                font-weight: 600;
+
+                h5 span {
+                    color: $c-primary;
+                }
+                svg {
+                    font-size: 1rem;
+                }
+                
+            }
+        }
+        
+      
+       
+    }
+   
+    
+}
+
+
+
+

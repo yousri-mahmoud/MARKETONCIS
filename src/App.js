@@ -10,9 +10,13 @@ import Login from "./views/auth/login";
 import Market from "./views/market/market";
 import Profile from "./views/profile/profile";
 import SocialMedia from "./views/social-media/social-media";
+
 import Sell from "./views/market/sell";
 import Buy from "./views/market/buy";
 import SingleProduct from "./components/market-component/single-product";
+import ShopHistory from "./components/Profile/ShopHistory";
+import Whislist from "./components/Profile/Whislist";
+import BlogActivity from "./components/Profile/BlogActivity";
 
 function App() {
   return (
@@ -24,7 +28,11 @@ function App() {
           <Route path="/about-us" element={<About />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/profile" element={<Profile />} />
+           <Route path="/profile" element={<Profile />}>
+          <Route element={<ShopHistory />} path="" />
+          <Route element={<Whislist />} path="whislist" />
+          <Route element={<BlogActivity />} path="activity" />
+        </Route>
           <Route path="/market" element={<Market />} />
           <Route path="/market/sell" element={<Sell />} />
           <Route path="/market/buy/*" element={<Buy />} />
@@ -34,7 +42,4 @@ function App() {
         <Footer />
       </Router>
     </main>
-  );
-}
-
 export default App;
