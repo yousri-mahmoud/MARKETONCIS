@@ -101,61 +101,50 @@ ul {
     }
 }
 
+.head__tr--primary {
+    background-color: $c-primary-dark;
 
+}
+.head__tr--secondary {
+    background-color: $c-secondary-dark;
 
-
-.glider-next, .glider-prev {
-    color: $c-primary !important;
-    font-weight: bold;
-    font-size: 3rem !important;
 }
-.glider-prev {
-    left: -8% !important;
-   
-}
-.glider-next {
-    right: -8% !important;
-  
-}
-.glider-dot {
-    width: 1rem !important;
-    height: 1rem !important;
-}
-.glider-dot.active {
-    background: $c-primary !important;
-}
-
 
 .shop {
-    width: 80%;
-    @media screen and (max-width: 900px) {
-        width: 90%;
-
-    }
-}
-.item {
-    text-align: center;
-    border: 1px solid gainsboro;
-    margin-right: 1rem;
-    margin-bottom: 1rem;
-    box-shadow: grey 1px 2px 5px 1px;   ;
-
-    &__img {
-        max-height: 100%;
-        margin-top: 1rem;
-        @media screen and (max-width: 900px) {
-            width: 70%;
-            max-height: 100%;
-
+    &__purchases {
+        &__title {
+            background-color: $c-primary-dark;
+            color: #fff;
+            text-align: center;
         }
-    
     }
-    &__price {
-        font-weight: bold;
+
+    &__sales {
+        &__title {
+            background-color: $c-secondary-dark;
+            color: #fff;
+            text-align: center;
+        }
     }
 }
-.item:last-of-type {
-    margin-right: 0.2rem;
+
+.table {
+    &__head{
+        font-size: 1rem;
+        color: #fff;
+
+       
+    }
+    &__body {
+        font-weight: bold;
+        &__img {
+            width: 30%;
+        }
+     
+        &__tr:hover {
+            background-color: rgb(240, 240, 240);
+        }
+    }
 }
 
 .whislist {

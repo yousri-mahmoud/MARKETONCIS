@@ -218,66 +218,41 @@ ul {
   }
 }
 
-.glider-next, .glider-prev {
-  color: #337aaa !important;
-  font-weight: bold;
-  font-size: 3rem !important;
+.head__tr--primary {
+  background-color: #1f455f;
 }
 
-.glider-prev {
-  left: -8% !important;
+.head__tr--secondary {
+  background-color: #206956;
 }
 
-.glider-next {
-  right: -8% !important;
-}
-
-.glider-dot {
-  width: 1rem !important;
-  height: 1rem !important;
-}
-
-.glider-dot.active {
-  background: #337aaa !important;
-}
-
-.shop {
-  width: 80%;
-}
-
-@media screen and (max-width: 900px) {
-  .shop {
-    width: 90%;
-  }
-}
-
-.item {
+.shop__purchases__title {
+  background-color: #1f455f;
+  color: #fff;
   text-align: center;
-  border: 1px solid gainsboro;
-  margin-right: 1rem;
-  margin-bottom: 1rem;
-  -webkit-box-shadow: grey 1px 2px 5px 1px;
-          box-shadow: grey 1px 2px 5px 1px;
 }
 
-.item__img {
-  max-height: 100%;
-  margin-top: 1rem;
+.shop__sales__title {
+  background-color: #206956;
+  color: #fff;
+  text-align: center;
 }
 
-@media screen and (max-width: 900px) {
-  .item__img {
-    width: 70%;
-    max-height: 100%;
-  }
+.table__head {
+  font-size: 1rem;
+  color: #fff;
 }
 
-.item__price {
+.table__body {
   font-weight: bold;
 }
 
-.item:last-of-type {
-  margin-right: 0.2rem;
+.table__body__img {
+  width: 30%;
+}
+
+.table__body__tr:hover {
+  background-color: #f0f0f0;
 }
 
 .whislist__content__box {
