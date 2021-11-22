@@ -6,7 +6,7 @@ const Whislist = () => {
   return (
     <section className="whislist mt-4 w-75 m-auto">
       <header>
-        <h2>MY WISHLIST</h2>
+        <h2>My Wishlist</h2>
       </header>
       <div className="whislist__content mt-4">
         <div className="whislist__content__box  d-flex align-items-center justify-content-around">

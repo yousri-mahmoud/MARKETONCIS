@@ -38,10 +38,6 @@ ul {
             }
             li {
                 margin: 0.7rem 0;
-                @media screen and (max-width: 900px) {
-                    margin: 0.7rem 1rem;
-
-                  }
             }
             li a span {
                 position: absolute;
@@ -66,7 +62,7 @@ ul {
                 display: flex;
                 flex-direction: column;
                 @media screen and (max-width: 900px) {
-                    align-items: flex-end;
+                    align-items: flex-start;
                     flex-direction: row;
                     justify-content: space-between;
 
@@ -80,9 +76,13 @@ ul {
                 }
 
                 &__location {
+                    @media screen and (max-width: 900px) {
+                        margin-top: 3rem;
+                    }
                     p {
                         color: $c-primary-light;
                         font-weight: bold;
+                      
                     }
                  
 
@@ -111,6 +111,9 @@ ul {
 }
 
 .shop {
+    header h2 {
+        color: black;
+    }
     &__purchases {
         &__title {
             background-color: $c-primary-dark;
@@ -139,6 +142,9 @@ ul {
         font-weight: bold;
         &__img {
             width: 30%;
+            @media screen and (max-width: 600px) {
+                width: 80%;
+       }
         }
      
         &__tr:hover {
@@ -148,6 +154,9 @@ ul {
 }
 
 .whislist {
+    header h2 {
+        color: black;
+    }
     &__content {
         &__box {
             border: 1px solid gainsboro;
@@ -171,7 +180,9 @@ ul {
 }
 
 .activity {
-
+    header h2 {
+        color: black;
+    }
    
     &__content {
         &__box {
@@ -184,36 +195,29 @@ ul {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    svg {
-                        font-size: 2.4rem;
-                        margin: 0;
-                    }
-                    .up {
-                        color: $c-primary;
-                    }
-                    .down {
-                        color: rgb(226, 27, 27);
-                    }
-                    .gray {
-                        color: gray;
-                    }
-                    h4 {
-                        margin-bottom: 0;
-                        line-height: 0;
-                        color: $c-primary;
-                        font-weight: bold;
-                    }
+                
+                  
                 }
             }
             &__footer {
                 color: grey;
                 font-weight: 600;
 
+                @media screen and (max-width: 900px) {
+                    flex-wrap: wrap;
+                    
+               }
+
                 h5 span {
                     color: $c-primary;
+                    font-size: 1.2rem;
+                    @media screen and (max-width: 900px) {
+                            font-size: 1rem;                        
+                   }
                 }
                 svg {
                     font-size: 1rem;
+                 
                 }
                 
             }

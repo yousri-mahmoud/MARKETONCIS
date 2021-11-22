@@ -29,15 +29,16 @@ const ProfileBase = () => {
       <div className="col-lg-2 col-md-12  order-md-2   order-lg-3   px-2 text-center user__content__biography ">
         <div className="user__content__biography__box">
           <div>
-        <h3 className="mt-5 mb-2">BIOGRAPHY</h3>
         <p className="user__content__biography__box__paragraph">
+        <h3 className="mt-5 mb-2">BIOGRAPHY</h3>
+
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown
         </p>
         </div>
         <div className="user__content__biography__box__location">
-        <h3>LOCATION</h3>
+        <h3 >LOCATION</h3>
         <p>Egypt, Suez</p>
         </div>
       </div>
