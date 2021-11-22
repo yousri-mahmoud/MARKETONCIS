@@ -1,7 +1,10 @@
-import React from "react";
-
+import LoginComponent from "../../components/auth/Login"
 function Login() {
-  return <div>login</div>;
+  return (
+      <div>
+        <LoginComponent />
+      </div>
+  )
 }
 
 export default Login;

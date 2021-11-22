@@ -84,6 +84,98 @@ svg {
   width: 100%;
 }
 
+.form {
+  width: 60%;
+  padding-right: 3rem;
+  margin-top: 2rem;
+  -webkit-box-shadow: grey 1px 2px 5px 1px;
+          box-shadow: grey 1px 2px 5px 1px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 900px) {
+  .form {
+    width: 90%;
+  }
+}
+
+.form__content {
+  position: relative;
+}
+
+.form__content__rouet ul li {
+  margin: 3rem 0;
+  font-weight: bold;
+}
+
+.form__content__rouet ul li a {
+  text-decoration: none;
+}
+
+.form__content__rouet ul li .active {
+  color: #337aaa;
+}
+
+.form__content__rouet ul li .inactive {
+  color: gray;
+}
+
+.form__content__rouet ul li a:before {
+  content: "";
+  border-left: 3px solid;
+  padding: 1rem 0rem;
+  position: absolute;
+  left: 0%;
+}
+
+.form__content__logo {
+  background-color: #337aaa;
+  position: absolute;
+  left: 40%;
+  -webkit-transform: translate(-40%, 0);
+          transform: translate(-40%, 0);
+  height: 100%;
+}
+
+@media screen and (max-width: 1100px) {
+  .form__content__logo {
+    display: none;
+    overflow: hidden;
+  }
+}
+
+.form__content__logo h2 {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(13%, -50%);
+          transform: translate(13%, -50%);
+  font-size: 1.5rem;
+}
+
+.form__content__fields {
+  padding: 3rem 0;
+  margin-left: 1rem;
+  font-weight: bold;
+}
+
+.form__content__fields button {
+  width: 100%;
+  height: 2.3rem;
+  background-color: #337aaa;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+}
+
+.login {
+  padding: 9.6rem 0;
+}
+
 .market h4 {
   text-align: center;
   margin-top: 2rem;
