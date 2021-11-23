@@ -41,6 +41,10 @@ p {
   min-height: 100vh;
 }
 
+a {
+  text-decoration: none;
+}
+
 .logo {
   text-decoration: none;
   color: #337aaa;

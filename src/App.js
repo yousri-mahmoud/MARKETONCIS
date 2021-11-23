@@ -17,6 +17,8 @@ import SingleProduct from "./components/market-component/single-product";
 import ShopHistory from "./components/Profile/ShopHistory";
 import Whislist from "./components/Profile/Whislist";
 import BlogActivity from "./components/Profile/BlogActivity";
+import { useEffect } from "react";
+import { register } from "./redux/actions/authActions";
 
 function App() {
   return (
@@ -28,11 +30,11 @@ function App() {
           <Route path="/about-us" element={<About />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
-           <Route path="/profile" element={<Profile />}>
-          <Route element={<ShopHistory />} path="" />
-          <Route element={<Whislist />} path="whislist" />
-          <Route element={<BlogActivity />} path="activity" />
-        </Route>
+          <Route path="/profile" element={<Profile />}>
+            <Route element={<ShopHistory />} path="" />
+            <Route element={<Whislist />} path="whislist" />
+            <Route element={<BlogActivity />} path="activity" />
+          </Route>
           <Route path="/market" element={<Market />} />
           <Route path="/market/sell" element={<Sell />} />
           <Route path="/market/buy/*" element={<Buy />} />
@@ -42,6 +44,7 @@ function App() {
         <Footer />
       </Router>
     </main>
-  )}
+  );
+}
 
 export default App;

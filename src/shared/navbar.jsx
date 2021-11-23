@@ -4,10 +4,11 @@ import {
   Nav,
   Container,
   Form,
+  NavDropdown,
   FormControl,
   Button,
 } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { useState } from "react";
 import {
   FaSearch,
@@ -43,7 +44,7 @@ function NavbarComponent() {
               About-Us
             </NavLink>
           </Nav>
-          <Nav>
+          <Nav className="align-items-center">
             {search ? (
               <>
                 {" "}
@@ -64,11 +65,27 @@ function NavbarComponent() {
                 onClick={() => setSearch(true)}
               />
             )}
+            {/* commet */}
 
+            {/* commet */}
             <FaSnapchatGhost />
-            <NavLink to="/profile" className="navItem">
-              <FaUserCircle />
-            </NavLink>
+
+            <NavDropdown
+              title={<FaUserCircle />}
+              id="collasible-nav-dropdown py-0"
+            >
+              <NavDropdown.Item>
+                <Link to="/profile">Profile</Link>
+              </NavDropdown.Item>
+              <NavDropdown.Item>
+                <NavLink to="/register">Register</NavLink>
+              </NavDropdown.Item>
+              <NavDropdown.Item>
+                <NavLink to="/login">Login</NavLink>
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item>Logout</NavDropdown.Item>
+            </NavDropdown>
           </Nav>
         </Navbar.Collapse>
       </Container>
