@@ -15,6 +15,8 @@ import Login from "./views/auth/login";
 import Market from "./views/market/market";
 import Profile from "./views/profile/profile";
 import SocialMedia from "./views/social-media/social-media";
+import Post from "./views/social-media/Post";
+import PostDetails from "./views/social-media/PostDetails";
 
 import Sell from "./views/market/sell";
 import Buy from "./views/market/buy";
