@@ -33,6 +33,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about-us" element={<About />} />
+          <Route path="/social-media" element={<SocialMedia />} />
+          <Route path="/social-media/post" element={<Post />} />
+          <Route path="/social-media/post/:id" element={<PostDetails />} />
           {isLoggedIn || <Route path="/register" element={<Register />} />}
           {isLoggedIn || <Route path="/login" element={<Login />} />}
 
