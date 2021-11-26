@@ -1,11 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import img from "../../assets/image/user.jpg";
 import { NavLink, Outlet } from "react-router-dom";
-import { useSelector } from "react-redux";
 
 const ProfileBase = () => {
-  const state = useSelector((state) => state.auth);
-  console.log(state);
+  let userDataStored = { id: 1 };
+  if (localStorage.getItem("user")) {
+    userDataStored = JSON.parse(localStorage.getItem("user"));
+  }
+  console.log(userDataStored);
+  const [user, setUser] = useState("");
+
+  const getUserData = async () => {
+    const response = await fetch(
+      `http://localhost:3001/664/users/${userDataStored.id}`
+    );
+    const data = await response.json();
+    setUser(data);
+  };
+  console.log(user);
+  useEffect(() => {
+    getUserData();
+  }, []);
   return (
     <section className="user">
       <div className="row user__content">
@@ -17,9 +32,7 @@ const ProfileBase = () => {
               alt="user"
             />
             <figcaption>
-              <h3 className="text-center">
-                {state.user ? state.user.user.firstName : "unKnown"}
-              </h3>
+              <h3 className="text-center">{user.firstName}</h3>
             </figcaption>
           </figure>
           <ul className="mt-5">

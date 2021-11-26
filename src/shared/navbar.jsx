@@ -10,14 +10,27 @@ import {
 } from "react-bootstrap";
 import { NavLink, Link } from "react-router-dom";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   FaSearch,
   FaRegTimesCircle,
   FaUserCircle,
   FaSnapchatGhost,
 } from "react-icons/fa";
+import { useSelector, useDispatch } from "react-redux";
+import { LOGOUT } from "../redux/actions/actionsType";
+
 function NavbarComponent() {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const isLoggedIn = useSelector((state) => state.auth.isLogIn);
   const [search, setSearch] = useState(false);
+
+  const logOut = () => {
+    dispatch({ type: LOGOUT });
+    navigate("/login");
+  };
   return (
     <Navbar
       collapseOnSelect
@@ -27,21 +40,28 @@ function NavbarComponent() {
       className="ourNav"
     >
       <Container>
-        {/* <Navbar.Brand href="#home">MARKETONCIS</Navbar.Brand> */}
         <NavLink className="logo nav-link" to="/">
           MARKETONCIS{" "}
         </NavLink>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
-            <NavLink className="nav-link navItem" to="/social-media">
-              Blog
+            <NavLink className="nav-link navItem" to="/">
+              Home
             </NavLink>
-            <NavLink className="nav-link navItem" to="/market">
-              Market
-            </NavLink>
+            {isLoggedIn && (
+              <NavLink className="nav-link navItem" to="/social-media">
+                Blog
+              </NavLink>
+            )}
+            {isLoggedIn && (
+              <NavLink className="nav-link navItem" to="/market">
+                Market
+              </NavLink>
+            )}
+
             <NavLink className="nav-link navItem" to="/about-us">
-              About-Us
+              About Us
             </NavLink>
           </Nav>
           <Nav className="align-items-center">
@@ -74,17 +94,28 @@ function NavbarComponent() {
               title={<FaUserCircle />}
               id="collasible-nav-dropdown py-0"
             >
-              <NavDropdown.Item>
-                <Link to="/profile">Profile</Link>
-              </NavDropdown.Item>
-              <NavDropdown.Item>
-                <NavLink to="/register">Register</NavLink>
-              </NavDropdown.Item>
-              <NavDropdown.Item>
-                <NavLink to="/login">Login</NavLink>
-              </NavDropdown.Item>
+              {isLoggedIn && (
+                <NavDropdown.Item>
+                  <Link to="/profile">Profile</Link>
+                </NavDropdown.Item>
+              )}
+              {isLoggedIn || (
+                <NavDropdown.Item>
+                  <NavLink to="/register">Register</NavLink>
+                </NavDropdown.Item>
+              )}
+              {isLoggedIn || (
+                <NavDropdown.Item>
+                  <NavLink to="/login">Login</NavLink>
+                </NavDropdown.Item>
+              )}
+
               <NavDropdown.Divider />
-              <NavDropdown.Item>Logout</NavDropdown.Item>
+              {isLoggedIn && (
+                <NavDropdown.Item onClick={() => logOut()}>
+                  Logout
+                </NavDropdown.Item>
+              )}
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>

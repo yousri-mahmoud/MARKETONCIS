@@ -5,9 +5,11 @@ import * as yup from "yup";
 import { userRegister } from "../../redux/actions/authActions";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 const RegisterComponent = () => {
+  const navigate = useNavigate();
   const state = useSelector((state) => state.auth);
-  console.log(state);
+  if (state.isLogIn) navigate("/profile");
   const dispatch = useDispatch();
   const initialValues = {
     firstName: "",

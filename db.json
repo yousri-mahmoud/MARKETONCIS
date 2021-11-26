@@ -9,36 +9,28 @@
       "id": 1
     },
     {
-      "email": "yousrymahmoud@gmail.com",
-      "password": "$2a$10$w2u/4LmpBvRWenDqSyFag.MQ0.aECFTcjiGyxNay.jTfKjPKP3Ssm",
+      "email": "yousrymahmoud@yahoo.com",
+      "password": "$2a$10$TScldco4COeuKUOrZivCvug3jaOG7hxS1oMc8F9Xrz71FD3kp8WXu",
       "firstName": "Yousri mahmoud",
       "lastName": "osman",
-      "confirmPassword": "123456789",
+      "confirmPassword": "12345678",
       "id": 2
     },
     {
       "email": "yousrymahmou@gmail.com",
-      "password": "$2a$10$eSolJlrxn0h/qnf.M87cWuaKUIdQTCSkZ.rklbTZ0nvP8cmfWHpbi",
-      "firstName": "Yousri mahmoud",
+      "password": "$2a$10$dyNKcYgHu0A9AcCqQ23XGedRo.TOECQdI.4jSli2hBxXt4FK8eQzO",
+      "firstName": "ahmed",
       "lastName": "osman",
-      "confirmPassword": "12345678",
+      "confirmPassword": "123456789",
       "id": 3
     },
     {
-      "email": "yousrymahmoud@yahoo.com",
-      "password": "$2a$10$m24nS7ADrtAbqNlmNCVUFu5NeWYhrKuienFMCER.Rc0zxxHjmCtXC",
-      "firstName": "saif",
-      "lastName": "salh",
-      "confirmPassword": "123456789",
-      "id": 4
-    },
-    {
-      "email": "yousrymad97@gmail.com",
-      "password": "$2a$10$0.v8H6dYofVYMvsztoOFrOI9hv2sfa3e.C7NSWsl8s6uux3bjb/Ry",
-      "firstName": "Yousri mahmoud",
-      "lastName": "osman",
+      "email": "yousry@gmail.com",
+      "password": "$2a$10$Fl24LLrKTsp.tlTlnCG02Oc7DZs32Vdtu74GeuktMdXVV1sD/OVFq",
+      "firstName": "mohamed",
+      "lastName": "kanmal",
       "confirmPassword": "12345678",
-      "id": 5
+      "id": 4
     }
   ],
   "selling-posts": [],
