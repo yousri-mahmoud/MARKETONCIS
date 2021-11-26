@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
+
+$f-weight-thin: 300;
+$f-weight-normal: 500;
+$f-weight-bold: 700;
+
+$f-size-xxs: 0.75rem;
+$f-size-xs: 0.813rem;
+$f-size-sm: 0.938rem;
+$f-size-md: 1rem;
+$f-size-lg: 1.25rem;
+$f-size-xl: 1.875rem;
+$f-size-xxl: 3.125rem;
+
+:root {
+  font-family: "Poppins", sans-serif, "Franklin Gothic Medium", "Arial Narrow",
+    Arial;
+
+  font-weight: $f-weight-normal;
+}
+
+
+h1,
+h2 {
+  font-weight: $f-weight-bold;
+}
+h1 {
+  font-size: $f-size-xxl;
+  line-height: $f-size-xxl + 0.8rem;
+}
+h2 {
+  font-size: $f-size-xl;
+  line-height: $f-size-xl + 0.8rem;
+}
+h3 {
+  font-size: $f-size-lg;
+  line-height: $f-size-lg + 0.8rem;
+}
+h4 {
+  font-size: $f-size-sm;
+  line-height: $f-size-md + 0.8rem;
+  color: $c-text-subdued;
+  font-weight: $f-weight-normal;
+}
+p {
+  font-size: $f-size-md;
+  line-height: $f-size-md + 0.8rem;
+}

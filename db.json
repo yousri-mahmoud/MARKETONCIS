@@ -1,0 +1,116 @@
+{
+  "users": [
+    {
+      "email": "yousrymahmoud97@gmail.com",
+      "password": "$2a$10$r4dNNINO2jzQVgmQlIBv4.Epfwpj6ruNA7SJEnXS6Q1TaLVedc20.",
+      "firstName": "Yousri mahmoud",
+      "lastName": "osman",
+      "confirmPassword": "12345678",
+      "id": 1
+    },
+    {
+      "email": "yousrymahmoud@gmail.com",
+      "password": "$2a$10$w2u/4LmpBvRWenDqSyFag.MQ0.aECFTcjiGyxNay.jTfKjPKP3Ssm",
+      "firstName": "Yousri mahmoud",
+      "lastName": "osman",
+      "confirmPassword": "123456789",
+      "id": 2
+    },
+    {
+      "email": "yousrymahmou@gmail.com",
+      "password": "$2a$10$eSolJlrxn0h/qnf.M87cWuaKUIdQTCSkZ.rklbTZ0nvP8cmfWHpbi",
+      "firstName": "Yousri mahmoud",
+      "lastName": "osman",
+      "confirmPassword": "12345678",
+      "id": 3
+    },
+    {
+      "email": "yousrymahmoud@yahoo.com",
+      "password": "$2a$10$m24nS7ADrtAbqNlmNCVUFu5NeWYhrKuienFMCER.Rc0zxxHjmCtXC",
+      "firstName": "saif",
+      "lastName": "salh",
+      "confirmPassword": "123456789",
+      "id": 4
+    },
+    {
+      "email": "yousrymad97@gmail.com",
+      "password": "$2a$10$0.v8H6dYofVYMvsztoOFrOI9hv2sfa3e.C7NSWsl8s6uux3bjb/Ry",
+      "firstName": "Yousri mahmoud",
+      "lastName": "osman",
+      "confirmPassword": "12345678",
+      "id": 5
+    },
+    {
+      "email": "saifalaa95@gmail.com",
+      "password": "$2a$10$Zc4jqxSbn7tjqrnlrkICIO4N4thNvAkFnCSRIp6yJI.PN7OvvaJnO",
+      "firstName": "Saif",
+      "lastName": "Alaa ElDin",
+      "confirmPassword": "1234",
+      "id": 6
+    }
+  ],
+  "selling-posts": [],
+  "posts": [
+    {
+      "title": "saif",
+      "desc": "alaa",
+      "id": 1,
+      "countComment": 5
+    },
+    {
+      "title": "m8mdas",
+      "desc": "asldjnas",
+      "id": 2,
+      "countComment": 2
+    },
+    {
+      "title": "asdas",
+      "desc": "kasd ",
+      "id": 3
+    }
+  ],
+  "comments": [
+    {
+      "postId": "1",
+      "author": "ahmed",
+      "comment": "",
+      "id": 1
+    },
+    {
+      "postId": "1",
+      "author": "ahmed",
+      "comment": "",
+      "id": 2
+    },
+    {
+      "postId": "2",
+      "author": "ahmed",
+      "comment": "hii",
+      "id": 3
+    },
+    {
+      "postId": "1",
+      "author": "ahmed",
+      "comment": "",
+      "id": 4
+    },
+    {
+      "postId": "1",
+      "author": "ahmed",
+      "comment": "",
+      "id": 5
+    },
+    {
+      "postId": "1",
+      "author": "ahmed",
+      "comment": "sadasd",
+      "id": 6
+    },
+    {
+      "postId": "2",
+      "author": "ahmed",
+      "comment": "asdklasn;d",
+      "id": 7
+    }
+  ]
+}

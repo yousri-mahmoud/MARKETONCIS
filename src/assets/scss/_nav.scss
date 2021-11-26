@@ -1,0 +1,29 @@
+.logo {
+  text-decoration: none;
+  color: $c-primary;
+  font-size: $f-size-lg;
+  font-weight: $f-weight-bold;
+  letter-spacing: 0.2rem;
+  margin-right: 0.5rem;
+  &:hover {
+    color: $c-gray-4;
+  }
+}
+.navItem {
+  font-size: $f-size-sm;
+  margin-right: 0.2rem;
+}
+svg {
+  margin: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+}
+.closeSearch_icon {
+  color: red;
+}
+.search_input {
+  width: 250px;
+  outline: none;
+  border: none;
+}
