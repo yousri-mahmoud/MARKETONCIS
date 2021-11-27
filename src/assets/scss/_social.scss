@@ -1,0 +1,46 @@
+.side {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100vh;
+  width: 20vw;
+  margin-left: 5vw;
+  background-color: $c-primary;
+}
+.box {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.card_dimension {
+  width: 45%;
+}
+.search_width {
+  width: 60%;
+}
+.blog_button {
+  border: none;
+  background-color: $c-primary;
+  color: white;
+  width: 5rem;
+}
+.topic {
+  border-radius: 10px;
+  width: 10rem;
+  height: 2rem;
+}
+.text_height {
+  height: 8rem;
+}
+.post_btn {
+  background-color: $c-primary;
+  color: white;
+  width: 5rem;
+  border: none;
+}
+.titleColor {
+  color: $c-primary;
+}
+.titleColor {
+  color: $c-primary;
+}

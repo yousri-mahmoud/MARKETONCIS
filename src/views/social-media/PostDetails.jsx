@@ -6,11 +6,17 @@ import { CommentInfo } from "./../../redux/actions/commentAction";
 export default function PostDetails() {
   const id = useParams().id;
   const [item, setItem] = useState({});
+  const [name, setName] = useState("");
   const commentStore = useSelector((state) => state.comment);
   const dispatch = useDispatch();
   const [comment, setComment] = useState("");
   const [comments, setComments] = useState([]);
   const { title, desc } = item;
+  useEffect(() => {
+    let nme = localStorage.getItem("user");
+    nme = JSON.parse(nme).firstName;
+    setName(nme);
+  }, []);
   useEffect(() => {
     fetchComment();
   }, [commentStore]);
@@ -24,7 +30,7 @@ export default function PostDetails() {
     const commentsResponse = await fetch("http://localhost:3001/comments")
       .then((res) => res.json())
       .then((data) => {
-        let updatedComments = data.filter((comm) => {
+        let updatedComments = data?.filter((comm) => {
           return comm.postId === id;
         });
         setComments(updatedComments);
@@ -46,7 +52,7 @@ export default function PostDetails() {
       .then((data) => setItem(data));
   };
   const handleComment = () => {
-    dispatch(CommentInfo({ postId: id, author: "ahmed", comment: comment }));
+    dispatch(CommentInfo({ postId: id, author: name, comment: comment }));
   };
   console.log(comments);
   return (

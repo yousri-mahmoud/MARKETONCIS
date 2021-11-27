@@ -31,8 +31,51 @@
       "lastName": "kanmal",
       "confirmPassword": "12345678",
       "id": 4
+    },
+    {
+      "email": "saifalaa95@gmail.com",
+      "password": "$2a$10$tdzW5qbcOkov3UnthTYlj.bJKSS8eCHjSnAliLED/CU3hKmTstQ5W",
+      "firstName": "saif",
+      "lastName": "Alaa ElDin",
+      "confirmPassword": "123456",
+      "id": 5
     }
   ],
   "selling-posts": [],
-  "posts": []
+  "posts": [
+    {
+      "title": "saif",
+      "desc": "alaa",
+      "name": "Yousri mahmoud",
+      "id": 1,
+      "countComment": 2
+    },
+    {
+      "title": "ezayk",
+      "desc": "lsjd as",
+      "name": "saif",
+      "id": 2,
+      "countComment": 1
+    }
+  ],
+  "comments": [
+    {
+      "postId": "1",
+      "author": "Yousri mahmoud",
+      "comment": "ezayk",
+      "id": 1
+    },
+    {
+      "postId": "1",
+      "author": "saif",
+      "comment": "",
+      "id": 2
+    },
+    {
+      "postId": "2",
+      "author": "ahmed",
+      "comment": "ak.sh d",
+      "id": 3
+    }
+  ]
 }

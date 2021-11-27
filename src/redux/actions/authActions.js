@@ -1,4 +1,10 @@
-import { REGISTERSUCCESS, REGISTERERROR } from "./actionsType";
+import {
+  REGISTERSUCCESS,
+  REGISTERERROR,
+  LOGINGSUCCESS,
+  LOGINERROR,
+} from "./actionsType";
+// REGISTER FUN
 export const registerSuccess = (user) => {
   return {
     type: REGISTERSUCCESS,
@@ -11,7 +17,6 @@ export const registerError = (error) => {
     payload: error,
   };
 };
-
 export const userRegister = (userData) => {
   return async (dispatch) => {
     const response = await fetch("http://localhost:3001/users", {
@@ -27,6 +32,38 @@ export const userRegister = (userData) => {
       dispatch(registerSuccess(data));
     } else {
       dispatch(registerError(data));
+    }
+  };
+};
+
+// LOGIN FUN
+export const loginSuccess = (user) => {
+  return {
+    type: LOGINGSUCCESS,
+    payload: user,
+  };
+};
+export const loginError = (error) => {
+  return {
+    type: LOGINERROR,
+    payload: error,
+  };
+};
+export const userLogin = (userData) => {
+  return async (dispatch) => {
+    const response = await fetch("http://localhost:3001/signin", {
+      method: "POST",
+      body: JSON.stringify(userData),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    const data = await response.json();
+    if (response.ok) {
+      dispatch(loginSuccess(data));
+    } else {
+      dispatch(loginError(data));
     }
   };
 };

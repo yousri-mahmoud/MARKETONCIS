@@ -14,8 +14,14 @@ function SocialMedia() {
   const post = useSelector((state) => state.post);
   const dispatch = useDispatch();
   let countComments = [];
+  const [name, setName] = useState("");
+  useEffect(() => {
+    let nme = localStorage.getItem("user");
+    nme = JSON.parse(nme).firstName;
+    setName(nme);
+  }, []);
   const handlePost = (e) => {
-    dispatch(PostInfo({ title, desc }));
+    dispatch(PostInfo({ title, desc, name }));
 
     setShow(false);
   };

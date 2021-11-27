@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 export default function PostsList(props) {
-  const { title, desc, id } = props.post;
+  const { title, desc, id, name } = props.post;
   const [count, setCount] = useState(0);
+
   useEffect(() => {
     fetchCount();
   });
@@ -22,7 +23,7 @@ export default function PostsList(props) {
         <hr />
         <div className="d-flex justify-content-around">
           <p>
-            Posted By <span className="text-primary">Ahmed Mido</span>
+            Posted By <span className="text-primary">{name}</span>
           </p>
           <p>Two hours ago </p>
           <p>{count} Comment</p>
