@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
 :root {
-  font-family: "Poppins", sans-serif, "Franklin Gothic Medium", "Arial Narrow", Arial;
+  font-family: "Poppins", sans-serif, "Franklin Gothic Medium", "Arial Narrow", Arial;
   font-weight: 500;
 }
 
@@ -43,6 +43,83 @@ p {
 
 a {
   text-decoration: none;
+}
+
+.home {
+  -webkit-animation: content 1s normal;
+          animation: content 1s normal;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.home img {
+  width: 40%;
+  border: 1px solid #e5e6e6;
+  border-radius: 20px;
+}
+
+.home__header {
+  margin-top: 3rem;
+}
+
+.home__header h1 {
+  color: #337aaa;
+}
+
+.home__header p {
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  color: #206956;
+}
+
+.home__content h2 {
+  color: #000;
+  margin-top: 5rem;
+}
+
+.home__content h2 span {
+  color: #337aaa;
+}
+
+.home__content h3 {
+  color: #206956;
+  margin-bottom: 1rem;
+}
+
+.home__content h3 span {
+  color: #337aaa;
+}
+
+@-webkit-keyframes content {
+  0% {
+    -webkit-transform: translatex(900px);
+            transform: translatex(900px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translatex(0px);
+            transform: translatex(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes content {
+  0% {
+    -webkit-transform: translatex(900px);
+            transform: translatex(900px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translatex(0px);
+            transform: translatex(0px);
+    opacity: 1;
+  }
+}
+
+.about__header h2 {
+  color: #000;
 }
 
 .logo {
@@ -89,7 +166,8 @@ svg {
 }
 
 .form {
-  width: 60%;
+  width: 70%;
+  position: relative;
   padding-right: 3rem;
   margin-top: 2rem;
   -webkit-box-shadow: grey 1px 2px 5px 1px;
@@ -137,11 +215,9 @@ svg {
 }
 
 .form__content__logo {
-  background-color: #337aaa;
   position: absolute;
-  left: 40%;
-  -webkit-transform: translate(-40%, 0);
-          transform: translate(-40%, 0);
+  left: 25%;
+  background-color: #337aaa;
   height: 100%;
 }
 
@@ -152,19 +228,21 @@ svg {
   }
 }
 
-.form__content__logo h2 {
+.form__content__logo__content {
+  position: relative;
+  top: 45%;
+}
+
+.form__content__logo__content h2 {
   color: #fff;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translate(13%, -50%);
-          transform: translate(13%, -50%);
   font-size: 1.5rem;
 }
 
 .form__content__fields {
-  padding: 3rem 0;
+  padding: 1rem 0;
   margin-left: 1rem;
   font-weight: bold;
+  font-size: 0.8rem;
 }
 
 .form__content__fields button {
@@ -177,7 +255,7 @@ svg {
 }
 
 .login {
-  padding: 9.6rem 0;
+  padding: 7rem 0;
 }
 
 .market h4 {

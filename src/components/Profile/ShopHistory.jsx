@@ -13,23 +13,16 @@ const ShopHistory = () => {
   return (
     <section className="shop container mt-4 ">
       <header>
-        <h2>Shop history</h2>
+        <h2>Shop activity</h2>
       </header>
     <div className="shop__purchases">
-      <h3 className="mt-4 shop__purchases__title">Purchases</h3>
+      <h3 className="mt-4 shop__purchases__title">Posted Products</h3>
       <div className="items__box">
       <TableComponents  images={images} trColor="head__tr--primary" />
      </div>
 
       </div>
 
-      <div className="shop__sales">
-      <h3 className="mt-3 shop__sales__title">Sales</h3>
-      <div className="items__box">
-      <TableComponents images={images} trColor="head__tr--secondary" />
-      </div>
-
-      </div>
     </section>
   );
 };

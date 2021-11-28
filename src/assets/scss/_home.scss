@@ -1,0 +1,53 @@
+.home {
+    animation: content 1s normal;
+    transition: all 1s ease-in-out;
+    img {
+        width: 40%;
+        border: 1px solid $c-gray-4;
+        border-radius: 20px;
+    }
+    &__header {
+        margin-top: 3rem;
+    
+        h1 {
+            color: $c-primary;
+        }
+        p {
+            margin: 0 auto;
+            margin-bottom: 2rem;
+            margin-top: 1rem;
+            font-size: 1.3rem;
+            color: $c-secondary-dark;
+        }
+    }
+
+    &__content {
+    
+        h2 {
+            color: #000;
+            margin-top: 5rem;
+            span {
+                color: $c-primary;
+            }
+        }
+        h3 {
+            color: $c-secondary-dark;
+            margin-bottom: 1rem;
+            span {
+                color: $c-primary;
+            }
+        }
+    }
+}
+
+
+@keyframes content {
+    0% {
+      transform: translatex(900px);
+      opacity: 0;
+    }
+    100% {
+      transform: translatex(0px);
+      opacity: 1;
+    }
+  }

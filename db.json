@@ -39,6 +39,31 @@
       "lastName": "Alaa ElDin",
       "confirmPassword": "123456",
       "id": 5
+    },
+    {
+      "email": "salehfarag161@gmail.com",
+      "password": "$2a$10$QE2hJCFC6JFhvAhb.2.G9.0IsFEP7GUqpABPRZM3KKQ4wKdoIFMcy",
+      "firstName": "Saleh",
+      "lastName": "Farag",
+      "confirmPassword": "123456",
+      "id": 6
+    },
+    {
+      "email": "ahmed23@gmail.com",
+      "password": "$2a$10$UgKXSIxzWKuDmymI3yujh.b/Asf20RAYNakIG.4ll0slwjOOUihzy",
+      "firstName": "ahemd",
+      "lastName": "cas",
+      "confirmPassword": "12345678",
+      "id": 7
+    },
+    {
+      "email": "salehsax@gmail.com",
+      "password": "$2a$10$ORmHte6FUKJkYPYM12iXKeVL574fKVguP3Nx1zTZvKrB5KXjheaje",
+      "firstName": "saleh",
+      "lastName": "farag",
+      "confirmPassword": "",
+      "address": "egypt-suez",
+      "id": 8
     }
   ],
   "selling-posts": [],
@@ -56,6 +81,13 @@
       "name": "saif",
       "id": 2,
       "countComment": 1
+    },
+    {
+      "title": "way",
+      "desc": "ok",
+      "name": "saleh",
+      "id": 3,
+      "countComment": 0
     }
   ],
   "comments": [
