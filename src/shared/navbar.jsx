@@ -3,10 +3,8 @@ import {
   Navbar,
   Nav,
   Container,
-  Form,
   NavDropdown,
   FormControl,
-  Button,
 } from "react-bootstrap";
 import { NavLink, Link } from "react-router-dom";
 import { useState } from "react";
@@ -85,9 +83,7 @@ function NavbarComponent() {
                 onClick={() => setSearch(true)}
               />
             )}
-            {/* commet */}
 
-            {/* commet */}
             <FaSnapchatGhost />
 
             <NavDropdown
@@ -109,12 +105,14 @@ function NavbarComponent() {
                   <NavLink to="/login">Login</NavLink>
                 </NavDropdown.Item>
               )}
-
-              <NavDropdown.Divider />
               {isLoggedIn && (
-                <NavDropdown.Item onClick={() => logOut()}>
-                  Logout
-                </NavDropdown.Item>
+                <>
+                  <NavDropdown.Divider />
+
+                  <NavDropdown.Item onClick={() => logOut()}>
+                    Logout
+                  </NavDropdown.Item>
+                </>
               )}
             </NavDropdown>
           </Nav>
