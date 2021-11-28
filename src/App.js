@@ -15,6 +15,8 @@ import Login from "./views/auth/login";
 import Market from "./views/market/market";
 import Profile from "./views/profile/profile";
 import SocialMedia from "./views/social-media/social-media";
+import Post from "./views/social-media/Post";
+import PostDetails from "./views/social-media/PostDetails";
 
 import Sell from "./views/market/sell";
 import Buy from "./views/market/buy";
@@ -29,14 +31,20 @@ function App() {
   return (
     <>
       <Router>
-        <main className="main">
-          <Navbar />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about-us" element={<About />} />
-            {isLoggedIn || <Route path="/register" element={<Register />} />}
-            {isLoggedIn || <Route path="/login" element={<Login />} />}
 
+        <main className="main">
+ 
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about-us" element={<About />} />
+             {isLoggedIn && (
+              <Route path="/social-media" element={<SocialMedia />} />
+            )}
+          <Route path="/social-media/post" element={<Post />} />
+          <Route path="/social-media/post/:id" element={<PostDetails />} />
+          {isLoggedIn || <Route path="/register" element={<Register />} />}
+          {isLoggedIn || <Route path="/login" element={<Login />} />
             {isLoggedIn && (
               <Route path="/profile" element={<Profile />}>
                 <Route element={<ShopHistory />} path="" />
@@ -50,9 +58,7 @@ function App() {
             {isLoggedIn && (
               <Route path="/market/buy/:id" element={<SingleProduct />} />
             )}
-            {isLoggedIn && (
-              <Route path="/social-media" element={<SocialMedia />} />
-            )}
+         
 
             <Route path="*" element={<Navigate replace to="/" />} />
           </Routes>

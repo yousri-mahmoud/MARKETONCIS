@@ -47,6 +47,7 @@
       "id": 1
     },
     {
+
       "deviceDetail": {
         "deviceName": "i phone x",
         "deviceType": "mobile",
@@ -79,5 +80,43 @@
       "id": 3
     }
   ],
-  "posts": []
+  
+  
+  "posts": [
+    {
+      "title": "saif",
+      "desc": "alaa",
+      "name": "Yousri mahmoud",
+      "id": 1,
+      "countComment": 2
+    },
+    {
+      "title": "ezayk",
+      "desc": "lsjd as",
+      "name": "saif",
+      "id": 2,
+      "countComment": 1
+    }
+  ],
+  "comments": [
+    {
+      "postId": "1",
+      "author": "Yousri mahmoud",
+      "comment": "ezayk",
+      "id": 1
+    },
+    {
+      "postId": "1",
+      "author": "saif",
+      "comment": "",
+      "id": 2
+    },
+    {
+      "postId": "2",
+      "author": "ahmed",
+      "comment": "ak.sh d",
+      "id": 3
+    }
+  ]
+
 }
