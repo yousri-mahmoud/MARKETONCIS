@@ -1,11 +1,17 @@
 import React from "react";
 import FormikField from "../../shared/formik/FormikField";
 import SelectFormikFiels from "../../shared/formik/SelectFormikFiels";
-import { FaRegTimesCircle } from "react-icons/fa";
-
-import { Formik, Form, FieldArray } from "formik";
+// import { FaRegTimesCircle } from "react-icons/fa";
+import { postNewDevice } from "../../redux/actions/marketActions";
+import { Formik, Form } from "formik";
 import * as yup from "yup";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router";
+
 function Sell() {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   const dropDownOptions = [
     {
       key: "select a device",
@@ -20,7 +26,7 @@ function Sell() {
     deviceName: "",
     deviceType: "",
     description: "",
-    images: [],
+    images: "",
     devicePrice: "",
     devicePlace: "",
     name: "",
@@ -28,8 +34,11 @@ function Sell() {
     email: "",
   };
 
-  const onSubmit = (values) =>
-    window.location.replace("http://localhost:3000/market/buy");
+  const onSubmit = (values) => {
+    dispatch(postNewDevice(values));
+    navigate("/market/buy");
+  };
+  // window.location.replace("http://localhost:3000/market/buy");
   const validationSchema = yup.object({
     deviceName: yup.string().required("Device Name field is required"),
     deviceType: yup.string().required("Device type field is required"),
@@ -38,7 +47,7 @@ function Sell() {
     devicePrice: yup.number().required("Device price field is required "),
     devicePlace: yup.string().required("Device place field is required "),
     name: yup.string().required("name field is required "),
-    phone: yup.number().required("phone field is required "),
+    phone: yup.string().required("phone field is required "),
     email: yup
       .string()
       .email("Please enter a valid email address")
@@ -75,42 +84,7 @@ function Sell() {
                   name="description"
                   type="textarea"
                 />
-                <FieldArray name="images">
-                  {({ remove, push }) => (
-                    <div className="my-3">
-                      {forimk.values.images.length > 0 &&
-                        forimk.values.images.map((image, index) => (
-                          <div className="row align-items-end" key={index}>
-                            <div className="col">
-                              <label htmlFor={`images.${index}`}>
-                                image-{index + 1}
-                              </label>
-                              <br />
-                              <FormikField
-                                label=""
-                                name={`images.${index}`}
-                                type="file"
-                                className="my-2"
-                              />
-                            </div>
-                            <div className="col">
-                              <FaRegTimesCircle
-                                onClick={() => remove(index)}
-                                className="close-icon"
-                              />
-                            </div>
-                          </div>
-                        ))}
-                      <button
-                        type="button"
-                        className="add-image__sell-form"
-                        onClick={() => push("")}
-                      >
-                        Add Image
-                      </button>
-                    </div>
-                  )}
-                </FieldArray>
+                <FormikField label="Add Images" name="images" type="file" />
                 <FormikField
                   label="Device Price"
                   name="devicePrice"
@@ -124,7 +98,7 @@ function Sell() {
                 <hr />
 
                 <FormikField label="Name" name="name" type="text" />
-                <FormikField label="Phone" name="phone" type="number" />
+                <FormikField label="Phone" name="phone" type="text" />
                 <FormikField label="Email" name="email" type="email" />
 
                 <button className="submit__sell-form" type="submit">
