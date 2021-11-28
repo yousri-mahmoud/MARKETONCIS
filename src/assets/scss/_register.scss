@@ -1,8 +1,9 @@
 .form {
-    width: 60%;
+    width: 70%;
     @media screen and (max-width: 900px) {
         width: 90%;
       }
+      position: relative;
     padding-right: 3rem;
     margin-top: 2rem;
     box-shadow: grey 1px 2px 5px 1px;
@@ -52,27 +53,34 @@
                 display: none;
                 overflow: hidden;
               }
-            background-color: $c-primary;
-            position: absolute;
-            left: 40%;
-            transform: translate(-40%, 0);
-            height: 100%;
-            h2 {
-                color: #fff;
-                position: absolute;
-                top: 50%;
+              position: absolute;
+              left: 25%;
+              background-color: $c-primary;
+              height: 100%;
+              
+              &__content {
+                position: relative;
+                top: 45%;
 
-                transform: translate(13%, -50%);
-                font-size: 1.5rem;
+                h2 {
+                    color: #fff;
+                    font-size: 1.5rem;
+    
+                }
+              }
+       
 
-            }
+              
+           
             
         }
 
         &__fields {
-            padding: 3rem 0;
+            padding: 1rem 0;
             margin-left: 1rem;
             font-weight: bold;
+            font-size: 0.8rem;
+         
             button {
                 width: 100%;
                 height: 2.3rem;
@@ -88,5 +96,6 @@
 }
 
 .login {
-    padding: 9.6rem 0;
+    padding: 7rem 0;
 }
+

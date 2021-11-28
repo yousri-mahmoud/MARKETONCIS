@@ -62,22 +62,6 @@
       "userName": " Yousri mahmoud osman",
       "id": 2
     },
-    {
-      "deviceDetail": {
-        "deviceName": "dell",
-        "deviceType": "laptop",
-        "description": "blalallallalaalllll",
-        "images": "C:\\fakepath\\Capture.PNG",
-        "devicePrice": 7000,
-        "devicePlace": "alex",
-        "name": "yousri mahmoud",
-        "phone": "01012146732",
-        "email": "yousrymahmoud97@gmail.com"
-      },
-      "userId": 2,
-      "userName": " ahmed mohamed",
-      "id": 3
-    }
   ],
   "posts": [
     {
@@ -86,6 +70,13 @@
       "name": "Yousri mahmoud",
       "id": 1,
       "countComment": 1
+    },
+    {
+      "title": "way",
+      "desc": "ok",
+      "name": "saleh",
+      "id": 3,
+      "countComment": 0
     }
   ],
   "comments": [

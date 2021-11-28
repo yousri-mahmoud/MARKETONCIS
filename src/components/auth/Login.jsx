@@ -31,7 +31,7 @@ const LoginComponent = () => {
   return (
     <div className="form ">
       <div className="form__content d-flex justify-content-between align-items-center">
-        <div className="form__content__rouet  col-lg-1">
+        <div className="form__content__rouet  col-lg-3 login">
           <ul>
             <li>
               <NavLink
@@ -54,14 +54,15 @@ const LoginComponent = () => {
           </ul>
         </div>
 
-        <div className="form__content__logo col-lg-3 ">
-          <h2>MARKETONCIS</h2>
+        <div className="form__content__logo col-lg-3 text-center">
+          <div className="form__content__logo__content">
+               <h2>MARKETONCIS</h2>
+          </div>
         </div>
-        <div className=" form__content__fields login">
+        <div className=" form__content__fields col-lg-5">
           <h2>Sign In</h2>
 
           <Formik
-            className="col-lg-8"
             initialValues={initialValues}
             onSubmit={onSubmit}
             validationSchema={validationSchema}
@@ -75,7 +76,7 @@ const LoginComponent = () => {
                     name="password"
                     type="password"
                   />
-                  <small className="text-danger">{state.message}</small>
+                  <small className="text-danger error">{state.message}</small>
                   <button className="submit__form" type="submit">
                     Sign In
                   </button>

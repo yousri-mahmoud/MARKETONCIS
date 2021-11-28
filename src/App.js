@@ -25,6 +25,7 @@ import ShopHistory from "./components/Profile/ShopHistory";
 import Whislist from "./components/Profile/Whislist";
 import BlogActivity from "./components/Profile/BlogActivity";
 import { useSelector } from "react-redux";
+import GlobalProfile from "./views/globalProfile/globalProfile";
 
 function App() {
   const isLoggedIn = useSelector((state) => state.auth.isLogIn);
@@ -46,6 +47,30 @@ function App() {
               <Route path="/social-media/post/:id" element={<PostDetails />} />
             )}
 
+
+          {isLoggedIn && (
+            <Route path="/profile" element={<Profile />}>
+              <Route element={<ShopHistory />} path="" />
+              <Route element={<Whislist />} path="whislist" />
+              <Route element={<BlogActivity />} path="activity" />
+            </Route>
+          )}
+          {isLoggedIn && (
+            <Route path="/globalProfile/:id" element={<GlobalProfile />}>
+              <Route element={<ShopHistory />} path="" />
+              <Route element={<BlogActivity />} path="activity" />
+            </Route>
+          )}
+
+          {isLoggedIn && <Route path="/market" element={<Market />} />}
+          {isLoggedIn && <Route path="/market/sell" element={<Sell />} />}
+          {isLoggedIn && <Route path="/market/buy/*" element={<Buy />} />}
+          {isLoggedIn && (
+            <Route path="/market/buy/item/:id" element={<SingleProduct />} />
+          )}
+          {isLoggedIn && (
+            <Route path="/social-media" element={<SocialMedia />} />
+          )}
             {isLoggedIn || <Route path="/register" element={<Register />} />}
             {isLoggedIn || <Route path="/login" element={<Login />} />}
 
