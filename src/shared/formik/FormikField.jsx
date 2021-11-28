@@ -14,6 +14,7 @@ const FormikField = ({ name, type, label }) => {
             <label htmlFor={name} style={{ display: "block" }}>
               {label}
             </label>
+
             {type === "textarea" ? (
               <textarea
                 rows="4"
@@ -28,6 +29,7 @@ const FormikField = ({ name, type, label }) => {
                 className="w-100 my-2"
                 type={type}
                 id={name}
+                multiple={type === "file" ? "multiple" : ""}
                 {...formikField.field}
                 defaultChecked={formikField.field.value}
               />

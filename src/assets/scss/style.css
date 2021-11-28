@@ -37,8 +37,7 @@ p {
 }
 
 .main {
-  position: relative;
-  min-height: 100vh;
+  min-height: calc(100vh - 100px);
 }
 
 a {
@@ -81,11 +80,7 @@ svg {
 }
 
 .footer {
-  position: absolute;
-  bottom: -100px;
-  left: 0;
   height: 100px;
-  width: 100%;
 }
 
 .form {
@@ -361,7 +356,8 @@ p {
 }
 
 .category {
-  background-color: #1f455f;
+  background: -webkit-gradient(linear, left top, right top, from(#1f455f), to(rgba(31, 69, 95, 0.5)));
+  background: linear-gradient(to right, #1f455f, rgba(31, 69, 95, 0.5));
   padding: 20px 0;
   color: white;
   margin-bottom: 50px;
@@ -372,8 +368,7 @@ p {
   font-weight: bold;
   letter-spacing: 5px;
   font-size: 25px;
-  margin-top: 20px;
-  color: #58a591;
+  margin: 20px 0;
 }
 
 .category ul {
@@ -398,7 +393,11 @@ p {
 }
 
 .category ul li:hover {
-  color: #32a989;
+  color: #5cb2fd;
+}
+
+.active_filter {
+  color: #5cb2fd;
 }
 
 ul {

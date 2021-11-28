@@ -10,29 +10,74 @@
     },
     {
       "email": "yousrymahmoud@yahoo.com",
-      "password": "$2a$10$TScldco4COeuKUOrZivCvug3jaOG7hxS1oMc8F9Xrz71FD3kp8WXu",
-      "firstName": "Yousri mahmoud",
-      "lastName": "osman",
+      "password": "$2a$10$fxfn.Kqug4IPGHngcWeCdO5Ul8BPE/76tgAnyko7g9jwbEeYp/4Z.",
+      "firstName": "ahmed",
+      "lastName": "mohamed",
       "confirmPassword": "12345678",
+      "id": 2
+    }
+  ],
+  "bio": [
+    {
+      "textBio": "edited",
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "textBio": "edited five times",
+      "userId": 2,
+      "id": 2
+    }
+  ],
+  "selling-posts": [
+    {
+      "deviceDetail": {
+        "deviceName": "hp latuid",
+        "deviceType": "laptop",
+        "description": "blblbllbblallalallalallall",
+        "images": "C:\\fakepath\\above-adventure-aerial-air.jpg",
+        "devicePrice": 5000,
+        "devicePlace": "cario",
+        "name": "yousri mahmoud",
+        "phone": "01012146732",
+        "email": "yousrymahmoud97@gmail.com"
+      },
+      "userId": 2,
+      "userName": " ahmed mohamed",
+      "id": 1
+    },
+    {
+      "deviceDetail": {
+        "deviceName": "i phone x",
+        "deviceType": "mobile",
+        "description": "blalbllblallblbalblblalblblbalballalb",
+        "images": "C:\\fakepath\\one.PNG",
+        "devicePrice": 4000,
+        "devicePlace": "fayoum",
+        "name": "yousri mahmoud",
+        "phone": "01012146732",
+        "email": "yousrymahmoud97@gmail.com"
+      },
+      "userId": 1,
+      "userName": " Yousri mahmoud osman",
       "id": 2
     },
     {
-      "email": "yousrymahmou@gmail.com",
-      "password": "$2a$10$dyNKcYgHu0A9AcCqQ23XGedRo.TOECQdI.4jSli2hBxXt4FK8eQzO",
-      "firstName": "ahmed",
-      "lastName": "osman",
-      "confirmPassword": "123456789",
+      "deviceDetail": {
+        "deviceName": "dell",
+        "deviceType": "laptop",
+        "description": "blalallallalaalllll",
+        "images": "C:\\fakepath\\Capture.PNG",
+        "devicePrice": 7000,
+        "devicePlace": "alex",
+        "name": "yousri mahmoud",
+        "phone": "01012146732",
+        "email": "yousrymahmoud97@gmail.com"
+      },
+      "userId": 2,
+      "userName": " ahmed mohamed",
       "id": 3
-    },
-    {
-      "email": "yousry@gmail.com",
-      "password": "$2a$10$Fl24LLrKTsp.tlTlnCG02Oc7DZs32Vdtu74GeuktMdXVV1sD/OVFq",
-      "firstName": "mohamed",
-      "lastName": "kanmal",
-      "confirmPassword": "12345678",
-      "id": 4
     }
   ],
-  "selling-posts": [],
   "posts": []
 }

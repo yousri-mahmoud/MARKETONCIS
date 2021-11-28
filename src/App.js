@@ -27,37 +27,39 @@ import { useSelector } from "react-redux";
 function App() {
   const isLoggedIn = useSelector((state) => state.auth.isLogIn);
   return (
-    <main className="main">
+    <>
       <Router>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about-us" element={<About />} />
-          {isLoggedIn || <Route path="/register" element={<Register />} />}
-          {isLoggedIn || <Route path="/login" element={<Login />} />}
+        <main className="main">
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about-us" element={<About />} />
+            {isLoggedIn || <Route path="/register" element={<Register />} />}
+            {isLoggedIn || <Route path="/login" element={<Login />} />}
 
-          {isLoggedIn && (
-            <Route path="/profile" element={<Profile />}>
-              <Route element={<ShopHistory />} path="" />
-              <Route element={<Whislist />} path="whislist" />
-              <Route element={<BlogActivity />} path="activity" />
-            </Route>
-          )}
-          {isLoggedIn && <Route path="/market" element={<Market />} />}
-          {isLoggedIn && <Route path="/market/sell" element={<Sell />} />}
-          {isLoggedIn && <Route path="/market/buy/*" element={<Buy />} />}
-          {isLoggedIn && (
-            <Route path="/market/buy/item/:id" element={<SingleProduct />} />
-          )}
-          {isLoggedIn && (
-            <Route path="/social-media" element={<SocialMedia />} />
-          )}
+            {isLoggedIn && (
+              <Route path="/profile" element={<Profile />}>
+                <Route element={<ShopHistory />} path="" />
+                <Route element={<Whislist />} path="whislist" />
+                <Route element={<BlogActivity />} path="activity" />
+              </Route>
+            )}
+            {isLoggedIn && <Route path="/market" element={<Market />} />}
+            {isLoggedIn && <Route path="/market/sell" element={<Sell />} />}
+            {isLoggedIn && <Route path="/market/buy/*" element={<Buy />} />}
+            {isLoggedIn && (
+              <Route path="/market/buy/:id" element={<SingleProduct />} />
+            )}
+            {isLoggedIn && (
+              <Route path="/social-media" element={<SocialMedia />} />
+            )}
 
-          <Route path="*" element={<Navigate replace to="/" />} />
-        </Routes>
+            <Route path="*" element={<Navigate replace to="/" />} />
+          </Routes>
+        </main>
         <Footer />
       </Router>
-    </main>
+    </>
   );
 }
 

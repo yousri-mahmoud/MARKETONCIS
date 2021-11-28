@@ -3,3 +3,4 @@ export const REGISTERERROR = "REGISTERERROR";
 export const LOGINGSUCCESS = "LOGINGSUCCESS";
 export const LOGINERROR = "LOGINERROR";
 export const LOGOUT = "LOGOUT";
+export const SELLINGDEVICE = "SELLINGDEVICE";

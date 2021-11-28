@@ -151,7 +151,7 @@ p {
 }
 // category
 .category {
-  background-color: $c-primary-dark;
+  background: $gradient;
   padding: 20px 0;
   color: white;
   margin-bottom: 50px;
@@ -160,8 +160,7 @@ p {
     font-weight: bold;
     letter-spacing: 5px;
     font-size: 25px;
-    margin-top: 20px;
-    color: $c-secondary-light;
+    margin: 20px 0;
   }
   ul {
     list-style-type: none;
@@ -175,8 +174,12 @@ p {
       font-weight: 500;
       cursor: pointer;
       &:hover {
-        color: $c-secondary;
+        color: $c-primary-light;
       }
     }
   }
+}
+
+.active_filter {
+  color: $c-primary-light;
 }
