@@ -31,20 +31,24 @@ function App() {
   return (
     <>
       <Router>
-
         <main className="main">
- 
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about-us" element={<About />} />
-             {isLoggedIn && (
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about-us" element={<About />} />
+            {isLoggedIn && (
               <Route path="/social-media" element={<SocialMedia />} />
             )}
-          <Route path="/social-media/post" element={<Post />} />
-          <Route path="/social-media/post/:id" element={<PostDetails />} />
-          {isLoggedIn || <Route path="/register" element={<Register />} />}
-          {isLoggedIn || <Route path="/login" element={<Login />} />
+            {isLoggedIn && (
+              <Route path="/social-media/post" element={<Post />} />
+            )}
+            {isLoggedIn && (
+              <Route path="/social-media/post/:id" element={<PostDetails />} />
+            )}
+
+            {isLoggedIn || <Route path="/register" element={<Register />} />}
+            {isLoggedIn || <Route path="/login" element={<Login />} />}
+
             {isLoggedIn && (
               <Route path="/profile" element={<Profile />}>
                 <Route element={<ShopHistory />} path="" />
@@ -58,7 +62,6 @@ function App() {
             {isLoggedIn && (
               <Route path="/market/buy/:id" element={<SingleProduct />} />
             )}
-         
 
             <Route path="*" element={<Navigate replace to="/" />} />
           </Routes>
