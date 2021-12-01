@@ -11,7 +11,7 @@ const Home = () => {
   return (
     <div className="home text-center">
       <header className="home__header">
-        <h1>MARKTONCIS</h1>
+        <h1>MARKETONICS</h1>
         <p className="w-50">
           It is a website that helps you to buy or sell used devices and also
           allows you to join to our blog to give your opinion on the products
@@ -19,14 +19,14 @@ const Home = () => {
       </header>
       <div className="home__content">
         <h2>
-          What You Can Do in <span>MARKTONCIS ?</span>
+          What You Can Do in <span>MARKETONICS ?</span>
         </h2>
         <div className="home__content__buy">
           <h3>
-            you can bay and sell from the{" "}
+            you can buy and sell from the{" "}
             <Link to={isLoggedIn ? "/market" : "/login"}>
               {" "}
-              <span> market </span>
+              <span> Market </span>
             </Link>
           </h3>
           <img className="" src={buyAndSell} alt="buyAndSell" />
@@ -54,7 +54,7 @@ const Home = () => {
         </div>
         <div className="home__content__register mt-4">
           {isLoggedIn ? (
-            <h3 className="p-3">Thanks For Join Us Our Journey</h3>
+            <h3 className="p-3">Thanks For Joining Our Journey</h3>
           ) : (
             <h3 className="p-3">
               Be One Of Our Family{" "}

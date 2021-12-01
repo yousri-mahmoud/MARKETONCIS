@@ -23,9 +23,7 @@ function SocialMedia() {
     setUserId(JSON.parse(nme).id);
   }, []);
   const handlePost = (e) => {
-
     dispatch(PostInfo({ title, desc, name, userId }));
-
 
     setShow(false);
   };

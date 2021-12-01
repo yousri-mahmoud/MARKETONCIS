@@ -1,9 +1,90 @@
 {
-  "users": [],
-  "bio": [],
-  "selling-posts": [],
-  "posts": [],
-  "whishList": [],
-  "comments": []
-
+  "users": [
+    {
+      "email": "Saifalaa95@gmail.com",
+      "password": "$2a$10$047/JoCRtr2kBJPXReL4rOAZY6JYvGqGecdsubHsMX3F3UzKwwsjy",
+      "firstName": "Saif",
+      "lastName": "Alaa ElDin",
+      "gender": "male",
+      "address": "Essawy, Miami",
+      "confirmPassword": "protected",
+      "id": 1
+    },
+    {
+      "email": "yousrymahmoud97@gmail.com",
+      "password": "$2a$10$rxHM8xW31caGBVSmlVxsBOSlYCOg4UQ8Ac58m.UOY6MoYtkhPv396",
+      "firstName": "yosry",
+      "lastName": "ahmed",
+      "gender": "male",
+      "address": "fayom",
+      "confirmPassword": "protected",
+      "id": 2
+    }
+  ],
+  "bio": [
+    {
+      "textBio": "gamd gdn",
+      "userId": 1,
+      "id": 1
+    }
+  ],
+  "selling-posts": [
+    {
+      "deviceDetail": {
+        "deviceName": "newDeviceImage",
+        "deviceType": "laptop",
+        "description": "asd",
+        "images": "",
+        "devicePrice": 1123,
+        "devicePlace": "alexandria",
+        "name": "",
+        "phone": "01093260600",
+        "email": ""
+      },
+      "email": "Saifalaa95@gmail.com",
+      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1638389548/vhllqj6iqzewrll5na4c.png",
+      "userId": 1,
+      "userName": " Saif Alaa ElDin",
+      "id": 1
+    }
+  ],
+  "posts": [
+    {
+      "title": "gama3a ana msh la2y laptop",
+      "desc": "a7eeeeeeh",
+      "name": "yosry",
+      "userId": 2,
+      "id": 1,
+      "countComment": 1
+    }
+  ],
+  "whishList": [
+    {
+      "deviceInfo": {
+        "deviceName": "newDeviceImage",
+        "deviceType": "laptop",
+        "description": "asd",
+        "images": "",
+        "devicePrice": 1123,
+        "devicePlace": "alexandria",
+        "name": "",
+        "phone": "01093260600",
+        "email": ""
+      },
+      "userId": 1,
+      "userName": " Saif Alaa ElDin",
+      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1638389548/vhllqj6iqzewrll5na4c.png",
+      "itemId": 1,
+      "id": 1
+    }
+  ],
+  "comments": [
+    {
+      "postId": "1",
+      "author": "Saif",
+      "comment": "asd",
+      "commentAuthorId": 1,
+      "id": 1
+    }
+  ]
 }

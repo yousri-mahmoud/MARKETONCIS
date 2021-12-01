@@ -7,7 +7,7 @@ import { Formik, Form } from "formik";
 import * as yup from "yup";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router";
-
+import { CloudinaryContext, Image, Cloudinary } from "cloudinary-react";
 function Sell() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -38,6 +38,7 @@ function Sell() {
     dispatch(postNewDevice(values, imageURL));
     navigate("/market/buy");
   };
+
   // window.location.replace("http://localhost:3000/market/buy");
   const validationSchema = yup.object({
     deviceName: yup.string().required("Device Name field is required"),
@@ -53,10 +54,18 @@ function Sell() {
     //   .email("Please enter a valid email address")
     //   .required("Email field is required"),
   });
-  const handleImage = (e) => {
-    // console.log(e.target.files[0]);
-    let imageUrl = URL.createObjectURL(e.target.files[0]);
-    setImageURL(imageUrl);
+  const handleImage = async (e) => {
+    let imageData = new FormData();
+    let url = "https://api.Cloudinary.com/v1_1/djup5x8bq/image/upload";
+    imageData.append("file", e.target.files[0]);
+    imageData.append("upload_preset", "rt0s8dsk");
+    const options = { method: "post", body: imageData };
+    const resp = await fetch(url, options)
+      .then((res) => res.json())
+      .then((data) => setImageURL(data.url));
+    // let imageUrl = URL.createObjectURL(e.target.files[0]);
+    // console.log(imageUrl);
+    // setImageURL(imageUrl);
   };
 
   return (

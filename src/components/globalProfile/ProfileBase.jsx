@@ -23,7 +23,7 @@ const ProfileBase = () => {
     const response = await fetch(`http://localhost:3001/bio`);
     const data = await response.json();
     const findBio = data.find((bio) => bio.userId == id);
-    setText(findBio.textBio);
+    setText(findBio?.textBio);
   };
 
   useEffect(() => {

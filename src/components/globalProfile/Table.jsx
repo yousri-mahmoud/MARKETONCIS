@@ -28,7 +28,7 @@ const TableComponents = ({ trColor, products }) => {
                   <td>
                     <Link className="noneHover" to={`/market/buy/${item.id}`}>
                       <img
-                        src={staticImageUrl}
+                        src={item.imageUrl}
                         className="table__body__img"
                         alt=""
                       />

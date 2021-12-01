@@ -65,8 +65,8 @@ export default function PostDetails() {
   };
   console.log(comments);
   return (
-    <div>
-      <div className="shadow w-50 ms-3 mt-3 p-3">
+    <div className="container">
+      <div className="shadow w-75 ms-3 mt-3 p-3">
         <p>
           By <Link to={`/globalProfile/${userId}`}>{postAuthor} </Link>
         </p>
@@ -76,7 +76,7 @@ export default function PostDetails() {
       <p className="fw-bold ms-3 mt-1">Comments</p>
       <div>
         {comments.map((comment) => (
-          <div className="shadow w-25 ms-3 p-3">
+          <div className="shadow w-50 ms-3 p-3">
             <p className="m-0 p-0 fw-bold fit-content">
               <Link to={`/globalProfile/${comment.commentAuthorId}`}>
                 {comment.author}
@@ -87,7 +87,7 @@ export default function PostDetails() {
           </div>
         ))}
       </div>
-      <div className="d-flex flex-column w-25 align-items-end ms-3 mb-3">
+      <div className="d-flex flex-column w-50 align-items-end ms-3 mb-3">
         <textarea
           className="w-100 mt-3"
           placeholder="Add Comment"
