@@ -3,10 +3,14 @@ import img from "../../assets/image/user.jpg";
 import { NavLink, Outlet } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { FaEdit } from "react-icons/fa";
-
+import man from "../../assets/image/man.jpg";
+import woman from "../../assets/image/woman.jpg";
 const ProfileBase = () => {
-  const dispatch = useDispatch();
   const user = JSON.parse(localStorage.getItem("user"));
+  let avatar = "";
+  if (user.gender === "male") avatar = man;
+  if (user.gender === "female") avatar = woman;
+
   const [userBio, setUserBio] = useState("");
   const [text, setText] = useState("");
   const [isEditing, setIsEditing] = useState(false);
@@ -70,7 +74,7 @@ const ProfileBase = () => {
           <figure className="text-center mt-5 mb-2">
             <img
               className="user__content__sections__img rounded-circle"
-              src={img}
+              src={avatar}
               alt="user"
             />
             <figcaption>
@@ -150,7 +154,7 @@ const ProfileBase = () => {
             </div>
             <div className="user__content__biography__box__location">
               <h3>LOCATION</h3>
-              <p>Egypt, Suez</p>
+              <p>{user.address}</p>
             </div>
           </div>
         </div>

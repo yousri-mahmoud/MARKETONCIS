@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import BlogCard from "./BlogCard";
-
-const BlogActivity = () => {
-  const user = JSON.parse(localStorage.getItem("user"));
+import { useParams } from "react-router-dom";
+const GlobalBlogActivity = () => {
+  const { id } = useParams();
   const [posts, setPosts] = useState([]);
   const getPosts = async () => {
-    const res = await fetch(`http://localhost:3001/posts?userId=${user.id}`);
+    const res = await fetch(`http://localhost:3001/posts?userId=${id}`);
     const data = await res.json();
     setPosts(data);
   };
@@ -26,7 +26,7 @@ const BlogActivity = () => {
               key={item.id}
               question={item.title}
               description={item.desc}
-              postedBy={`${user.firstName} ${user.lastName}`}
+              postedBy={item.name}
               id={item.id}
             />
           );
@@ -36,4 +36,4 @@ const BlogActivity = () => {
   );
 };
 
-export default BlogActivity;
+export default GlobalBlogActivity;

@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { PostInfo } from "../../redux/actions/PostAction";
 import PostsList from "./PostsList";
 function SocialMedia() {
+  const user = JSON.parse(localStorage.getItem("user"));
   const [show, setShow] = useState(false);
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
@@ -22,7 +23,9 @@ function SocialMedia() {
     setUserId(JSON.parse(nme).id);
   }, []);
   const handlePost = (e) => {
+
     dispatch(PostInfo({ title, desc, name, userId }));
+
 
     setShow(false);
   };

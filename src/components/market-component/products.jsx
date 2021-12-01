@@ -190,8 +190,12 @@ function Products() {
                 </Card.Body>
                 <Card.Footer>
                   <small className="text-muted">
-                    posted by :
-                    <Link to={`/profile/${item.userId}`}>{item.userName}</Link>
+
+                    posted by :{" "}
+                    <Link to={`/globalProfile/${item.userId}`}>
+                      {item.userName}
+                    </Link>
+
                   </small>
                 </Card.Footer>
               </Card>

@@ -103,7 +103,9 @@ function SingleProduct() {
             <p>{device.deviceDetail.description}</p>
             <small className="text-muted">
               posted by :
-              <Link to={`/profile/${device.userId}`}>{device.userName}</Link>
+              <Link to={`/globalProfile/${device.userId}`}>
+                {device.userName}
+              </Link>
             </small>
             <small className="text-muted">
               place : {device.deviceDetail.devicePlace}
