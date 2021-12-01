@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { CommentInfo } from "./../../redux/actions/commentAction";
 
@@ -11,11 +11,13 @@ export default function PostDetails() {
   const dispatch = useDispatch();
   const [comment, setComment] = useState("");
   const [comments, setComments] = useState([]);
-  const { title, desc } = item;
+  const [commentAuthorId, setCommentAuthorId] = useState("");
+  const { title, desc, userId } = item;
+  let postAuthor = item.name;
   useEffect(() => {
     let nme = localStorage.getItem("user");
-    nme = JSON.parse(nme).firstName;
-    setName(nme);
+    setCommentAuthorId(JSON.parse(nme).id);
+    setName(JSON.parse(nme).firstName);
   }, []);
   useEffect(() => {
     fetchComment();
@@ -52,28 +54,49 @@ export default function PostDetails() {
       .then((data) => setItem(data));
   };
   const handleComment = () => {
-    dispatch(CommentInfo({ postId: id, author: name, comment: comment }));
+    dispatch(
+      CommentInfo({
+        postId: id,
+        author: name,
+        comment: comment,
+        commentAuthorId,
+      })
+    );
   };
   console.log(comments);
   return (
-    <div className="">
-      <h1 className="row m-0 ms-4 titleColor">{title}</h1>
-      <p className="row m-0 ms-4 fs-3">{desc}</p>
+    <div>
+      <div className="shadow w-50 ms-3 mt-3 p-3">
+        <p>
+          By <Link to={`/globalProfile/${userId}`}>{postAuthor} </Link>
+        </p>
+        <h1 className="row m-0 ms-4 titleColor ">{title}</h1>
+        <p className="row m-0 ms-4 fs-3 mt-4">{desc}</p>
+      </div>
+      <p className="fw-bold ms-3 mt-1">Comments</p>
       <div>
         {comments.map((comment) => (
-          <>
-            <p>{comment.author}</p>
-            <p>{comment.comment}</p>
-          </>
+          <div className="shadow w-25 ms-3 p-3">
+            <p className="m-0 p-0 fw-bold fit-content">
+              <Link to={`/globalProfile/${comment.commentAuthorId}`}>
+                {comment.author}
+              </Link>
+            </p>
+
+            <p className="m-0 p-0">{comment.comment}</p>
+          </div>
         ))}
       </div>
-      <div>
+      <div className="d-flex flex-column w-25 align-items-end ms-3 mb-3">
         <textarea
-          placeholder="add comment"
+          className="w-100 mt-3"
+          placeholder="Add Comment"
           value={comment}
           onChange={(e) => setComment(e.target.value)}
         />
-        <button onClick={handleComment}>Comment</button>
+        <button className="w-25 mt-1 btn-primary" onClick={handleComment}>
+          Comment
+        </button>
       </div>
     </div>
   );

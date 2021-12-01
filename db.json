@@ -1,81 +1,9 @@
 {
-  "users": [
-    {
-      "email": "yousrymahmoud97@gmail.com",
-      "password": "$2a$10$Os8kA/S9.QQL/qMA8Ka4w.XuyPjEu.f4/no84k5LW.KTeFKOyOvTq",
-      "firstName": "Yousri ",
-      "lastName": "mahmoud",
-      "gender": "male",
-      "address": "Dala Helwan street , el fayoum",
-      "confirmPassword": "protected",
-      "id": 1
-    },
-    {
-      "email": "shima@yahoo.com",
-      "password": "$2a$10$WpKtvf8qpJdO.kLnwrUbZevE54gIHc3Z/azMQtcEW3aSFMWPbGc1G",
-      "firstName": "shimaa",
-      "lastName": "ggggg",
-      "gender": "female",
-      "address": "Dala Helwan street , el fayoum",
-      "confirmPassword": "protected",
-      "id": 2
-    }
-  ],
-  "bio": [
-    {
-      "textBio": "hhhhhhhhhhhh",
-      "userId": 1,
-      "id": 1
-    },
-    {
-      "textBio": "shimaa bio",
-      "userId": 2,
-      "id": 2
-    }
-  ],
-  "selling-posts": [
-    {
-      "deviceDetail": {
-        "deviceName": "i phone x",
-        "deviceType": "mobile",
-        "description": "blalbllblallblbalblblalblblbalballalb",
-        "images": "C:\\fakepath\\one.PNG",
-        "devicePrice": 4000,
-        "devicePlace": "fayoum",
-        "name": "yousri mahmoud",
-        "phone": "01012146732",
-        "email": "yousrymahmoud97@gmail.com"
-      },
-      "userId": 1,
-      "userName": " Yousri mahmoud osman",
-      "id": 2
-    },
-    {
-      "deviceDetail": {
-        "deviceName": "hamad",
-        "deviceType": "mobile",
-        "description": "fddddddd",
-        "images": "C:\\fakepath\\Capture.PNG",
-        "devicePrice": 5000,
-        "devicePlace": "helwan",
-        "name": "Yousri mahmoud mohamed osman",
-        "phone": "01012146732",
-        "email": "yousrymahmoud97@gmail.com"
-      },
-      "userId": 1,
-      "userName": " Yousri  mahmoud",
-      "id": 3
-    }
-  ],
-  "posts": [
-    {
-      "title": "buy a new laptop",
-      "desc": "i want anew laptop for my work",
-      "name": "Yousri ",
-      "userId": 1,
-      "id": 1,
-      "countComment": 0
-    }
-  ],
+  "users": [],
+  "bio": [],
+  "selling-posts": [],
+  "posts": [],
+  "whishList": [],
   "comments": []
+
 }
