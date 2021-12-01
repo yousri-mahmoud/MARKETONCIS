@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 export default function PostsList(props) {
-  const { title, desc, id, name } = props.post;
+  const { title, desc, id, name, userId } = props.post;
   const [count, setCount] = useState(0);
 
   useEffect(() => {
@@ -23,7 +23,10 @@ export default function PostsList(props) {
         <hr />
         <div className="d-flex justify-content-around">
           <p>
-            Posted By <span className="text-primary">{name}</span>
+            Posted By{" "}
+            <Link to={`/globalProfile/${userId}`} className="text-primary">
+              {name}
+            </Link>
           </p>
           <p>Two hours ago </p>
           <p>{count} Comment</p>

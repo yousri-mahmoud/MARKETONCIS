@@ -9,3 +9,4 @@ export const SELLINGDEVICE = "SELLINGDEVICE";
 export const POSTTOPIC = "POSTTOPIC";
 export const POSTCOMMENT = "POSTCOMMENT";
 
+export const ADDWHISH = "ADDWHISH";

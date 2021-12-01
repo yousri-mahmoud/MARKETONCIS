@@ -15,13 +15,14 @@ function SocialMedia() {
   const dispatch = useDispatch();
   let countComments = [];
   const [name, setName] = useState("");
+  const [userId, setUserId] = useState("");
   useEffect(() => {
     let nme = localStorage.getItem("user");
-    nme = JSON.parse(nme).firstName;
-    setName(nme);
+    setName(JSON.parse(nme).firstName);
+    setUserId(JSON.parse(nme).id);
   }, []);
   const handlePost = (e) => {
-    dispatch(PostInfo({ title, desc, name }));
+    dispatch(PostInfo({ title, desc, name, userId }));
 
     setShow(false);
   };
