@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from "react";
-
+import { useParams } from "react-router-dom";
 import TableComponents from "./Table";
 
-const ShopHistory = () => {
-  const user = JSON.parse(localStorage.getItem("user"));
+const GlobalShopHistory = () => {
+  const { id } = useParams();
   const [products, setProducts] = useState([]);
   const getProducts = async () => {
-    const res = await fetch(
-      `http://localhost:3001/selling-posts?userId=${user.id}`
-    );
+    const res = await fetch(`http://localhost:3001/selling-posts?userId=${id}`);
     const data = await res.json();
     setProducts(data);
   };
@@ -30,4 +28,4 @@ const ShopHistory = () => {
   );
 };
 
-export default ShopHistory;
+export default GlobalShopHistory;

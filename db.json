@@ -2,50 +2,38 @@
   "users": [
     {
       "email": "yousrymahmoud97@gmail.com",
-      "password": "$2a$10$r4dNNINO2jzQVgmQlIBv4.Epfwpj6ruNA7SJEnXS6Q1TaLVedc20.",
-      "firstName": "Yousri mahmoud",
-      "lastName": "osman",
-      "confirmPassword": "12345678",
+      "password": "$2a$10$Os8kA/S9.QQL/qMA8Ka4w.XuyPjEu.f4/no84k5LW.KTeFKOyOvTq",
+      "firstName": "Yousri ",
+      "lastName": "mahmoud",
+      "gender": "male",
+      "address": "Dala Helwan street , el fayoum",
+      "confirmPassword": "protected",
       "id": 1
     },
     {
-      "email": "yousrymahmoud@yahoo.com",
-      "password": "$2a$10$fxfn.Kqug4IPGHngcWeCdO5Ul8BPE/76tgAnyko7g9jwbEeYp/4Z.",
-      "firstName": "ahmed",
-      "lastName": "mohamed",
-      "confirmPassword": "12345678",
+      "email": "shima@yahoo.com",
+      "password": "$2a$10$WpKtvf8qpJdO.kLnwrUbZevE54gIHc3Z/azMQtcEW3aSFMWPbGc1G",
+      "firstName": "shimaa",
+      "lastName": "ggggg",
+      "gender": "female",
+      "address": "Dala Helwan street , el fayoum",
+      "confirmPassword": "protected",
       "id": 2
     }
   ],
   "bio": [
     {
-      "textBio": "edited",
+      "textBio": "hhhhhhhhhhhh",
       "userId": 1,
       "id": 1
     },
     {
-      "textBio": "edited five times",
+      "textBio": "shimaa bio",
       "userId": 2,
       "id": 2
     }
   ],
   "selling-posts": [
-    {
-      "deviceDetail": {
-        "deviceName": "hp latuid",
-        "deviceType": "laptop",
-        "description": "blblbllbblallalallalallall",
-        "images": "C:\\fakepath\\above-adventure-aerial-air.jpg",
-        "devicePrice": 5000,
-        "devicePlace": "cario",
-        "name": "yousri mahmoud",
-        "phone": "01012146732",
-        "email": "yousrymahmoud97@gmail.com"
-      },
-      "userId": 2,
-      "userName": " ahmed mohamed",
-      "id": 1
-    },
     {
       "deviceDetail": {
         "deviceName": "i phone x",
@@ -62,29 +50,32 @@
       "userName": " Yousri mahmoud osman",
       "id": 2
     },
+    {
+      "deviceDetail": {
+        "deviceName": "hamad",
+        "deviceType": "mobile",
+        "description": "fddddddd",
+        "images": "C:\\fakepath\\Capture.PNG",
+        "devicePrice": 5000,
+        "devicePlace": "helwan",
+        "name": "Yousri mahmoud mohamed osman",
+        "phone": "01012146732",
+        "email": "yousrymahmoud97@gmail.com"
+      },
+      "userId": 1,
+      "userName": " Yousri  mahmoud",
+      "id": 3
+    }
   ],
   "posts": [
     {
-      "title": "hamad ",
-      "desc": "i wana a lap top",
-      "name": "Yousri mahmoud",
+      "title": "buy a new laptop",
+      "desc": "i want anew laptop for my work",
+      "name": "Yousri ",
+      "userId": 1,
       "id": 1,
-      "countComment": 1
-    },
-    {
-      "title": "way",
-      "desc": "ok",
-      "name": "saleh",
-      "id": 3,
       "countComment": 0
     }
   ],
-  "comments": [
-    {
-      "postId": "1",
-      "author": "Yousri mahmoud",
-      "comment": "one comment",
-      "id": 1
-    }
-  ]
+  "comments": []
 }

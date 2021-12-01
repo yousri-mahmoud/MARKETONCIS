@@ -122,16 +122,8 @@ a {
 }
 
 .logo {
-  text-decoration: none;
-  color: #337aaa;
-  font-size: 1.25rem;
-  font-weight: 700;
-  letter-spacing: 0.2rem;
-  margin-right: 0.5rem;
-}
-
-.logo:hover {
-  color: #e5e6e6;
+  width: 60px;
+  margin-right: 30px;
 }
 
 .navItem {
@@ -158,6 +150,7 @@ svg {
 
 .footer {
   height: 100px;
+  margin-top: 100px;
 }
 
 .form {
@@ -499,6 +492,8 @@ ul {
 
 .user__content__sections__img {
   width: 70%;
+  height: 250px;
+  margin-bottom: 20px;
 }
 
 @media screen and (max-width: 900px) {

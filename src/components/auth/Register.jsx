@@ -1,4 +1,5 @@
 import FormikField from "../../shared/formik/FormikField";
+import SelectFormikFiels from "../../shared/formik/SelectFormikFiels";
 import { Formik, Form } from "formik";
 import { NavLink } from "react-router-dom";
 import * as yup from "yup";
@@ -11,22 +12,37 @@ const RegisterComponent = () => {
   const state = useSelector((state) => state.auth);
   if (state.isLogIn) navigate("/profile");
   const dispatch = useDispatch();
+  const dropDownOptions = [
+    {
+      key: "select gender",
+      value: "",
+    },
+    { key: "male", value: "male" },
+    { key: "female", value: "female" },
+  ];
   const initialValues = {
     firstName: "",
     lastName: "",
+    gender: "",
+    address: "",
     email: "",
     password: "",
     confirmPassword: "",
   };
 
   const onSubmit = (values) => {
-    dispatch(userRegister(values));
+    dispatch(userRegister({ ...values, confirmPassword: "protected" }));
   };
   const validationSchema = yup.object({
     firstName: yup.string().required("first name is required "),
     lastName: yup.string().required("first name is required "),
+    gender: yup.string().required("select gender is required "),
     address: yup.string().required("Address name is required "),
     password: yup.string().required("password field is required "),
+    confirmPassword: yup
+      .string()
+      .required()
+      .oneOf([yup.ref("password"), null], "password must match"),
     email: yup
       .string()
       .email("Please enter a valid email address")
@@ -60,7 +76,7 @@ const RegisterComponent = () => {
 
         <div className="form__content__logo col-lg-3 text-center">
           <div className="form__content__logo__content">
-               <h2>MARKETONCIS</h2>
+            <h2>MARKETONCIS</h2>
           </div>
         </div>
         <div className=" form__content__fields col-lg-5">
@@ -74,20 +90,30 @@ const RegisterComponent = () => {
             {(forimk) => {
               return (
                 <Form>
-                  <FormikField label="firstName" name="firstName" type="text" />
-                  <FormikField label="lastName" name="lastName" type="text" />
                   <FormikField
-                    label="Address"
-                    name="address"
+                    label="First Name"
+                    name="firstName"
                     type="text"
                   />
+                  <FormikField label="Last Name" name="lastName" type="text" />
+                  <SelectFormikFiels
+                    label="Gender"
+                    name="gender"
+                    options={dropDownOptions}
+                  />
+                  <FormikField label="Address" name="address" type="text" />
                   <FormikField label="Email" name="email" type="email" />
                   <FormikField
-                    label="password"
+                    label="Password"
                     name="password"
                     type="password"
                   />
-              
+                  <FormikField
+                    label="Confirm Password"
+                    name="confirmPassword"
+                    type="password"
+                  />
+
                   <small className="text-danger error">{state.message}</small>
                   <button className="submit__form" type="submit">
                     Sign up

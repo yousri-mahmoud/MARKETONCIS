@@ -1,235 +1,206 @@
 ul {
-    list-style: none;
+  list-style: none;
 }
 
+.user {
+  width: 99%;
+  &__content {
+    &__sections {
+      display: flex;
+      border-right: 1px solid $c-gray-4;
+      flex-direction: column;
+      @media screen and (max-width: 900px) {
+      }
 
-
-.user  {
-    width: 99%;
-    &__content {
-        &__sections {
-            display: flex;
-            border-right: 1px solid $c-gray-4;
-            flex-direction: column;
-            @media screen and (max-width: 900px) {
-             
-              }
-    
-            &__img {
-                width: 70%;
-                @media screen and (max-width: 900px) {
-                    width: 30%;
-                }
-            }
-            .active {
-                color: $c-primary-light;
-                
-            }
-            .inactive {
-                color: gray;
-            }
-            ul {
-                position: relative;
-            }
-            li a {
-                text-decoration: none;
-                font-weight: bold;
-
-            }
-            li {
-                margin: 0.7rem 0;
-            }
-            li a span {
-                position: absolute;
-                left: 0;
-
-                @media screen and (max-width: 900px) {
-                    right: 0;
-                    left: unset;
-                  }
-            }
-           
+      &__img {
+        width: 100%;
+        height: 250px;
+        margin-bottom: 20px;
+        @media screen and (max-width: 900px) {
+          width: 30%;
         }
-        &__biography {
-            border-left: 1px solid $c-gray-4;
-            @media screen and (max-width: 900px) {
-                border-left: none;
-                border-bottom: 1px solid $c-gray-4;
-                padding-bottom: 2rem;
-              }
+      }
+      .active {
+        color: $c-primary-light;
+      }
+      .inactive {
+        color: gray;
+      }
+      ul {
+        position: relative;
+      }
+      li a {
+        text-decoration: none;
+        font-weight: bold;
+      }
+      li {
+        margin: 0.7rem 0;
+      }
+      li a span {
+        position: absolute;
+        left: 0;
 
-            &__box {
-                display: flex;
-                flex-direction: column;
-                @media screen and (max-width: 900px) {
-                    align-items: flex-start;
-                    flex-direction: row;
-                    justify-content: space-between;
-
-                  }
-                &__paragraph {
-                    @media screen and (max-width: 900px) {
-                            width: 80%;
-                            margin: 0 auto;
-                      }
-
-                }
-
-                &__location {
-                    @media screen and (max-width: 900px) {
-                        margin-top: 3rem;
-                    }
-                    p {
-                        color: $c-primary-light;
-                        font-weight: bold;
-                      
-                    }
-                 
-
-                    @media screen and (max-width: 900px) {
-                        margin-right: 3rem;
-                        h3 {
-                            font-size: 1.15rem;
-                        }
-                       
-                  }
-                }
-              
-            }
-         
+        @media screen and (max-width: 900px) {
+          right: 0;
+          left: unset;
         }
+      }
     }
+    &__biography {
+      border-left: 1px solid $c-gray-4;
+      @media screen and (max-width: 900px) {
+        border-left: none;
+        border-bottom: 1px solid $c-gray-4;
+        padding-bottom: 2rem;
+      }
+
+      &__box {
+        display: flex;
+        flex-direction: column;
+        @media screen and (max-width: 900px) {
+          align-items: flex-start;
+          flex-direction: row;
+          justify-content: space-between;
+        }
+        &__paragraph {
+          @media screen and (max-width: 900px) {
+            width: 80%;
+            margin: 0 auto;
+          }
+        }
+
+        &__location {
+          @media screen and (max-width: 900px) {
+            margin-top: 3rem;
+          }
+          p {
+            color: $c-primary-light;
+            font-weight: bold;
+          }
+
+          @media screen and (max-width: 900px) {
+            margin-right: 3rem;
+            h3 {
+              font-size: 1.15rem;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 .head__tr--primary {
-    background-color: $c-primary-dark;
-
+  background-color: $c-primary-dark;
 }
 .head__tr--secondary {
-    background-color: $c-secondary-dark;
-
+  background-color: $c-secondary-dark;
 }
 
 .shop {
-    header h2 {
-        color: black;
+  header h2 {
+    color: black;
+  }
+  &__purchases {
+    &__title {
+      background-color: $c-primary-dark;
+      color: #fff;
+      text-align: center;
     }
-    &__purchases {
-        &__title {
-            background-color: $c-primary-dark;
-            color: #fff;
-            text-align: center;
-        }
-    }
+  }
 
-    &__sales {
-        &__title {
-            background-color: $c-secondary-dark;
-            color: #fff;
-            text-align: center;
-        }
+  &__sales {
+    &__title {
+      background-color: $c-secondary-dark;
+      color: #fff;
+      text-align: center;
     }
+  }
 }
 
 .table {
-    &__head{
-        font-size: 1rem;
-        color: #fff;
+  &__head {
+    font-size: 1rem;
+    color: #fff;
+  }
+  &__body {
+    font-weight: bold;
+    &__img {
+      width: 30%;
+      @media screen and (max-width: 600px) {
+        width: 80%;
+      }
+    }
 
-       
+    &__tr:hover {
+      background-color: rgb(240, 240, 240);
     }
-    &__body {
-        font-weight: bold;
-        &__img {
-            width: 30%;
-            @media screen and (max-width: 600px) {
-                width: 80%;
-       }
-        }
-     
-        &__tr:hover {
-            background-color: rgb(240, 240, 240);
-        }
-    }
+  }
 }
 
 .whislist {
-    header h2 {
-        color: black;
-    }
-    &__content {
-        &__box {
-            border: 1px solid gainsboro;
-            border-radius: 20px;
-            &__info {
-                img {
-                    width:  70%;
-                    max-height: 10rem;
-                    margin: 0.5rem 0;
-                }
-
-                &__user {
-                    color: $c-primary;
-                }
-            }
-            &__price {
-                font-weight: bold;
-            }
+  header h2 {
+    color: black;
+  }
+  &__content {
+    &__box {
+      border: 1px solid gainsboro;
+      border-radius: 20px;
+      &__info {
+        img {
+          width: 70%;
+          max-height: 10rem;
+          margin: 0.5rem 0;
         }
+
+        &__user {
+          color: $c-primary;
+        }
+      }
+      &__price {
+        font-weight: bold;
+      }
     }
+  }
 }
 
 .activity {
-    header h2 {
-        color: black;
-    }
-   
-    &__content {
-        &__box {
-            box-shadow: grey 1px 2px 5px 1px;
-            padding: 1rem 2rem;
-            width: 100%;
-            
-            &__info {
-                &__votes {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                
-                  
-                }
-            }
-            &__footer {
-                color: grey;
-                font-weight: 600;
+  header h2 {
+    color: black;
+  }
 
-                @media screen and (max-width: 900px) {
-                    flex-wrap: wrap;
-                    
-               }
+  &__content {
+    &__box {
+      box-shadow: grey 1px 2px 5px 1px;
+      padding: 1rem 2rem;
+      width: 100%;
 
-                h5 span {
-                    color: $c-primary;
-                    font-size: 1.2rem;
-                    @media screen and (max-width: 900px) {
-                            font-size: 1rem;                        
-                   }
-                }
-                svg {
-                    font-size: 1rem;
-                 
-                }
-                
-            }
+      &__info {
+        &__votes {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
         }
-        
-      
-       
+      }
+      &__footer {
+        color: grey;
+        font-weight: 600;
+
+        @media screen and (max-width: 900px) {
+          flex-wrap: wrap;
+        }
+
+        h5 span {
+          color: $c-primary;
+          font-size: 1.2rem;
+          @media screen and (max-width: 900px) {
+            font-size: 1rem;
+          }
+        }
+        svg {
+          font-size: 1rem;
+        }
+      }
     }
-   
-    
+  }
 }
-
-
-
-
