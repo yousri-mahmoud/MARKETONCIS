@@ -88,7 +88,7 @@ const ProfileBase = () => {
                 className={({ isActive }) => (isActive ? "active" : "inactive")}
                 to="/profile"
               >
-                <span>|</span> Shop history{" "}
+                <span>|</span> Shop history
               </NavLink>
             </li>
             <li>

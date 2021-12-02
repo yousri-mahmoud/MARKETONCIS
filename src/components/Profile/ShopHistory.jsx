@@ -18,7 +18,7 @@ const ShopHistory = () => {
   return (
     <section className="shop container mt-4 ">
       <header>
-        <h2>Shop activity</h2>
+        <h2>Shop History</h2>
       </header>
       <div className="shop__purchases">
         <h3 className="mt-4 shop__purchases__title">Posted Products</h3>

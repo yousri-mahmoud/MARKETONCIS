@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
 :root {
-  font-family: "Poppins", sans-serif, "Franklin Gothic Medium", "Arial Narrow", Arial;
+  font-family: "Poppins", sans-serif, "Franklin Gothic Medium", "Arial Narrow", Arial;
   font-weight: 500;
 }
 
@@ -121,6 +121,27 @@ a {
   color: #000;
 }
 
+.about__content__about p {
+  font-size: 1.3rem;
+  color: #206956;
+}
+
+.about__content__team__box {
+  border: 1px solid #e5e6e6;
+  margin: 1rem;
+  width: 20.333%;
+  border-radius: 20px;
+}
+
+.about__content__team__box img {
+  border-radius: 20px;
+}
+
+.about__content__team__box__info__icon {
+  color: #0e76a8;
+  font-size: 2rem;
+}
+
 .logo {
   width: 60px;
   margin-right: 30px;
@@ -149,8 +170,16 @@ svg {
 }
 
 .footer {
-  height: 100px;
+  height: 70px;
   margin-top: 100px;
+}
+
+.footer h6 {
+  color: #fff;
+}
+
+.footer h6 span {
+  color: #337aaa;
 }
 
 .form {
@@ -163,6 +192,7 @@ svg {
   position: absolute;
   top: 50%;
   left: 50%;
+  height: 83%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
@@ -175,6 +205,7 @@ svg {
 
 .form__content {
   position: relative;
+  height: 100%;
 }
 
 .form__content__rouet ul li {

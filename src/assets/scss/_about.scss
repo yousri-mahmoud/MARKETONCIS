@@ -4,4 +4,32 @@
             color: #000;
         }
     }
+
+    &__content {
+        &__about {
+            p {
+                font-size: 1.3rem;
+                color: $c-secondary-dark;
+            }
+        }
+        &__team {
+
+            &__box {
+                border: 1px solid $c-gray-4;
+                margin: 1rem;
+                width: 20.333%;
+                border-radius: 20px;
+                img {
+                    border-radius: 20px;
+                }
+
+                &__info {
+                    &__icon {
+                        color: #0e76a8 ;
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+    }
 }
