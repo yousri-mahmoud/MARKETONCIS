@@ -3,6 +3,7 @@ import lap1 from "../../assets/image/lap1.jpg";
 import lap2 from "../../assets/image/lap2.jpg";
 import lap3 from "../../assets/image/lap3.jpg";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 const Whislist = () => {
   const whishes = useSelector((wish) => wish.whish);
   const [wList, setWList] = useState([]);
@@ -43,7 +44,11 @@ const Whislist = () => {
         <h2>My Wishlist</h2>
       </header>
       {wList.map((item, index) => (
-        <div key={index} className="whislist__content mt-4">
+        <Link
+          to={`/market/buy/${item.itemId}`}
+          key={index}
+          className="whislist__content mt-4"
+        >
           <div className="whislist__content__box  d-flex align-items-center justify-content-around">
             <div className="whislist__content__box__info d-flex align-items-center">
               <figure>
@@ -53,7 +58,9 @@ const Whislist = () => {
                 <h5>{item.deviceInfo.deviceName}</h5>
                 <h6 className="mt-4">Posted by</h6>
                 <h6 className="whislist__content__box__info__user">
-                  {item.userName}
+                  <Link to={`/globalProfile/${item.postedById}`}>
+                    {item.userName}
+                  </Link>
                 </h6>
               </div>
             </div>
@@ -68,7 +75,7 @@ const Whislist = () => {
               DELETE
             </button>
           </div>
-        </div>
+        </Link>
       ))}
     </section>
   );

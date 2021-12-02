@@ -45,21 +45,28 @@ function SingleProduct() {
   useEffect(() => {
     getWishes();
   }, [whishes]);
+  let user = JSON.parse(localStorage.getItem("user"));
   useEffect(() => {
+    console.log(list);
     let updatedList = list?.filter((whish) => {
-      return whish.userId === device.userId;
+      return whish.userId === user.id;
     });
     setWList(updatedList);
   }, [list]);
   useEffect(() => {
+    console.log(wList);
     let newItemsID = wList.map((item) => item.itemId);
     setItemsId(newItemsID);
   }, [wList]);
+  useEffect(() => {
+    console.log(itemsId);
+  }, [itemsId]);
   const handleWhish = async (item) => {
     dispatch(
       AddWhish({
         deviceInfo: item.deviceDetail,
         userId: item.userId,
+        imageUrl: item.imageUrl,
         itemId: item.id,
       })
     );
@@ -90,7 +97,7 @@ function SingleProduct() {
             />
           )}
           <div class="productImg">
-            <img src={staticImageUrl} alt="" />
+            <img src={device.imageUrl} alt="" />
           </div>
 
           <div class="details">
