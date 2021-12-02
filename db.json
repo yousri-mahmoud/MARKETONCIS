@@ -46,16 +46,34 @@
       "userId": 1,
       "userName": " Saif Alaa ElDin",
       "id": 1
+    },
+    {
+      "deviceDetail": {
+        "deviceName": "ps",
+        "deviceType": "laptop",
+        "description": "asodns",
+        "images": "",
+        "devicePrice": 12312,
+        "devicePlace": "alexandria",
+        "name": "",
+        "phone": "01093260600",
+        "email": ""
+      },
+      "email": "yousrymahmoud97@gmail.com",
+      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1638446471/ivtglpy4huautsmsymdl.jpg",
+      "userId": 2,
+      "userName": " yosry ahmed",
+      "id": 2
     }
   ],
   "posts": [
     {
-      "title": "gama3a ana msh la2y laptop",
-      "desc": "a7eeeeeeh",
+      "title": "hahaha",
+      "desc": "heheheh",
       "name": "yosry",
       "userId": 2,
-      "id": 1,
-      "countComment": 1
+      "postDate": "2021 11 2 17 20",
+      "id": 1
     }
   ],
   "whishList": [
@@ -71,20 +89,13 @@
         "phone": "01093260600",
         "email": ""
       },
-      "userId": 1,
+      "userId": 2,
+      "postedById": 1,
       "userName": " Saif Alaa ElDin",
       "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1638389548/vhllqj6iqzewrll5na4c.png",
       "itemId": 1,
       "id": 1
     }
   ],
-  "comments": [
-    {
-      "postId": "1",
-      "author": "Saif",
-      "comment": "asd",
-      "commentAuthorId": 1,
-      "id": 1
-    }
-  ]
+  "comments": []
 }

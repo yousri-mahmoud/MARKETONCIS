@@ -73,6 +73,7 @@ function Products() {
       AddWhish({
         deviceInfo: item.deviceDetail,
         userId: userId,
+        postedById: item.userId,
         userName: item.userName,
         imageUrl: item.imageUrl,
         itemId: item.id,
@@ -81,6 +82,7 @@ function Products() {
   };
 
   useEffect(() => {
+    console.log(list);
     let updatedList = list?.filter((whish) => {
       return whish.userId === userId;
     });
@@ -190,12 +192,10 @@ function Products() {
                 </Card.Body>
                 <Card.Footer>
                   <small className="text-muted">
-
                     posted by :{" "}
                     <Link to={`/globalProfile/${item.userId}`}>
                       {item.userName}
                     </Link>
-
                   </small>
                 </Card.Footer>
               </Card>

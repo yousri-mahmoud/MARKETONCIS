@@ -10,6 +10,7 @@ function SocialMedia() {
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
   const [posts, setPosts] = useState([]);
+  const [searchText, setSearchText] = useState("");
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const post = useSelector((state) => state.post);
@@ -23,12 +24,37 @@ function SocialMedia() {
     setUserId(JSON.parse(nme).id);
   }, []);
   const handlePost = (e) => {
-    dispatch(PostInfo({ title, desc, name, userId }));
+    let date = new Date();
+    console.log();
+    dispatch(
+      PostInfo({
+        title,
+        desc,
+        name,
+        userId,
+        postDate:
+          date.getFullYear() +
+          " " +
+          date.getMonth() +
+          " " +
+          date.getDate() +
+          " " +
+          date.getHours() +
+          " " +
+          date.getMinutes(),
+      })
+    );
 
     setShow(false);
   };
   useEffect(() => {
     fetchPosts();
+    let date = new Date();
+    const year = date.getFullYear();
+    const month = date.getMonth();
+    const day = date.getDate();
+    const hour = date.getHours();
+    const minutes = date.getMinutes();
   }, [post]);
   const fetchPosts = async () => {
     const response = await fetch("http://localhost:3001/posts")
@@ -46,11 +72,23 @@ function SocialMedia() {
       })
       .catch((err) => console.log(err));
   };
-  console.log(posts);
+  useEffect(() => {
+    if (searchText.length > 0) handleSearch();
+    else fetchPosts();
+  }, [searchText]);
+  const handleSearch = async () => {
+    // e.preventDefault();
+    // alert(searchText);
+    if (searchText.length > 0) {
+      const resp = await fetch(`http://localhost:3001/posts?q=${searchText}`)
+        .then((res) => res.json())
+        .then((newPosts) => setPosts(newPosts));
+    }
+  };
   return (
     <div className="d-flex">
-      <div className="side d-flex align-items-center justify-content-center">
-        <h2 className="text-white">Marketonics</h2>
+      <div className="side d-flex align-items-center justify-content-center ">
+        <h2 className=" fs-5 text-white">M A R K E T O N I C S</h2>
       </div>
       <div className="box w-100 mt-3">
         <div className="d-flex justify-content-center">
@@ -58,9 +96,17 @@ function SocialMedia() {
             <input
               className="search_width"
               type="text"
+              value={searchText}
+              onChange={(e) => setSearchText(e.target.value)}
               placeholder="Search for topics"
             />
-            <button className="blog_button">Search</button>
+            <button
+              type="button"
+              onClick={handleSearch}
+              className="blog_button"
+            >
+              Search
+            </button>
           </div>
           <Button variant="primary" onClick={handleShow}>
             Add new Topic
