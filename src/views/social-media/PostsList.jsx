@@ -14,21 +14,35 @@ export default function PostsList(props) {
     let pstDate = postDate.split(" ");
     if (year > pstDate[0])
       setPostTime(
-        year - pstDate[0] == 1 ? "1 year ago" : year - pstDate[0] + " years ago"
+        year - pstDate[0] == 1
+          ? month < pstDate[1]
+            ? month + 12 - pstDate[1] + " months ago"
+            : "1 year ago"
+          : year - pstDate[0] + " years ago"
       );
     else if (month > pstDate[1])
       setPostTime(
         month - pstDate[1] == 1
-          ? "1 month ago"
+          ? day < pstDate[2]
+            ? day + 30 - pstDate[2] + " days ago"
+            : "1 month ago"
           : month - pstDate[1] + " months ago"
       );
     else if (day > pstDate[2])
       setPostTime(
-        day - pstDate[2] == 1 ? "1 day ago" : day - pstDate[2] + " days ago"
+        day - pstDate[2] == 1
+          ? hour < pstDate[3]
+            ? hour + 24 - pstDate[3] + " hours ago"
+            : "1 day ago"
+          : day - pstDate[2] + " days ago"
       );
     else if (hour > pstDate[3])
       setPostTime(
-        hour - pstDate[3] == 1 ? "1 hour ago" : hour - pstDate[3] + " hours ago"
+        hour - pstDate[3] == 1
+          ? minutes < pstDate[4]
+            ? minutes + 60 - pstDate[4] + " minutes ago"
+            : "1 hour ago"
+          : hour - pstDate[3] + " hours ago"
       );
     else if (minutes > pstDate[4])
       setPostTime(
