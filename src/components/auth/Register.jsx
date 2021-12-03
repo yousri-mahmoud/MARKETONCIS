@@ -35,7 +35,7 @@ const RegisterComponent = () => {
   };
   const validationSchema = yup.object({
     firstName: yup.string().required("first name is required "),
-    lastName: yup.string().required("first name is required "),
+    lastName: yup.string().required("last name is required "),
     gender: yup.string().required("select gender is required "),
     address: yup.string().required("Address name is required "),
     password: yup.string().required("password field is required "),
@@ -90,19 +90,34 @@ const RegisterComponent = () => {
             {(forimk) => {
               return (
                 <Form>
+                  <div className="d-flex align-items-center">
+                    <div className="me-3">
                   <FormikField
                     label="First Name"
                     name="firstName"
                     type="text"
                   />
+                  </div>
+                  <div>
+
                   <FormikField label="Last Name" name="lastName" type="text" />
+                  </div>
+                  </div>
                   <SelectFormikFiels
                     label="Gender"
                     name="gender"
                     options={dropDownOptions}
                   />
-                  <FormikField label="Address" name="address" type="text" />
+                  <div className="d-flex align-items-center">
+
+                  <div className="me-3">
                   <FormikField label="Email" name="email" type="email" />
+
+                  </div>
+                  <div>
+                  <FormikField label="Address" name="address" type="text" />
+                  </div>
+                  </div>
                   <FormikField
                     label="Password"
                     name="password"

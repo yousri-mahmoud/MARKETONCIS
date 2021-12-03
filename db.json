@@ -19,6 +19,16 @@
       "address": "fayom",
       "confirmPassword": "protected",
       "id": 2
+    },
+    {
+      "email": "salehsax@gmail.com",
+      "password": "$2a$10$ZOyuGhBkSHELKq5MyBDCdu7bEQpq2ODrDsgvfYfkAaWyjLKKeiOga",
+      "firstName": "Saleh",
+      "lastName": "Farag",
+      "gender": "male",
+      "address": "egypt-suez",
+      "confirmPassword": "protected",
+      "id": 3
     }
   ],
   "bio": [
@@ -66,107 +76,7 @@
       "id": 2
     }
   ],
-  "posts": [
-    {
-      "title": "hahaha",
-      "desc": "heheheh",
-      "name": "yosry",
-      "userId": 2,
-      "postDate": "2021 11 2 17 20",
-      "id": 1,
-      "countComment": 1
-    },
-    {
-      "title": "o;ug",
-      "desc": "iyv",
-      "name": "yosry",
-      "userId": 2,
-      "postDate": "2021 11 2 17 51",
-      "id": 2,
-      "countComment": 1
-    },
-    {
-      "title": "feen",
-      "desc": "a7 7aga",
-      "name": "Saif",
-      "userId": 1,
-      "postDate": "2021 11 2 20 31",
-      "id": 3
-    }
-  ],
-  "whishList": [
-    {
-      "deviceInfo": {
-        "deviceName": "newDeviceImage",
-        "deviceType": "laptop",
-        "description": "asd",
-        "images": "",
-        "devicePrice": 1123,
-        "devicePlace": "alexandria",
-        "name": "",
-        "phone": "01093260600",
-        "email": ""
-      },
-      "userId": 2,
-      "postedById": 1,
-      "userName": " Saif Alaa ElDin",
-      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1638389548/vhllqj6iqzewrll5na4c.png",
-      "itemId": 1,
-      "id": 1
-    },
-    {
-      "deviceInfo": {
-        "deviceName": "newDeviceImage",
-        "deviceType": "laptop",
-        "description": "asd",
-        "images": "",
-        "devicePrice": 1123,
-        "devicePlace": "alexandria",
-        "name": "",
-        "phone": "01093260600",
-        "email": ""
-      },
-      "userId": 1,
-      "postedById": 1,
-      "userName": " Saif Alaa ElDin",
-      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1638389548/vhllqj6iqzewrll5na4c.png",
-      "itemId": 1,
-      "id": 2
-    },
-    {
-      "deviceInfo": {
-        "deviceName": "ps",
-        "deviceType": "laptop",
-        "description": "asodns",
-        "images": "",
-        "devicePrice": 12312,
-        "devicePlace": "alexandria",
-        "name": "",
-        "phone": "01093260600",
-        "email": ""
-      },
-      "userId": 1,
-      "postedById": 2,
-      "userName": " yosry ahmed",
-      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1638446471/ivtglpy4huautsmsymdl.jpg",
-      "itemId": 2,
-      "id": 3
-    }
-  ],
-  "comments": [
-    {
-      "postId": "2",
-      "author": "Saif",
-      "comment": "hiiii",
-      "commentAuthorId": 1,
-      "id": 1
-    },
-    {
-      "postId": "1",
-      "author": "Saif",
-      "comment": "sfsd",
-      "commentAuthorId": 1,
-      "id": 2
-    }
-  ]
+  "posts": [],
+  "whishList": [],
+  "comments": []
 }
