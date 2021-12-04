@@ -165,7 +165,15 @@ export default function PostsList(props) {
         <Modal.Body>
           {likes.map((like) => (
             <div>
-              <Link to={`/globalProfile/${like.likeUserId}`}>{like.name}</Link>
+              <Link
+                to={
+                  user === like.likeUserId
+                    ? "/profile"
+                    : `/globalProfile/${like.likeUserId}`
+                }
+              >
+                {like.name}
+              </Link>
               <hr />
             </div>
           ))}
@@ -205,7 +213,10 @@ export default function PostsList(props) {
         <div className="d-flex justify-content-around">
           <p>
             Posted By{" "}
-            <Link to={`/globalProfile/${userId}`} className="text-primary">
+            <Link
+              to={user === userId ? "/profile" : `/globalProfile/${userId}`}
+              className="text-primary"
+            >
               {name}
             </Link>
           </p>

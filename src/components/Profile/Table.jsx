@@ -1,8 +1,6 @@
 import { Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
 const TableComponents = ({ trColor, products }) => {
-  const staticImageUrl =
-    'https://www.slashgear.com/wp-content/uploads/2018/02/microsoft-surface-laptop-review-0-980x620.jpg"';
   return (
     <div>
       <Table className="table" bordered hover>
