@@ -49,12 +49,6 @@ function SocialMedia() {
   };
   useEffect(() => {
     fetchPosts();
-    let date = new Date();
-    const year = date.getFullYear();
-    const month = date.getMonth();
-    const day = date.getDate();
-    const hour = date.getHours();
-    const minutes = date.getMinutes();
   }, [post]);
   const fetchPosts = async () => {
     const response = await fetch("http://localhost:3001/posts")
@@ -153,7 +147,12 @@ function SocialMedia() {
             <div className="w-50">
               {posts.length > 0 ? (
                 posts.map((post, id) => (
-                  <PostsList key={id} post={post} count={countComments} />
+                  <PostsList
+                    key={id}
+                    post={post}
+                    count={countComments}
+                    toparent={fetchPosts}
+                  />
                 ))
               ) : (
                 <h2>No Posts yet</h2>

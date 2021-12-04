@@ -29,7 +29,8 @@ const Whislist = () => {
       });
     // console.log(wList);
   };
-  const handleDelete = async (item) => {
+  const handleDelete = async (e, item) => {
+    e.preventDefault();
     console.log(item);
     // let deletedId = wList.filter((it) => it.itemId === item.id);
     const response = await fetch(`http://localhost:3001/whishList/${item.id}`, {
@@ -69,7 +70,7 @@ const Whislist = () => {
               {item.deviceInfo.devicePrice}
             </p>
             <button
-              onClick={() => handleDelete(item)}
+              onClick={(e) => handleDelete(e, item)}
               className="btn btn-danger"
             >
               DELETE
