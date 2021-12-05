@@ -9,11 +9,31 @@
       "address": "Essawy, Miami",
       "confirmPassword": "protected",
       "id": 1,
-      "profileImg": "http://res.cloudinary.com/djup5x8bq/image/upload/v1638693782/b2j3hksdtiq1gw9bzcsk.png"
+      "profileImg": "http://res.cloudinary.com/djup5x8bq/image/upload/v1638695233/mhmqwjbiy54diust1nmp.jpg"
     }
   ],
   "bio": [],
-  "selling-posts": [],
+  "selling-posts": [
+    {
+      "deviceDetail": {
+        "deviceName": "xiaomi redmi note 9 pro",
+        "deviceType": "mobile",
+        "description": "cg",
+        "images": "",
+        "devicePrice": 4345,
+        "devicePlace": "alexandria",
+        "name": "",
+        "phone": "54546351553",
+        "email": ""
+      },
+      "email": "Saifalaa95@gmail.com",
+      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1638694280/kg5qvzpcatoge5yu7ype.jpg",
+      "userId": 1,
+      "userName": " Saif Alaa ElDin",
+      "sold": false,
+      "id": 1
+    }
+  ],
   "posts": [
     {
       "title": "jh",
@@ -22,9 +42,26 @@
       "userId": 1,
       "postDate": "2021 11 5 10 46",
       "id": 1
+    },
+    {
+      "title": "asd",
+      "desc": "asd",
+      "name": "Saif",
+      "userId": 1,
+      "postDate": "2021 11 5 11 20",
+      "id": 2,
+      "countComment": 1
     }
   ],
   "likes": [],
   "whishList": [],
-  "comments": []
+  "comments": [
+    {
+      "postId": "2",
+      "author": "Saif",
+      "comment": "asd",
+      "commentAuthorId": 1,
+      "id": 1
+    }
+  ]
 }

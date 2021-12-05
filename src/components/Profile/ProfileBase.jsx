@@ -16,9 +16,6 @@ const ProfileBase = () => {
   const [text, setText] = useState("");
   const [isEditing, setIsEditing] = useState(false);
 
- 
-
-
   const [imageURL, setImageURL] = useState("");
   const bio = useRef(null);
   let id = JSON.parse(localStorage.getItem("user")).id;
@@ -85,7 +82,8 @@ const ProfileBase = () => {
     const options = { method: "post", body: imageData };
     const resp = await fetch(url, options)
       .then((res) => res.json())
-      .then((data) => setImageURL(data.url));
+      .then((data) => setImageURL(data.url))
+      .catch((err) => alert("Please check your internet connection"));
   };
   useEffect(() => {
     fetchUser();

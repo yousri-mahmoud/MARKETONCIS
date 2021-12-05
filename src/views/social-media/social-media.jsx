@@ -137,7 +137,11 @@ function SocialMedia() {
                 <Button variant="secondary" onClick={handleClose}>
                   Close
                 </Button>
-                <Button variant="primary" onClick={handlePost}>
+                <Button
+                  variant="primary"
+                  disabled={!title || !desc ? true : false}
+                  onClick={handlePost}
+                >
                   Save Changes
                 </Button>
               </Modal.Footer>

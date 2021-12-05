@@ -3,6 +3,8 @@ import { Link, useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { CommentInfo } from "./../../redux/actions/commentAction";
 import Loading from "../../shared/Loading";
+import { Button } from "react-bootstrap";
+
 export default function PostDetails() {
   const id = useParams().id;
   const [isPostLoading, setIsPostLoading] = useState(true);
@@ -127,9 +129,13 @@ export default function PostDetails() {
           value={comment}
           onChange={(e) => setComment(e.target.value)}
         />
-        <button className="w-25 mt-1 btn-primary" onClick={handleComment}>
+        <Button
+          disabled={!comment ? true : false}
+          className="w-25 mt-1 btn-primary"
+          onClick={handleComment}
+        >
           Comment
-        </button>
+        </Button>
       </div>
     </div>
   );
