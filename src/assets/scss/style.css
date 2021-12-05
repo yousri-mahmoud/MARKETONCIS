@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
 :root {
-  font-family: "Poppins", sans-serif, "Franklin Gothic Medium", "Arial Narrow", Arial;
+  font-family: "Poppins", sans-serif, "Franklin Gothic Medium", "Arial Narrow", Arial;
   font-weight: 500;
 }
 
@@ -696,6 +696,10 @@ ul {
   border-left: 1px solid #e5e6e6;
 }
 
+.user__content__biography h3 {
+  color: #337aaa;
+}
+
 @media screen and (max-width: 900px) {
   .user__content__biography {
     border-left: none;
@@ -736,15 +740,14 @@ ul {
   }
 }
 
+.user__content__biography__box__location h3 {
+  color: #337aaa;
+}
+
 @media screen and (max-width: 900px) {
   .user__content__biography__box__location {
     margin-top: 3rem;
   }
-}
-
-.user__content__biography__box__location p {
-  color: #5cb2fd;
-  font-weight: bold;
 }
 
 @media screen and (max-width: 900px) {

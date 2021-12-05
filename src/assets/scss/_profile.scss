@@ -48,6 +48,9 @@ ul {
     }
     &__biography {
       border-left: 1px solid $c-gray-4;
+      h3 {
+        color: $c-primary;
+      }
       @media screen and (max-width: 900px) {
         border-left: none;
         border-bottom: 1px solid $c-gray-4;
@@ -70,12 +73,13 @@ ul {
         }
 
         &__location {
+          h3 {
+            color: $c-primary;
+          }
           @media screen and (max-width: 900px) {
             margin-top: 3rem;
           }
           p {
-            color: $c-primary-light;
-            font-weight: bold;
           }
 
           @media screen and (max-width: 900px) {

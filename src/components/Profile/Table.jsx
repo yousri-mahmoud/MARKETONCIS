@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import CheckBox from "./CheckBox";
 
 const TableComponents = ({ trColor, products }) => {
-
   useEffect(() => {});
 
   return (

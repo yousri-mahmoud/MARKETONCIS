@@ -24,13 +24,13 @@ function Products() {
   const [itemsId, setItemsId] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const getData = async () => {
-
-    const response = await fetch("http://localhost:3001/selling-posts")
+    const response = await fetch(
+      `http://localhost:3001/selling-posts?sold=${false}`
+    )
       .then((res) => res.json())
       .then((data) => setDevices(data))
       .catch((err) => console.log(err))
       .finally(() => setIsLoading(false));
-
   };
   const handelFilter = (filterName) => {
     setIsLoading(true);
@@ -42,19 +42,21 @@ function Products() {
   };
   const queryParamsFilter = async (filterName) => {
     const response = await fetch(
-      `http://localhost:3001/selling-posts?deviceDetail.deviceType=${filterName}`)
+      `http://localhost:3001/selling-posts?deviceDetail.deviceType=${filterName}&sold=${false}`
+    )
       .then((res) => res.json())
       .then((data) => setDevices(data))
       .catch((err) => console.log(err))
       .finally(() => setIsLoading(false));
-
   };
   useEffect(() => {
     handelSearch();
   }, [searchText]);
   const handelSearch = async () => {
     if (activeFilter === 0) {
-      const response = await fetch(`http://localhost:3001/selling-posts?q=${searchText}`)
+      const response = await fetch(
+        `http://localhost:3001/selling-posts?q=${searchText}&sold=${false}`
+      )
         .then((res) => res.json())
         .then((data) => setDevices(data))
         .catch((err) => console.log(err))
@@ -62,13 +64,12 @@ function Products() {
     } else {
       const activeType = typesFilter[activeFilter];
       const res = await fetch(
-        `http://localhost:3001/selling-posts?deviceDetail.deviceType=${activeType}&q=${searchText}`
+        `http://localhost:3001/selling-posts?deviceDetail.deviceType=${activeType}&q=${searchText}&sold=${false}`
       )
         .then((res) => res.json())
         .then((data) => setDevices(data))
         .catch((err) => console.log(err))
         .finally(() => setIsLoading(false));
-
     }
   };
   useEffect(() => {
@@ -194,7 +195,11 @@ function Products() {
                   )}
 
                   <Link to={`/market/buy/${item.id}`}>
-                    <Card.Img variant="top" src={item.imageUrl} />
+                    <Card.Img
+                      className="product__img"
+                      variant="top"
+                      src={item.imageUrl}
+                    />
                   </Link>
                   <Card.Body>
                     <Card.Title className="d-flex justify-content-between align-items-center">
@@ -203,7 +208,6 @@ function Products() {
                         {item.deviceDetail.devicePrice} EGP
                       </small>
                     </Card.Title>
-
 
                     <Card.Text>{item.deviceDetail.description}</Card.Text>
                   </Card.Body>
@@ -219,7 +223,6 @@ function Products() {
                       >
                         {item.userName}
                       </Link>
-
                     </small>
                   </Card.Footer>
                 </Card>
