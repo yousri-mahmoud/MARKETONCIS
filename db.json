@@ -10,9 +10,26 @@
       "confirmPassword": "protected",
       "id": 1,
       "profileImg": "http://res.cloudinary.com/djup5x8bq/image/upload/v1638695233/mhmqwjbiy54diust1nmp.jpg"
+    },
+    {
+      "email": "salehsax@gmail.com",
+      "password": "$2a$10$WnSZmnTssjR4f07D/.G1vehuSX3/gedd9QBhTWH.hp5AZPWB9GlZK",
+      "firstName": "Saleh",
+      "lastName": "Farag",
+      "gender": "male",
+      "address": "egypt-suez",
+      "confirmPassword": "protected",
+      "id": 2,
+      "profileImg": ""
     }
   ],
-  "bio": [],
+  "bio": [
+    {
+      "textBio": "saleh",
+      "userId": 2,
+      "id": 1
+    }
+  ],
   "selling-posts": [
     {
       "deviceDetail": {
@@ -41,7 +58,8 @@
       "name": "Saif",
       "userId": 1,
       "postDate": "2021 11 5 10 46",
-      "id": 1
+      "id": 1,
+      "countComment": 0
     },
     {
       "title": "asd",
@@ -51,9 +69,25 @@
       "postDate": "2021 11 5 11 20",
       "id": 2,
       "countComment": 1
+    },
+    {
+      "title": "انا عايز اشتري لاب توب عشان البرمجة و كمان الالعاب",
+      "desc": "انا بدور علي لاب يكون بسعر مناسب عشان الشغل و يكون كمان كويس في تشغيل الالعاب",
+      "name": "Saleh",
+      "userId": 2,
+      "postDate": "2021 11 5 19 28",
+      "id": 3,
+      "countComment": 0
     }
   ],
-  "likes": [],
+  "likes": [
+    {
+      "likeUserId": 2,
+      "name": "Saleh Farag",
+      "postId": "3",
+      "id": 1
+    }
+  ],
   "whishList": [],
   "comments": [
     {

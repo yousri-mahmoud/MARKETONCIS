@@ -83,13 +83,12 @@ function SocialMedia() {
     }
   };
   return (
-    <div className="d-flex">
-      <div className="side d-flex align-items-center justify-content-center ">
-        <h2 className=" fs-5 text-white">M A R K E T O N I C S</h2>
+    <section className="row blog">
+      <div className="side col-lg-2">
+        <h2 className="">M A R K E T O N I C S</h2>
       </div>
-      <div className="box w-100 mt-3">
-        <div className="d-flex justify-content-center">
-          <div className="d-flex col-8">
+      <div className="box mt-3 col-lg col-md-12  order-md-3 order-sm-3 order-2">
+          <div className="input__box">
             <input
               className="search_width"
               type="text"
@@ -105,10 +104,33 @@ function SocialMedia() {
               Search
             </button>
           </div>
+          {isLoading ? (
+          <Loading />
+        ) : (
+          <div className=" mt-5">
+            <div className="d-flex justify-content-center">
+              <div className="post__card">
+                {posts.length > 0 ? (
+                  posts.map((post, id) => (
+                    <PostsList
+                      key={id}
+                      post={post}
+                      count={countComments}
+                      toparent={fetchPosts}
+                    />
+                  ))
+                ) : (
+                  <h2>No Posts yet</h2>
+                )}
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+      <div className="col-lg-2 mt-3 col-md-12 text-end   order-md-2   order-lg-3">
           <Button variant="primary" onClick={handleShow}>
             Add new Topic
           </Button>
-          <div>
             <Modal show={show} onHide={handleClose}>
               <Modal.Header closeButton>
                 <Modal.Title>Post Details</Modal.Title>
@@ -147,31 +169,7 @@ function SocialMedia() {
               </Modal.Footer>
             </Modal>
           </div>
-        </div>
-        {isLoading ? (
-          <Loading />
-        ) : (
-          <div className="w-100 mt-5">
-            <div className="d-flex justify-content-center">
-              <div className="w-50">
-                {posts.length > 0 ? (
-                  posts.map((post, id) => (
-                    <PostsList
-                      key={id}
-                      post={post}
-                      count={countComments}
-                      toparent={fetchPosts}
-                    />
-                  ))
-                ) : (
-                  <h2>No Posts yet</h2>
-                )}
-              </div>
-            </div>
-          </div>
-        )}
-      </div>
-    </div>
+    </section>
   );
 }
 

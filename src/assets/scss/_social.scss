@@ -1,11 +1,45 @@
+
+.blog {
+  width: 99%;
+
+  h2 {
+    font-size: 1.4rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+
+  .icon {
+    font-size: 1.3rem;
+  }
+}
+
+.post__card {
+  width: 70%;
+  @media screen and (max-width: 550px) {
+    width: 90%;
+  }
+}
+
 .side {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
-  height: 100vh;
-  width: 20vw;
-  margin-left: 5vw;
   background-color: $c-primary;
+  height: 100vw;
+  text-align: center;
+  @media screen and (max-width: 900px) {
+    display: none;
+    overflow: hidden;
+  }
+  h2 {
+    position: relative;
+    top: 40%;
+    font-size: 1.1rem;
+    color: #fff;
+    @media screen and (max-width: 1100px) {
+      font-size: 0.8rem;
+
+    }
+  }
 }
 .box {
   box-sizing: border-box;
@@ -15,14 +49,22 @@
 .card_dimension {
   width: 45%;
 }
+.input__box {
+  text-align: center;
+
+
+}
 .search_width {
   width: 60%;
+  height: 2.3rem;
+
 }
 .blog_button {
   border: none;
   background-color: $c-primary;
   color: white;
   width: 5rem;
+  height: 2.4rem;
 }
 .topic {
   border-radius: 10px;
@@ -47,6 +89,7 @@
 .fit-content {
   width: fit-content;
 }
+
 .clickable:hover {
   cursor: pointer;
   text-decoration: underline;
