@@ -1,99 +1,10 @@
 {
-  "users": [
-    {
-      "email": "yousrymahmoud97@gmail.com",
-      "password": "$2a$10$WdKs0E.pQvzNdMLCd9ThqeEUYVMsky0tFENj/K8z79UWLTeJIADJK",
-      "firstName": "Yousri ",
-      "lastName": "mahmoud",
-      "gender": "male",
-      "address": "Dala Helwan street , el fayoum",
-      "confirmPassword": "protected",
-      "id": 1
-    },
-    {
-      "email": "mmma@gmail.com",
-      "password": "$2a$10$u86zd4aE2fRRF/hEE/LsreYCT9orPfhEprWSLXi1p.ULat7MG8vJu",
-      "firstName": "m",
-      "lastName": "salah",
-      "gender": "male",
-      "address": "Dala Helwan street , el fayoum",
-      "confirmPassword": "protected",
-      "id": 2
-    }
-  ],
-  "bio": [
-    {
-      "textBio": "hello ^_^",
-      "userId": 1,
-      "id": 1
-    },
-    {
-      "textBio": "edit it",
-      "userId": 2,
-      "id": 2
-    }
-  ],
-  "selling-posts": [
-    {
-      "deviceDetail": {
-        "deviceName": "i phone x-s max",
-        "deviceType": "mobile",
-        "description": "blbllblblbll",
-        "images": "",
-        "devicePrice": 8000,
-        "devicePlace": "fayoum",
-        "name": "",
-        "phone": "01012146732",
-        "email": ""
-      },
-      "email": "yousrymahmoud97@gmail.com",
-      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1638521699/vs7qvduapm1cvbxozlva.jpg",
-      "userId": 1,
-      "userName": " Yousri  mahmoud",
-      "sold": true,
-      "id": 1
-    },
-    {
-      "deviceDetail": {
-        "deviceName": "hp latuid",
-        "deviceType": "laptop",
-        "description": "bllblblblalalalalal",
-        "images": "",
-        "devicePrice": 5000,
-        "devicePlace": "cario",
-        "name": "",
-        "phone": "01012146732",
-        "email": ""
-      },
-      "email": "yousrymahmoud97@gmail.com",
-      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1638537796/rawnlwugvfr0mhcj0pvd.jpg",
-      "userId": 1,
-      "userName": " Yousri  mahmoud",
-      "sold": false,
-      "id": 2
-    }
-  ],
+ 
+  "users": [],
+  "bio": [],
+  "selling-posts": [],
   "posts": [],
-  "whishList": [
-    {
-      "deviceInfo": {
-        "deviceName": "hp latuid",
-        "deviceType": "laptop",
-        "description": "bllblblblalalalalal",
-        "images": "",
-        "devicePrice": 5000,
-        "devicePlace": "cario",
-        "name": "",
-        "phone": "01012146732",
-        "email": ""
-      },
-      "userId": 2,
-      "postedById": 1,
-      "userName": " Yousri  mahmoud",
-      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1638537796/rawnlwugvfr0mhcj0pvd.jpg",
-      "itemId": 2,
-      "id": 1
-    }
-  ],
+  "likes": [],
+  "whishList": [],
   "comments": []
 }

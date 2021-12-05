@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Modal, Button } from "react-bootstrap";
-
+import Loading from "../../shared/Loading";
 import { useSelector, useDispatch } from "react-redux";
 import { PostInfo } from "../../redux/actions/PostAction";
 import PostsList from "./PostsList";
@@ -13,6 +13,7 @@ function SocialMedia() {
   const [searchText, setSearchText] = useState("");
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const [isLoading, setIsLoading] = useState(true);
   const post = useSelector((state) => state.post);
   const dispatch = useDispatch();
   let countComments = [];
@@ -25,7 +26,6 @@ function SocialMedia() {
   }, []);
   const handlePost = (e) => {
     let date = new Date();
-    console.log();
     dispatch(
       PostInfo({
         title,
@@ -44,23 +44,20 @@ function SocialMedia() {
           date.getMinutes(),
       })
     );
-
+    setTitle("");
+    setDesc("");
     setShow(false);
   };
   useEffect(() => {
+    setIsLoading(true);
     fetchPosts();
-    let date = new Date();
-    const year = date.getFullYear();
-    const month = date.getMonth();
-    const day = date.getDate();
-    const hour = date.getHours();
-    const minutes = date.getMinutes();
   }, [post]);
   const fetchPosts = async () => {
     const response = await fetch("http://localhost:3001/posts")
       .then((res) => res.json())
       .then((data) => setPosts(data))
-      .catch((err) => console.log(err));
+      .catch((err) => console.log(err))
+      .finally(() => setIsLoading(false));
     const commentResponse = await fetch("http://localhost:3001/comments")
       .then((res) => res.json())
       .then((data) => {
@@ -147,20 +144,28 @@ function SocialMedia() {
             </Modal>
           </div>
         </div>
-
-        <div className="w-100 mt-5">
-          <div className="d-flex justify-content-center">
-            <div className="w-50">
-              {posts.length > 0 ? (
-                posts.map((post, id) => (
-                  <PostsList key={id} post={post} count={countComments} />
-                ))
-              ) : (
-                <h2>No Posts yet</h2>
-              )}
+        {isLoading ? (
+          <Loading />
+        ) : (
+          <div className="w-100 mt-5">
+            <div className="d-flex justify-content-center">
+              <div className="w-50">
+                {posts.length > 0 ? (
+                  posts.map((post, id) => (
+                    <PostsList
+                      key={id}
+                      post={post}
+                      count={countComments}
+                      toparent={fetchPosts}
+                    />
+                  ))
+                ) : (
+                  <h2>No Posts yet</h2>
+                )}
+              </div>
             </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );

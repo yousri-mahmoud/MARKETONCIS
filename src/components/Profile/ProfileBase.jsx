@@ -5,17 +5,23 @@ import { useDispatch, useSelector } from "react-redux";
 import { FaEdit } from "react-icons/fa";
 import man from "../../assets/image/man.jpg";
 import woman from "../../assets/image/woman.jpg";
+import Loading from "../../shared/Loading";
 const ProfileBase = () => {
   const user = JSON.parse(localStorage.getItem("user"));
   let avatar = "";
   if (user.gender === "male") avatar = man;
   if (user.gender === "female") avatar = woman;
-
+  const [isImageLoading, setIsImageLoading] = useState(true);
   const [userBio, setUserBio] = useState("");
   const [text, setText] = useState("");
   const [isEditing, setIsEditing] = useState(false);
 
-  const bio = useRef("");
+ 
+
+
+  const [imageURL, setImageURL] = useState("");
+  const bio = useRef(null);
+  let id = JSON.parse(localStorage.getItem("user")).id;
 
   const handelBioSubmit = (e) => {
     e.preventDefault();
@@ -70,20 +76,68 @@ const ProfileBase = () => {
   useEffect(() => {
     getBio();
   }, []);
+  const handleProfilePicture = async (e) => {
+    setIsImageLoading(true);
+    let imageData = new FormData();
+    let url = "https://api.Cloudinary.com/v1_1/djup5x8bq/image/upload";
+    imageData.append("file", e.target.files[0]);
+    imageData.append("upload_preset", "rt0s8dsk");
+    const options = { method: "post", body: imageData };
+    const resp = await fetch(url, options)
+      .then((res) => res.json())
+      .then((data) => setImageURL(data.url));
+  };
+  useEffect(() => {
+    patchImage();
+  }, [imageURL]);
+  const patchImage = async () => {
+    const response = await fetch(`http://localhost:3001/users/${id}`, {
+      method: "PATCH",
+      body: JSON.stringify({ profileImg: imageURL }),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }).finally(() => setIsImageLoading(false));
+  };
+  useEffect(() => {
+    fetchUser();
+  }, []);
+  const fetchUser = async () => {
+    const resp = await fetch(`http://localhost:3001/users/${id}`)
+      .then((res) => res.json())
+      .then((data) => setImageURL(data.profileImg))
+      .catch((err) => console.log(err))
+      .finally(() => setIsImageLoading(false));
+  };
   return (
     <section className="user">
       <div className="row user__content">
         <div className="col-lg-2  col-md-12 col-sm-12   user__content__sections">
-          <figure className="text-center mt-5 mb-2">
-            <img
-              className="user__content__sections__img rounded-circle"
-              src={avatar}
-              alt="user"
-            />
-            <figcaption>
-              <h3 className="text-center">{`${user.firstName} ${user.lastName} `}</h3>
-            </figcaption>
-          </figure>
+          {isImageLoading ? (
+            <Loading />
+          ) : (
+            <figure className="text-center mt-5 mb-2">
+              <label for="upload">
+                {" "}
+                <FaEdit className="text-muted position-relative edit-pos " />
+              </label>
+              <img
+                className="user__content__sections__img rounded-circle"
+                src={imageURL ? imageURL : avatar}
+                alt="user"
+              />
+
+              <input
+                onChange={handleProfilePicture}
+                className="d-none"
+                id="upload"
+                type="file"
+              />
+              <figcaption>
+                <h3 className="text-center">{`${user.firstName} ${user.lastName} `}</h3>
+              </figcaption>
+            </figure>
+          )}
           <ul className="mt-5">
             <li>
               <NavLink

@@ -7,6 +7,7 @@ import { FaSearch, FaRegTimesCircle } from "react-icons/fa";
 import { FormControl } from "react-bootstrap";
 
 import { AddWhish } from "./../../redux/actions/whishAction";
+import Loading from "./../../shared/Loading";
 function Products() {
   const typesFilter = ["all", "laptop", "pc", "mobile", "accessories"];
 
@@ -21,14 +22,18 @@ function Products() {
   const [wList, setWList] = useState([]);
   const [list, setList] = useState([]);
   const [itemsId, setItemsId] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
   const getData = async () => {
-    const response = await fetch(
-      `http://localhost:3001/selling-posts?sold=${false}`
-    );
-    const data = await response.json();
-    setDevices(data);
+
+    const response = await fetch("http://localhost:3001/selling-posts")
+      .then((res) => res.json())
+      .then((data) => setDevices(data))
+      .catch((err) => console.log(err))
+      .finally(() => setIsLoading(false));
+
   };
   const handelFilter = (filterName) => {
+    setIsLoading(true);
     if (filterName === "all") {
       getData();
     } else {
@@ -37,34 +42,43 @@ function Products() {
   };
   const queryParamsFilter = async (filterName) => {
     const response = await fetch(
-      `http://localhost:3001/selling-posts?deviceDetail.deviceType=${filterName}&sold=${false}`
-    );
-    const data = await response.json();
-    setDevices(data);
+      `http://localhost:3001/selling-posts?deviceDetail.deviceType=${filterName}`)
+      .then((res) => res.json())
+      .then((data) => setDevices(data))
+      .catch((err) => console.log(err))
+      .finally(() => setIsLoading(false));
+
   };
+  useEffect(() => {
+    handelSearch();
+  }, [searchText]);
   const handelSearch = async () => {
     if (activeFilter === 0) {
-      const response = await fetch(
-        `http://localhost:3001/selling-posts?q=${searchText}&sold=${false}`
-      );
-      const data = await response.json();
-      setDevices(data);
+      const response = await fetch(`http://localhost:3001/selling-posts?q=${searchText}`)
+        .then((res) => res.json())
+        .then((data) => setDevices(data))
+        .catch((err) => console.log(err))
+        .finally(() => setIsLoading(false));
     } else {
       const activeType = typesFilter[activeFilter];
       const res = await fetch(
-        `http://localhost:3001/selling-posts?deviceDetail.deviceType=${activeType}&q=${searchText}&sold=${false}`
-      );
-      const newData = await res.json();
-      setDevices(newData);
+        `http://localhost:3001/selling-posts?deviceDetail.deviceType=${activeType}&q=${searchText}`
+      )
+        .then((res) => res.json())
+        .then((data) => setDevices(data))
+        .catch((err) => console.log(err))
+        .finally(() => setIsLoading(false));
+
     }
   };
   useEffect(() => {
     let user = localStorage.getItem("user");
     setUserId(JSON.parse(user).id);
-    console.log(userId);
+
     fetchList();
   }, [whishes]);
   useEffect(() => {
+    setIsLoading(true);
     getData();
   }, [state]);
 
@@ -133,7 +147,6 @@ function Products() {
                   aria-label="Search"
                   onChange={(e) => {
                     setSearchText(e.target.value);
-                    handelSearch();
                   }}
                 />
                 <FaRegTimesCircle
@@ -160,54 +173,61 @@ function Products() {
           ))}
         </ul>
       </div>
+      {isLoading ? (
+        <Loading />
+      ) : (
+        <div className="row products">
+          {devices.map((item) => {
+            return (
+              <div key={item.id} className="col-4 my-2">
+                <Card className="position-relative">
+                  {itemsId.includes(item.id) ? (
+                    <AiFillStar
+                      onClick={() => handleDeleteWhish(item)}
+                      className="position-absolute top-0 end-0 text-warning"
+                    />
+                  ) : (
+                    <AiOutlineStar
+                      onClick={() => handleWhish(item)}
+                      className="position-absolute top-0 end-0 text-warning"
+                    />
+                  )}
 
-      <div className="row products">
-        {devices.map((item) => {
-          return (
-            <div key={item.id} className="col-4 my-2">
-              <Card className="position-relative">
-                {itemsId.includes(item.id) ? (
-                  <AiFillStar
-                    onClick={() => handleDeleteWhish(item)}
-                    className="position-absolute top-0 end-0 text-warning"
-                  />
-                ) : (
-                  <AiOutlineStar
-                    onClick={() => handleWhish(item)}
-                    className="position-absolute top-0 end-0 text-warning"
-                  />
-                )}
+                  <Link to={`/market/buy/${item.id}`}>
+                    <Card.Img variant="top" src={item.imageUrl} />
+                  </Link>
+                  <Card.Body>
+                    <Card.Title className="d-flex justify-content-between align-items-center">
+                      {item.deviceDetail.deviceName}{" "}
+                      <small className="text-danger">
+                        {item.deviceDetail.devicePrice} EGP
+                      </small>
+                    </Card.Title>
 
-                <Link to={`/market/buy/${item.id}`}>
-                  <Card.Img
-                    className="product__img"
-                    variant="top"
-                    src={item.imageUrl}
-                  />
-                </Link>
-                <Card.Body>
-                  <Card.Title className="d-flex justify-content-between align-items-center">
-                    {item.deviceDetail.deviceName}{" "}
-                    <small className="text-danger">
-                      {item.deviceDetail.devicePrice} EGP
+
+                    <Card.Text>{item.deviceDetail.description}</Card.Text>
+                  </Card.Body>
+                  <Card.Footer>
+                    <small className="text-muted">
+                      posted by :{" "}
+                      <Link
+                        to={
+                          userId === item.userId
+                            ? "/profile"
+                            : `/globalProfile/${item.userId}`
+                        }
+                      >
+                        {item.userName}
+                      </Link>
+
                     </small>
-                  </Card.Title>
-
-                  <Card.Text>{item.deviceDetail.description}</Card.Text>
-                </Card.Body>
-                <Card.Footer>
-                  <small className="text-muted">
-                    posted by :{" "}
-                    <Link to={`/globalProfile/${item.userId}`}>
-                      {item.userName}
-                    </Link>
-                  </small>
-                </Card.Footer>
-              </Card>
-            </div>
-          );
-        })}
-      </div>
+                  </Card.Footer>
+                </Card>
+              </div>
+            );
+          })}
+        </div>
+      )}
     </>
   );
 }

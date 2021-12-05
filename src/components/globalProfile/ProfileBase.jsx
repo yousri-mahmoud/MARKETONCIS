@@ -37,7 +37,7 @@ const ProfileBase = () => {
           <figure className="text-center mt-5 mb-2">
             <img
               className="user__content__sections__img rounded-circle"
-              src={avatar}
+              src={user.profileImg ? user.profileImg : avatar}
               alt="user"
             />
             <figcaption>

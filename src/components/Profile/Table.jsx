@@ -4,7 +4,9 @@ import { useState, useEffect } from "react";
 import CheckBox from "./CheckBox";
 
 const TableComponents = ({ trColor, products }) => {
+
   useEffect(() => {});
+
   return (
     <div>
       <Table className="table" bordered hover>
