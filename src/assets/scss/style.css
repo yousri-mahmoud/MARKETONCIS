@@ -36,8 +36,24 @@ p {
   line-height: 1.8rem;
 }
 
+:root {
+  font-size: 16px;
+}
+
+@media screen and (max-width: 900px) {
+  :root {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  :root {
+    font-size: 12px;
+  }
+}
+
 .main {
-  min-height: calc(100vh - 100px);
+  min-height: calc(100vh - 5px);
 }
 
 a {
@@ -171,11 +187,14 @@ svg {
 
 .footer {
   height: 70px;
-  margin-top: 100px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
 
 .footer h6 {
   color: #fff;
+  font-size: 1rem;
 }
 
 .footer h6 span {
@@ -834,8 +853,6 @@ ul {
 }
 
 .activity__content__box {
-  -webkit-box-shadow: grey 1px 2px 5px 1px;
-          box-shadow: grey 1px 2px 5px 1px;
   padding: 1rem 2rem;
   width: 100%;
 }
@@ -880,15 +897,58 @@ ul {
   font-size: 1rem;
 }
 
+.blog {
+  width: 99%;
+}
+
+.blog h2 {
+  font-size: 1.4rem;
+}
+
+.blog p {
+  font-size: 1rem;
+}
+
+.blog .icon {
+  font-size: 1.3rem;
+}
+
+.post__card {
+  width: 70%;
+}
+
+@media screen and (max-width: 550px) {
+  .post__card {
+    width: 90%;
+  }
+}
+
 .side {
-  margin: 0;
-  padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  height: 100vh;
-  width: 20vw;
-  margin-left: 5vw;
   background-color: #337aaa;
+  height: 100vw;
+  text-align: center;
+}
+
+@media screen and (max-width: 900px) {
+  .side {
+    display: none;
+    overflow: hidden;
+  }
+}
+
+.side h2 {
+  position: relative;
+  top: 40%;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+@media screen and (max-width: 1100px) {
+  .side h2 {
+    font-size: 0.8rem;
+  }
 }
 
 .box {
@@ -902,8 +962,13 @@ ul {
   width: 45%;
 }
 
+.input__box {
+  text-align: center;
+}
+
 .search_width {
   width: 60%;
+  height: 2.3rem;
 }
 
 .blog_button {
@@ -911,6 +976,7 @@ ul {
   background-color: #337aaa;
   color: white;
   width: 5rem;
+  height: 2.4rem;
 }
 
 .topic {

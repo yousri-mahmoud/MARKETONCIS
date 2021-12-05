@@ -1,5 +1,19 @@
+
+:root {
+  font-size: 16px;
+  @media screen and (max-width: 900px) {
+    font-size: 14px;
+
+  }
+  @media screen and (max-width: 550px) {
+    font-size: 12px;
+
+  }
+
+}
+
 .main {
-  min-height: calc(100vh - 100px);
+  min-height: calc(100vh - 5px);
 }
 a {
   text-decoration: none;

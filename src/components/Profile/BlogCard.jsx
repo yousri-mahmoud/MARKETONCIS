@@ -4,7 +4,7 @@ const BlogCard = ({ question, description, postedBy, id }) => {
     <div>
       <Link to={`/social-media/post/${id}`}>
         <div className="activity__content mt-4">
-          <div className="activity__content__box mb-4">
+          <div className="activity__content__box shadow  mb-4">
             <h3 className="text-black">{question}</h3>
             <div className="activity__content__box__info ">
               <div className="activity__content__box__info__description ">

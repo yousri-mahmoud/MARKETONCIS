@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Modal, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { FaTrash, FaThumbsUp } from "react-icons/fa";
+
 export default function PostsList(props) {
   const { title, desc, id, name, userId, postDate } = props.post;
   const toparent = props.toparent;
@@ -129,17 +131,13 @@ export default function PostsList(props) {
     setShowLikes(true);
   };
   return (
-    <div className="shadow p-4 w-100 mb-2">
+    <div className="shadow px-4 py-2 w-100 mb-4">
       {isItMe ? (
         <div className="d-flex justify-content-end">
-          <Button
-            data-toggle="modal"
+         
+            <FaTrash  className="text-danger icon"  data-toggle="modal"
             data-target="#exampleModal"
-            onClick={handleShow}
-            className="btn-danger"
-          >
-            Delete Post
-          </Button>
+            onClick={handleShow} />
         </div>
       ) : (
         <></>
@@ -189,23 +187,23 @@ export default function PostsList(props) {
           <h2>{title}</h2>
           <p>{desc}</p>
         </div>
-        <div className="d-flex">
+        <div className="d-flex align-items-center justify-content-end">
           <label className="clickable" onClick={handleShowLike}>
             {likes.length} Likes
           </label>
           {likedUsers.includes(user) ? (
             <button
               onClick={handleUnLike}
-              className="bg-transparent text-primary border-0 ms-3"
+              className="bg-transparent  border-0 ms-3"
             >
-              Liked
+                <FaThumbsUp className="text-primary icon" />
             </button>
           ) : (
             <button
               onClick={handleLike}
               className="bg-transparent border-0 ms-3"
             >
-              Like
+              <FaThumbsUp className="text-muted icon" />
             </button>
           )}
         </div>
