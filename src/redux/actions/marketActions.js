@@ -21,6 +21,7 @@ export const postNewDevice = (device, url) => {
         imageUrl: url,
         userId: user.id,
         userName: ` ${user.firstName} ${user.lastName}`,
+        sold: false,
       }),
     });
     const data = await response.json();

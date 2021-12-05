@@ -10,8 +10,7 @@ import { AddWhish } from "./../../redux/actions/whishAction";
 import Loading from "./../../shared/Loading";
 function Products() {
   const typesFilter = ["all", "laptop", "pc", "mobile", "accessories"];
-  const staticImageUrl =
-    'https://www.slashgear.com/wp-content/uploads/2018/02/microsoft-surface-laptop-review-0-980x620.jpg"';
+
   const state = useSelector((state) => state.market);
   const whishes = useSelector((wish) => wish.whish);
   const dispatch = useDispatch();
@@ -25,7 +24,9 @@ function Products() {
   const [itemsId, setItemsId] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const getData = async () => {
-    const response = await fetch("http://localhost:3001/selling-posts")
+    const response = await fetch(
+      `http://localhost:3001/selling-posts?sold=${false}`
+    )
       .then((res) => res.json())
       .then((data) => setDevices(data))
       .catch((err) => console.log(err))
@@ -41,7 +42,7 @@ function Products() {
   };
   const queryParamsFilter = async (filterName) => {
     const response = await fetch(
-      `http://localhost:3001/selling-posts?deviceDetail.deviceType=${filterName}`
+      `http://localhost:3001/selling-posts?deviceDetail.deviceType=${filterName}&sold=${false}`
     )
       .then((res) => res.json())
       .then((data) => setDevices(data))
@@ -54,7 +55,7 @@ function Products() {
   const handelSearch = async () => {
     if (activeFilter === 0) {
       const response = await fetch(
-        `http://localhost:3001/selling-posts?q=${searchText}`
+        `http://localhost:3001/selling-posts?q=${searchText}&sold=${false}`
       )
         .then((res) => res.json())
         .then((data) => setDevices(data))
@@ -63,7 +64,7 @@ function Products() {
     } else {
       const activeType = typesFilter[activeFilter];
       const res = await fetch(
-        `http://localhost:3001/selling-posts?deviceDetail.deviceType=${activeType}&q=${searchText}`
+        `http://localhost:3001/selling-posts?deviceDetail.deviceType=${activeType}&q=${searchText}&sold=${false}`
       )
         .then((res) => res.json())
         .then((data) => setDevices(data))
@@ -194,7 +195,11 @@ function Products() {
                   )}
 
                   <Link to={`/market/buy/${item.id}`}>
-                    <Card.Img variant="top" src={item.imageUrl} />
+                    <Card.Img
+                      className="product__img"
+                      variant="top"
+                      src={item.imageUrl}
+                    />
                   </Link>
                   <Card.Body>
                     <Card.Title className="d-flex justify-content-between align-items-center">

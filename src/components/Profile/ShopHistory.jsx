@@ -11,7 +11,7 @@ const ShopHistory = () => {
       `http://localhost:3001/selling-posts?userId=${user.id}`
     )
       .then((res) => res.json())
-      .then((data) => setIsProfileLoading(data))
+      .then((data) => setProducts(data))
       .catch((err) => console.log(err))
       .finally(() => setIsProfileLoading(false));
   };
