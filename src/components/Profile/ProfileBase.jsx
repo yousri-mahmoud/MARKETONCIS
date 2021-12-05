@@ -81,6 +81,9 @@ const ProfileBase = () => {
       .then((data) => setImageURL(data.url));
   };
   useEffect(() => {
+    fetchUser();
+  }, []);
+  useEffect(() => {
     patchImage();
   }, [imageURL]);
   const patchImage = async () => {
@@ -92,9 +95,7 @@ const ProfileBase = () => {
       },
     }).finally(() => setIsImageLoading(false));
   };
-  useEffect(() => {
-    fetchUser();
-  }, []);
+
   const fetchUser = async () => {
     const resp = await fetch(`http://localhost:3001/users/${id}`)
       .then((res) => res.json())

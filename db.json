@@ -1,8 +1,29 @@
 {
-  "users": [],
+  "users": [
+    {
+      "email": "Saifalaa95@gmail.com",
+      "password": "$2a$10$gcwsl.PKBDVCAnvDU9Toz.FwLKk7ETR.qX6HmN/jFXi3fII3EHHbm",
+      "firstName": "Saif",
+      "lastName": "Alaa ElDin",
+      "gender": "male",
+      "address": "Essawy, Miami",
+      "confirmPassword": "protected",
+      "id": 1,
+      "profileImg": "http://res.cloudinary.com/djup5x8bq/image/upload/v1638693782/b2j3hksdtiq1gw9bzcsk.png"
+    }
+  ],
   "bio": [],
   "selling-posts": [],
-  "posts": [],
+  "posts": [
+    {
+      "title": "jh",
+      "desc": "fh",
+      "name": "Saif",
+      "userId": 1,
+      "postDate": "2021 11 5 10 46",
+      "id": 1
+    }
+  ],
   "likes": [],
   "whishList": [],
   "comments": []
