@@ -17,7 +17,7 @@ import Profile from "./views/profile/profile";
 import SocialMedia from "./views/social-media/social-media";
 import Post from "./views/social-media/Post";
 import PostDetails from "./views/social-media/PostDetails";
-import ProductPage from "./components/market-component/ProductPage";
+
 import Sell from "./views/market/sell";
 import Buy from "./views/market/buy";
 import SingleProduct from "./components/market-component/single-product";
