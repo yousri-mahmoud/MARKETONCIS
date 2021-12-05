@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Card, Button } from "react-bootstrap";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { useSelector, useDispatch } from "react-redux";
 import { FaSearch, FaRegTimesCircle } from "react-icons/fa";
@@ -8,10 +8,10 @@ import { FormControl } from "react-bootstrap";
 
 import { AddWhish } from "./../../redux/actions/whishAction";
 import Loading from "./../../shared/Loading";
-function Products() {
-  let currentPage = parseInt(useParams().page);
-  let type = useParams().type;
-  // console.log(type);
+import { useParams } from "react-router-dom";
+
+export default function ProductPage() {
+  let currentPage = useParams().page;
   const typesFilter = ["all", "laptop", "pc", "mobile", "accessories"];
   const [pages, setPages] = useState([]);
   const state = useSelector((state) => state.market);
@@ -20,7 +20,6 @@ function Products() {
   const [search, setSearch] = useState(false);
   const [searchText, setSearchText] = useState("");
   const [devices, setDevices] = useState([]);
-  const [tempDevices, setTempDevices] = useState([]);
   const [activeFilter, setActiceFilter] = useState(0);
   const [userId, setUserId] = useState("");
   const [wList, setWList] = useState([]);
@@ -29,7 +28,6 @@ function Products() {
   const [isLoading, setIsLoading] = useState(true);
 
   const getData = async () => {
-    currentPage = isNaN(currentPage) ? 1 : currentPage;
     const response = await fetch(
       `http://localhost:3001/selling-posts?_page=${currentPage}&_limit=2&sold=${false}`
     )
@@ -39,67 +37,60 @@ function Products() {
         return res.json();
       })
       .then((data) => {
-        // console.log(data);
+        console.log(data);
         setDevices(data);
       })
       .catch((err) => console.log(err))
       .finally(() => setIsLoading(false));
   };
+  //   const getPage = async (page) => {
+  //     const response = await fetch(
+  //       `http://localhost:3001/selling-posts?_page=${page}&_limit=2&sold=${false}`
+  //     )
+  //       .then((res) => res.json())
+  //       .then((data) => {
+  //         setDevices(data);
+  //       })
+  //       .catch((err) => console.log(err))
+  //       .finally(() => setIsLoading(false));
+  //   };
+
   const parsePageNumber = (str) => {
-    // console.log(str);
     let allPages = str.substring(
       str.lastIndexOf("_page=") + 6,
       str.indexOf("&")
     );
     allPages = parseInt(allPages);
-    console.log(allPages);
     let pagesArray = [];
     for (let i = 1; i <= allPages; i++) pagesArray.push(i);
     setPages(pagesArray);
   };
-  useEffect(() => {
+  const handelFilter = (filterName) => {
     setIsLoading(true);
-    if (type === "all" || !type) {
+    if (filterName === "all") {
       getData();
     } else {
-      queryParamsFilter(type);
-      // console.log("type here");
+      queryParamsFilter(filterName);
     }
-  }, [type, currentPage]);
+  };
   const queryParamsFilter = async (filterName) => {
-    // console.log(currentPage, filterName);
     const response = await fetch(
-      `http://localhost:3001/selling-posts?_page=${currentPage}&_limit=2&deviceDetail.deviceType=${filterName}&sold=${false}`
+      `http://localhost:3001/selling-posts?deviceDetail.deviceType=${filterName}&sold=${false}`
     )
-      .then((res) => {
-        let arr = res.headers.get("link").split(",");
-        // console.log(arr);
-        if (arr.length > 0) parsePageNumber(arr[arr.length - 1]);
-        return res.json();
-      })
-      .then((data) => {
-        // console.log(data);
-        setTempDevices(data);
-      })
+      .then((res) => res.json())
+      .then((data) => setDevices(data))
       .catch((err) => console.log(err))
       .finally(() => setIsLoading(false));
   };
   useEffect(() => {
-    if (searchText !== "") handelSearch();
+    handelSearch();
   }, [searchText]);
-  useEffect(() => {
-    setDevices(tempDevices);
-  }, [tempDevices, pages]);
   const handelSearch = async () => {
     if (activeFilter === 0) {
       const response = await fetch(
-        `http://localhost:3001/selling-posts?_page=1&_limit=2&q=${searchText}&sold=${false}`
+        `http://localhost:3001/selling-posts?q=${searchText}&sold=${false}`
       )
-        .then((res) => {
-          let arr = res.headers.get("link").split(",");
-          parsePageNumber(arr[arr.length - 1]);
-          return res.json();
-        })
+        .then((res) => res.json())
         .then((data) => setDevices(data))
         .catch((err) => console.log(err))
         .finally(() => setIsLoading(false));
@@ -117,15 +108,13 @@ function Products() {
   useEffect(() => {
     let user = localStorage.getItem("user");
     setUserId(JSON.parse(user).id);
+
     fetchList();
   }, [whishes]);
   useEffect(() => {
-    if (!type || type === "all") {
-      console.log("it was here");
-      setIsLoading(true);
-      getData();
-    }
-  }, [state, currentPage]);
+    setIsLoading(true);
+    getData();
+  }, [currentPage]);
 
   const handleWhish = async (item) => {
     console.log(item);
@@ -142,14 +131,17 @@ function Products() {
   };
 
   useEffect(() => {
+    console.log(list);
     let updatedList = list?.filter((whish) => {
       return whish.userId === userId;
     });
     setWList(updatedList);
   }, [list]);
   useEffect(() => {
+    console.log(wList);
     let newItemsID = wList.map((item) => item.itemId);
     setItemsId(newItemsID);
+    console.log(itemsId);
   }, [wList]);
   const fetchList = async () => {
     const commentsResponse = await fetch("http://localhost:3001/whishList")
@@ -157,7 +149,7 @@ function Products() {
       .then((data) => {
         setList(data);
       });
-    // console.log(whishes);
+    console.log(whishes);
   };
   const handleDeleteWhish = async (item) => {
     let deletedId = wList.filter((it) => {
@@ -171,7 +163,7 @@ function Products() {
         method: "DELETE",
       }
     );
-    // console.log(deletedId);
+    console.log(deletedId);
     fetchList();
   };
   return (
@@ -206,11 +198,11 @@ function Products() {
             <li
               className={`${activeFilter === index ? "active_filter" : ""}`}
               onClick={() => {
-                // handelFilter(item);
+                handelFilter(item);
                 setActiceFilter(index);
               }}
             >
-              <Link to={`/market/buy/type/${item}/page/1`}> {item}</Link>
+              {item}
             </li>
           ))}
         </ul>
@@ -235,7 +227,7 @@ function Products() {
                     />
                   )}
 
-                  <Link to={`/market/buy/item/${item.id}`}>
+                  <Link to={`/market/buy/${item.id}`}>
                     <Card.Img
                       className="product__img"
                       variant="top"
@@ -274,14 +266,7 @@ function Products() {
       )}
       <div className="d-flex justify-content-center">
         {pages.map((page) => (
-          <Link
-            className="ms-3"
-            to={
-              type === "all" || !type
-                ? `/market/buy/page/${page}`
-                : `/market/buy/type/${type}/page/${page}`
-            }
-          >
+          <Link className="ms-3" to={`/market/buy/${page}`}>
             {page}
           </Link>
         ))}
@@ -289,5 +274,3 @@ function Products() {
     </>
   );
 }
-
-export default Products;

@@ -17,7 +17,7 @@ import Profile from "./views/profile/profile";
 import SocialMedia from "./views/social-media/social-media";
 import Post from "./views/social-media/Post";
 import PostDetails from "./views/social-media/PostDetails";
-
+import ProductPage from "./components/market-component/ProductPage";
 import Sell from "./views/market/sell";
 import Buy from "./views/market/buy";
 import SingleProduct from "./components/market-component/single-product";
@@ -84,9 +84,19 @@ function App() {
             )}
             {isLoggedIn && <Route path="/market" element={<Market />} />}
             {isLoggedIn && <Route path="/market/sell" element={<Sell />} />}
-            {isLoggedIn && <Route path="/market/buy/*" element={<Buy />} />}
             {isLoggedIn && (
-              <Route path="/market/buy/:id" element={<SingleProduct />} />
+              <Route path="/market/buy/page/:page" element={<Buy />} />
+            )}
+            {isLoggedIn && (
+              <Route
+                path="/market/buy/type/:type/page/:page"
+                element={<Buy />}
+              />
+            )}
+            {isLoggedIn && <Route path="/market/buy/*" element={<Buy />} />}
+
+            {isLoggedIn && (
+              <Route path="/market/buy/item/:id" element={<SingleProduct />} />
             )}
 
             <Route path="*" element={<Navigate replace to="/" />} />
