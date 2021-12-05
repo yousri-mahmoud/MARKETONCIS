@@ -23,7 +23,18 @@ const TableComponents = ({ trColor, products }) => {
             return (
               <tbody className="table__body" key={index}>
                 <tr className="table__body__tr">
-                  <td>{index + 1}</td>
+                  <td>
+                    {index + 1}
+                    <h4
+                      className={`mt-3 rounded px-2  ${
+                        item.sold
+                          ? "text-white bg-danger text-center"
+                          : "text-white bg-primary"
+                      }`}
+                    >
+                      {item.sold ? "sold" : "available"}
+                    </h4>
+                  </td>
 
                   <td>
                     <Link className="noneHover" to={`/market/buy/${item.id}`}>

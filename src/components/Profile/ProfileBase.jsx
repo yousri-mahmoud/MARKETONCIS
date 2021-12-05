@@ -15,7 +15,8 @@ const ProfileBase = () => {
   const [text, setText] = useState("");
   const [isEditing, setIsEditing] = useState(false);
 
-  const bio = useRef(null);
+  const bio = useRef("");
+
   const handelBioSubmit = (e) => {
     e.preventDefault();
     if (isEditing) {
@@ -43,11 +44,13 @@ const ProfileBase = () => {
     });
     const data = await response.json();
 
+    setUserBio(data);
     setText(data.textBio);
   };
   //edit
   const editBio = () => {
     setIsEditing(true);
+
     setText("");
   };
   //edit request

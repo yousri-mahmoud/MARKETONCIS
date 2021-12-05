@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import { Link, useParams } from "react-router-dom";
 import { AiOutlineStar, AiFillStar } from "react-icons/ai";
+import { FaWhatsappSquare } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { AddWhish } from "./../../redux/actions/whishAction";
 function SingleProduct() {
@@ -97,7 +98,9 @@ function SingleProduct() {
             />
           )}
           <div class="productImg">
-            <img src={device.imageUrl} alt="" />
+            <figure className={device.sold && "sold"}>
+              <img src={device.imageUrl} alt="" />
+            </figure>
           </div>
 
           <div class="details">
@@ -108,18 +111,31 @@ function SingleProduct() {
               <div class="price">{device.deviceDetail.devicePrice} EGP</div>
             </div>
             <p>{device.deviceDetail.description}</p>
-            <small className="text-muted">
-              posted by :
-              <Link to={`/globalProfile/${device.userId}`}>
-                {device.userName}
-              </Link>
-            </small>
-            <small className="text-muted">
-              place : {device.deviceDetail.devicePlace}
-            </small>{" "}
-            <small className="text-muted">
-              phone : {device.deviceDetail.phone}
-            </small>
+            <div className="d-flex justify-content-between align-items-center">
+              <div>
+                <small className="text-muted">
+                  posted by :
+                  <Link to={`/globalProfile/${device.userId}`}>
+                    {device.userName}
+                  </Link>
+                </small>
+                <small className="text-muted">
+                  place : {device.deviceDetail.devicePlace}
+                </small>{" "}
+                <small className="text-muted">
+                  phone : {device.deviceDetail.phone}
+                </small>
+              </div>
+              <div>
+                <a
+                  rel="noreferrer"
+                  target="_blank"
+                  href={`https://wa.me/+2${device.deviceDetail.phone}`}
+                >
+                  <FaWhatsappSquare className="whatsApp_icon" />
+                </a>
+              </div>
+            </div>
           </div>
         </section>
       </div>

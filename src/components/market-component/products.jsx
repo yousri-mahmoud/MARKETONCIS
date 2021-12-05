@@ -9,8 +9,7 @@ import { FormControl } from "react-bootstrap";
 import { AddWhish } from "./../../redux/actions/whishAction";
 function Products() {
   const typesFilter = ["all", "laptop", "pc", "mobile", "accessories"];
-  const staticImageUrl =
-    'https://www.slashgear.com/wp-content/uploads/2018/02/microsoft-surface-laptop-review-0-980x620.jpg"';
+
   const state = useSelector((state) => state.market);
   const whishes = useSelector((wish) => wish.whish);
   const dispatch = useDispatch();
@@ -23,7 +22,9 @@ function Products() {
   const [list, setList] = useState([]);
   const [itemsId, setItemsId] = useState([]);
   const getData = async () => {
-    const response = await fetch("http://localhost:3001/selling-posts");
+    const response = await fetch(
+      `http://localhost:3001/selling-posts?sold=${false}`
+    );
     const data = await response.json();
     setDevices(data);
   };
@@ -36,7 +37,7 @@ function Products() {
   };
   const queryParamsFilter = async (filterName) => {
     const response = await fetch(
-      `http://localhost:3001/selling-posts?deviceDetail.deviceType=${filterName}`
+      `http://localhost:3001/selling-posts?deviceDetail.deviceType=${filterName}&sold=${false}`
     );
     const data = await response.json();
     setDevices(data);
@@ -44,14 +45,14 @@ function Products() {
   const handelSearch = async () => {
     if (activeFilter === 0) {
       const response = await fetch(
-        `http://localhost:3001/selling-posts?q=${searchText}`
+        `http://localhost:3001/selling-posts?q=${searchText}&sold=${false}`
       );
       const data = await response.json();
       setDevices(data);
     } else {
       const activeType = typesFilter[activeFilter];
       const res = await fetch(
-        `http://localhost:3001/selling-posts?deviceDetail.deviceType=${activeType}&q=${searchText}`
+        `http://localhost:3001/selling-posts?deviceDetail.deviceType=${activeType}&q=${searchText}&sold=${false}`
       );
       const newData = await res.json();
       setDevices(newData);
@@ -178,7 +179,11 @@ function Products() {
                 )}
 
                 <Link to={`/market/buy/${item.id}`}>
-                  <Card.Img variant="top" src={item.imageUrl} />
+                  <Card.Img
+                    className="product__img"
+                    variant="top"
+                    src={item.imageUrl}
+                  />
                 </Link>
                 <Card.Body>
                   <Card.Title className="d-flex justify-content-between align-items-center">
