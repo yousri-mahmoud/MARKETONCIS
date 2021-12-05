@@ -15,9 +15,14 @@ const ProfileBase = () => {
   const [userBio, setUserBio] = useState("");
   const [text, setText] = useState("");
   const [isEditing, setIsEditing] = useState(false);
+
+ 
+
+
   const [imageURL, setImageURL] = useState("");
   const bio = useRef(null);
   let id = JSON.parse(localStorage.getItem("user")).id;
+
   const handelBioSubmit = (e) => {
     e.preventDefault();
     if (isEditing) {
@@ -45,11 +50,13 @@ const ProfileBase = () => {
     });
     const data = await response.json();
 
+    setUserBio(data);
     setText(data.textBio);
   };
   //edit
   const editBio = () => {
     setIsEditing(true);
+
     setText("");
   };
   //edit request

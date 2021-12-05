@@ -10,8 +10,7 @@ import { AddWhish } from "./../../redux/actions/whishAction";
 import Loading from "./../../shared/Loading";
 function Products() {
   const typesFilter = ["all", "laptop", "pc", "mobile", "accessories"];
-  const staticImageUrl =
-    'https://www.slashgear.com/wp-content/uploads/2018/02/microsoft-surface-laptop-review-0-980x620.jpg"';
+
   const state = useSelector((state) => state.market);
   const whishes = useSelector((wish) => wish.whish);
   const dispatch = useDispatch();
@@ -25,11 +24,13 @@ function Products() {
   const [itemsId, setItemsId] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const getData = async () => {
+
     const response = await fetch("http://localhost:3001/selling-posts")
       .then((res) => res.json())
       .then((data) => setDevices(data))
       .catch((err) => console.log(err))
       .finally(() => setIsLoading(false));
+
   };
   const handelFilter = (filterName) => {
     setIsLoading(true);
@@ -41,21 +42,19 @@ function Products() {
   };
   const queryParamsFilter = async (filterName) => {
     const response = await fetch(
-      `http://localhost:3001/selling-posts?deviceDetail.deviceType=${filterName}`
-    )
+      `http://localhost:3001/selling-posts?deviceDetail.deviceType=${filterName}`)
       .then((res) => res.json())
       .then((data) => setDevices(data))
       .catch((err) => console.log(err))
       .finally(() => setIsLoading(false));
+
   };
   useEffect(() => {
     handelSearch();
   }, [searchText]);
   const handelSearch = async () => {
     if (activeFilter === 0) {
-      const response = await fetch(
-        `http://localhost:3001/selling-posts?q=${searchText}`
-      )
+      const response = await fetch(`http://localhost:3001/selling-posts?q=${searchText}`)
         .then((res) => res.json())
         .then((data) => setDevices(data))
         .catch((err) => console.log(err))
@@ -69,6 +68,7 @@ function Products() {
         .then((data) => setDevices(data))
         .catch((err) => console.log(err))
         .finally(() => setIsLoading(false));
+
     }
   };
   useEffect(() => {
@@ -204,6 +204,7 @@ function Products() {
                       </small>
                     </Card.Title>
 
+
                     <Card.Text>{item.deviceDetail.description}</Card.Text>
                   </Card.Body>
                   <Card.Footer>
@@ -218,6 +219,7 @@ function Products() {
                       >
                         {item.userName}
                       </Link>
+
                     </small>
                   </Card.Footer>
                 </Card>

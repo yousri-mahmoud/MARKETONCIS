@@ -1,6 +1,12 @@
 import { Table } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import CheckBox from "./CheckBox";
+
 const TableComponents = ({ trColor, products }) => {
+
+  useEffect(() => {});
+
   return (
     <div>
       <Table className="table" bordered hover>
@@ -21,7 +27,11 @@ const TableComponents = ({ trColor, products }) => {
             return (
               <tbody className="table__body" key={index}>
                 <tr className="table__body__tr">
-                  <td>{index + 1}</td>
+                  <td>
+                    <h4 className="text-black">{index + 1} </h4>
+
+                    <CheckBox item={item} />
+                  </td>
 
                   <td>
                     <Link className="noneHover" to={`/market/buy/${item.id}`}>
