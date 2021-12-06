@@ -23,7 +23,7 @@ function NavbarComponent() {
       expand="lg"
       bg="dark"
       variant="dark"
-      className="ourNav py-3"
+      className="ourNav fixed-top py-3"
     >
       <Container>
         <NavLink className="nav-link p-0" to="/">

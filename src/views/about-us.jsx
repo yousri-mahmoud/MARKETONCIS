@@ -3,10 +3,10 @@ import { FaLinkedin } from "react-icons/fa";
 import img from "../assets/image/user.jpg";
 function About() {
   return (
-    <div className="about text-center mt-4 container">
+    <div className="about  text-center mt-4 container">
       <header className="about__header"></header>
 
-      <div className="about__content">
+      <div className="about__content gap">
         <div className="about__content__about">
           <h2 className="me-3">About Us</h2>
           <p className="w-75 m-auto">

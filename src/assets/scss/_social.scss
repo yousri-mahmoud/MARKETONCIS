@@ -24,18 +24,23 @@
 .side {
   box-sizing: border-box;
   background-color: $c-primary;
-  height: 100vw;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: -2;
+  height: 100%;
+  width: 15%;
   text-align: center;
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 994px) {
     display: none;
     overflow: hidden;
   }
-  h2 {
+  h2 { 
     position: relative;
-    top: 40%;
+    top: 49%;
     font-size: 1.1rem;
     color: #fff;
-    @media screen and (max-width: 1100px) {
+    @media screen and (max-width: 1200px) {
       font-size: 0.8rem;
 
     }
