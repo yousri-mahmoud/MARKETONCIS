@@ -129,7 +129,6 @@ const RegisterComponent = () => {
                     type="password"
                   />
 
-                  <small className="text-danger error">{state.message}</small>
                   <button className="submit__form" type="submit">
                     Sign up
                   </button>

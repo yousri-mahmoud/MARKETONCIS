@@ -13,14 +13,21 @@
             }
         }
         &__team {
+           
 
             &__box {
                 border: 1px solid $c-gray-4;
                 margin: 1rem;
-                width: 20.333%;
+                padding: 0;
                 border-radius: 20px;
+                @media screen and (max-width: 994px) {
+                    width: 55%;
+                  }
+                
                 img {
                     border-radius: 20px;
+                    width: 100%;
+                   
                 }
 
                 &__info {

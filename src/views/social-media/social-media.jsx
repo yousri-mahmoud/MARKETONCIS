@@ -126,9 +126,11 @@ function SocialMedia({ resource, newFetch }) {
   };
 
   return (
-    <section className="row blog">
-      <div className="side col-lg-2">
+    <section className="row blog gap">
+      <div className="col-lg-2">
+      <div className="side">
         <h2 className="">M A R K E T O N I C S</h2>
+      </div>
       </div>
       <div className="box mt-3 col-lg col-md-12  order-md-3 order-sm-3 order-2">
         <div className="input__box">
@@ -162,7 +164,7 @@ function SocialMedia({ resource, newFetch }) {
                     />
                   ))
                 ) : (
-                  <h2>No Posts yet</h2>
+                  <h2 className="text-center">No Posts yet</h2>
                 )}
               </div>
             </div>

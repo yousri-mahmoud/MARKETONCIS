@@ -9,8 +9,7 @@ ul {
       display: flex;
       border-right: 1px solid $c-gray-4;
       flex-direction: column;
-      @media screen and (max-width: 900px) {
-      }
+  
 
       &__img {
         width: 100%;

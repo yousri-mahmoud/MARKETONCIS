@@ -3,10 +3,10 @@ import { FaLinkedin } from "react-icons/fa";
 import img from "../assets/image/user.jpg";
 function About() {
   return (
-    <div className="about text-center mt-4 container">
+    <div className="about  text-center mt-4 container">
       <header className="about__header"></header>
 
-      <div className="about__content">
+      <div className="about__content gap">
         <div className="about__content__about">
           <h2 className="me-3">About Us</h2>
           <p className="w-75 m-auto">
@@ -17,15 +17,15 @@ function About() {
         </div>
         <div className="about__content__team mt-3">
           <h2>Our Team</h2>
-          <div className="d-flex  justify-content-center">
-            <div className="about__content__team__box">
+          <div className="row  justify-content-center">
+            <div className="about__content__team__box col-lg-3">
               <img src={img} alt="me" />
               <div className="about__content__team__box__info">
                 <h3 className="me-3">Yousri Mahmoud</h3>
                 <FaLinkedin className="about__content__team__box__info__icon" />
               </div>
             </div>
-            <div className="about__content__team__box">
+            <div className="about__content__team__box col-lg-3">
               <img src={img} alt="me" />
 
               <div className="about__content__team__box__info">
@@ -33,7 +33,7 @@ function About() {
                 <FaLinkedin className="about__content__team__box__info__icon" />
               </div>
             </div>
-            <div className="about__content__team__box">
+            <div className="about__content__team__box col-lg-3">
               <img src={img} alt="me" />
 
               <div className="about__content__team__box__info">

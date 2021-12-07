@@ -52,6 +52,10 @@ p {
   }
 }
 
+.gap {
+  margin-top: 6.8rem;
+}
+
 .main {
   min-height: calc(100vh - 5px);
 }
@@ -73,29 +77,56 @@ a {
   border-radius: 20px;
 }
 
+@media screen and (max-width: 994px) {
+  .home img {
+    width: 90%;
+  }
+}
+
 .home__header {
   margin-top: 3rem;
 }
 
 .home__header h1 {
   color: #337aaa;
+  font-size: 3.2rem;
+}
+
+@media screen and (max-width: 550px) {
+  .home__header h1 {
+    font-size: 2rem;
+  }
 }
 
 .home__header p {
   margin: 0 auto;
   margin-bottom: 2rem;
   margin-top: 1rem;
+  width: 55%;
   font-size: 1.3rem;
   color: #206956;
+}
+
+@media screen and (max-width: 994px) {
+  .home__header p {
+    width: 90%;
+  }
 }
 
 .home__content h2 {
   color: #000;
   margin-top: 5rem;
+  font-size: 1.8rem;
 }
 
 .home__content h2 span {
   color: #337aaa;
+}
+
+@media screen and (max-width: 550px) {
+  .home__content h2 {
+    font-size: 1.5rem;
+  }
 }
 
 .home__content h3 {
@@ -145,17 +176,28 @@ a {
 .about__content__team__box {
   border: 1px solid #e5e6e6;
   margin: 1rem;
-  width: 20.333%;
+  padding: 0;
   border-radius: 20px;
+}
+
+@media screen and (max-width: 994px) {
+  .about__content__team__box {
+    width: 55%;
+  }
 }
 
 .about__content__team__box img {
   border-radius: 20px;
+  width: 100%;
 }
 
 .about__content__team__box__info__icon {
   color: #0e76a8;
   font-size: 2rem;
+}
+
+.ourNav {
+  height: 70px;
 }
 
 .logo {
@@ -190,6 +232,7 @@ svg {
   position: relative;
   bottom: 0;
   width: 100%;
+  margin-top: 5%;
 }
 
 .footer h6 {
@@ -216,14 +259,13 @@ svg {
           transform: translate(-50%, -50%);
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1100px) {
   .form {
-    width: 90%;
+    width: 95%;
   }
 }
 
 .form__content {
-  position: relative;
   height: 100%;
 }
 
@@ -255,14 +297,19 @@ svg {
 .form__content__logo {
   position: absolute;
   left: 25%;
-  background-color: #337aaa;
+  width: 20%;
   height: 100%;
+  background-color: #337aaa;
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 550px) {
   .form__content__logo {
-    display: none;
-    overflow: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5%;
+    width: 100%;
+    margin: 0;
   }
 }
 
@@ -271,16 +318,28 @@ svg {
   top: 45%;
 }
 
+@media screen and (max-width: 550px) {
+  .form__content__logo__content {
+    top: 0;
+  }
+}
+
 .form__content__logo__content h2 {
   color: #fff;
   font-size: 1.5rem;
+}
+
+@media screen and (max-width: 1100px) {
+  .form__content__logo__content h2 {
+    font-size: 1.2rem;
+  }
 }
 
 .form__content__fields {
   padding: 1rem 0;
   margin-left: 1rem;
   font-weight: bold;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 .form__content__fields button {
@@ -928,10 +987,15 @@ ul {
           box-sizing: border-box;
   background-color: #337aaa;
   height: 117vh;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: -2;
+  width: 15%;
   text-align: center;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 994px) {
   .side {
     display: none;
     overflow: hidden;
@@ -940,12 +1004,12 @@ ul {
 
 .side h2 {
   position: relative;
-  top: 40%;
+  top: 49%;
   font-size: 1.1rem;
   color: #fff;
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1200px) {
   .side h2 {
     font-size: 0.8rem;
   }
