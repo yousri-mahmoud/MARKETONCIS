@@ -12,7 +12,7 @@ const Home = () => {
     <div className="home text-center gap">
       <header className="home__header">
         <h1>M A R K E T O N I C S</h1>
-        <p className="w-50">
+        <p className="">
           It is a website that helps you to buy or sell used devices and also
           allows you to join to our blog to give your opinion on the products
         </p>

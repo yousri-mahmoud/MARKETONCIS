@@ -1,5 +1,17 @@
 {
-  "users": [],
+  "users": [
+    {
+      "email": "salehfarag@gmail.com",
+      "password": "$2a$10$DKzySkHlSaj4RzRR3QiFMOLAEVJYEUOqQdzrGJ8XFGLWvJpsYSNRW",
+      "firstName": "saleh",
+      "lastName": "Farag",
+      "gender": "male",
+      "address": "egypt-suez",
+      "confirmPassword": "protected",
+      "id": 1,
+      "profileImg": ""
+    }
+  ],
   "bio": [],
   "selling-posts": [],
   "posts": [],

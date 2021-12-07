@@ -31,7 +31,7 @@ const ProfileBase = () => {
     getBio();
   }, []);
   return (
-    <section className="user">
+    <section className="user gap">
       <div className="row user__content">
         <div className="col-lg-2  col-md-12 col-sm-12   user__content__sections">
           <figure className="text-center mt-5 mb-2">
