@@ -81,6 +81,7 @@ export default function PostsList(props) {
       .then((data) => setCount(data.countComment));
   };
   const handleDelete = async () => {
+    console.log(id);
     const response = await fetch(`http://localhost:3001/posts/${id}`, {
       method: "DELETE",
     });
@@ -134,10 +135,12 @@ export default function PostsList(props) {
     <div className="shadow px-4 py-2 w-100 mb-4">
       {isItMe ? (
         <div className="d-flex justify-content-end">
-         
-            <FaTrash  className="text-danger icon"  data-toggle="modal"
+          <FaTrash
+            className="text-danger icon"
+            data-toggle="modal"
             data-target="#exampleModal"
-            onClick={handleShow} />
+            onClick={handleShow}
+          />
         </div>
       ) : (
         <></>
@@ -196,7 +199,7 @@ export default function PostsList(props) {
               onClick={handleUnLike}
               className="bg-transparent  border-0 ms-3"
             >
-                <FaThumbsUp className="text-primary icon" />
+              <FaThumbsUp className="text-primary icon" />
             </button>
           ) : (
             <button

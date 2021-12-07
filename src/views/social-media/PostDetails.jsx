@@ -25,7 +25,7 @@ export default function PostDetails() {
     setName(JSON.parse(nme).firstName);
   }, []);
   useEffect(() => {
-    setIsCommentLoading(true);
+    console.log("opaa");
     fetchComment();
   }, [commentStore]);
   useEffect(() => {
@@ -39,6 +39,7 @@ export default function PostDetails() {
     const commentsResponse = await fetch("http://localhost:3001/comments")
       .then((res) => res.json())
       .then((data) => {
+        console.log(data);
         let updatedComments = data?.filter((comm) => {
           return comm.postId === id;
         });
@@ -65,6 +66,7 @@ export default function PostDetails() {
       .finally(() => setIsPostLoading(false));
   };
   const handleComment = () => {
+    setIsCommentLoading(true);
     dispatch(
       CommentInfo({
         postId: id,
@@ -72,10 +74,10 @@ export default function PostDetails() {
         comment: comment,
         commentAuthorId,
       })
-    );
+    ).then(() => fetchComment());
+
     setComment("");
   };
-  console.log(comments);
   return (
     <div className="container">
       {isPostLoading ? (
