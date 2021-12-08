@@ -116,16 +116,15 @@ const ProfileBase = () => {
             <Loading />
           ) : (
             <figure className="text-center mt-5 mb-2">
-              <label for="upload">
-                {" "}
-                <FaEdit className="text-muted position-relative edit-pos " />
-              </label>
               <img
                 className="user__content__sections__img rounded-circle"
                 src={imageURL ? imageURL : avatar}
                 alt="user"
               />
-
+              <label for="upload">
+                {" "}
+                <FaEdit className="text-muted  add-img" />
+              </label>
               <input
                 onChange={handleProfilePicture}
                 className="d-none"
@@ -173,14 +172,13 @@ const ProfileBase = () => {
             <div>
               {text ? (
                 <>
-                  <p className="user__content__biography__box__paragraph position-relative">
-                    <FaEdit
-                      onClick={editBio}
-                      className="text-muted position-absolute top-0 end-0"
-                    />
+                  <div className="user__content__biography__box__paragraph position-relative">
+                    <FaEdit onClick={editBio} className="text-muted fa-edit" />
                     <h3 className="mt-5 mb-2">BIOGRAPHY</h3>
-                    {text}
-                  </p>
+                    <p className="user__content__biography__box__paragraph__text">
+                      {text}
+                    </p>
+                  </div>
                 </>
               ) : (
                 <form className="my-5" onSubmit={handelBioSubmit}>
@@ -199,7 +197,7 @@ const ProfileBase = () => {
                   ></textarea>
                   <button
                     type="submit"
-                    className={`btn w-25 py-0  mx-auto d-block ${
+                    className={`btn  py-0  mx-auto d-block ${
                       isEditing ? "btn-danger" : "btn-primary"
                     }`}
                   >
@@ -210,7 +208,9 @@ const ProfileBase = () => {
             </div>
             <div className="user__content__biography__box__location">
               <h3>LOCATION</h3>
-              <p>{user.address}</p>
+              <p className="user__content__biography__box__location__text">
+                {user.address}
+              </p>
             </div>
           </div>
         </div>

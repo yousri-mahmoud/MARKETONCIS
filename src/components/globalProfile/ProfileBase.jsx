@@ -71,14 +71,18 @@ const ProfileBase = () => {
         <div className="col-lg-2 col-md-12  order-md-2   order-lg-3   px-2 text-center user__content__biography ">
           <div className="user__content__biography__box">
             <div>
-              <p className="user__content__biography__box__paragraph position-relative">
+              <div className="user__content__biography__box__paragraph position-relative">
                 <h3 className="mt-5 mb-2">BIOGRAPHY</h3>
-                {text}
-              </p>
+                <p className="user__content__biography__box__paragraph__text">
+                  {text}
+                </p>
+              </div>
             </div>
             <div className="user__content__biography__box__location">
               <h3>LOCATION</h3>
-              <p>{user.address}</p>
+              <p className="user__content__biography__box__location__text">
+                {user.address}
+              </p>
             </div>
           </div>
         </div>

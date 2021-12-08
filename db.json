@@ -10,9 +10,26 @@
       "confirmPassword": "protected",
       "id": 1,
       "profileImg": ""
+    },
+    {
+      "email": "salehfarag@gmail.com",
+      "password": "$2a$10$LCjZRVjNsATpCOHjikqzeOWgoRh4s2/b9AkriXf8E/YzuZP1/Go6O",
+      "firstName": "Saleh",
+      "lastName": "Farag",
+      "gender": "male",
+      "address": "egypt-suez",
+      "confirmPassword": "protected",
+      "id": 2,
+      "profileImg": ""
     }
   ],
-  "bio": [],
+  "bio": [
+    {
+      "textBio": "sals cjanca [canas[ [cosacj[a ocnsa [cias ocijas[ ojcas ojas[ [ocnas ocsa[s ocjas[ ",
+      "userId": 2,
+      "id": 1
+    }
+  ],
   "selling-posts": [
     {
       "deviceDetail": {

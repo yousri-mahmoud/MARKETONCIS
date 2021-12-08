@@ -18,7 +18,7 @@ const GlobalBlogActivity = () => {
         <h2>Blog Activity</h2>
       </header>
       {posts.length == 0 ? (
-        <h2 className="text-dark text-center py-3">no posts added yet</h2>
+        <h3 className="text-dark text-center py-3">no posts added yet</h3>
       ) : (
         posts.map((item) => {
           return (
