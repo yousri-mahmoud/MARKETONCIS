@@ -15,9 +15,9 @@ const TableComponents = ({ trColor, products }) => {
           </tr>
         </thead>
         {products.length === 0 ? (
-          <h2 className="text-dark text-center my-5 border-0">
+          <h3 className="text-dark text-center my-5 border-0">
             no items added yet
-          </h2>
+          </h3>
         ) : (
           products.map((item, index) => {
             return (

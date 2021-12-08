@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
 :root {
-  font-family: "Poppins", sans-serif, "Franklin Gothic Medium", "Arial Narrow", Arial;
+  font-family: "Poppins", sans-serif, "Franklin Gothic Medium", "Arial Narrow", Arial;
   font-weight: 500;
 }
 
@@ -710,6 +710,30 @@ ul {
   list-style: none;
 }
 
+.fa-edit {
+  position: absolute;
+  left: 0px;
+  top: -25px;
+}
+
+@media screen and (max-width: 900px) {
+  .fa-edit {
+    left: -5px;
+    top: -35px;
+  }
+}
+
+.add-img {
+  position: absolute;
+  right: 0;
+}
+
+@media screen and (max-width: 900px) {
+  .add-img {
+    right: 30%;
+  }
+}
+
 .user {
   width: 99%;
 }
@@ -723,6 +747,7 @@ ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
 }
 
 .user__content__sections__img {
@@ -731,7 +756,7 @@ ul {
   margin-bottom: 20px;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 990px) {
   .user__content__sections__img {
     width: 30%;
   }
@@ -798,22 +823,25 @@ ul {
 
 @media screen and (max-width: 900px) {
   .user__content__biography__box {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
 }
 
+.user__content__biography__box__paragraph__text {
+  font-size: 1rem;
+}
+
 @media screen and (max-width: 900px) {
-  .user__content__biography__box__paragraph {
-    width: 80%;
+  .user__content__biography__box__paragraph__text {
+    width: 90%;
     margin: 0 auto;
   }
 }
@@ -826,6 +854,10 @@ ul {
   .user__content__biography__box__location {
     margin-top: 3rem;
   }
+}
+
+.user__content__biography__box__location__text {
+  font-size: 1rem;
 }
 
 @media screen and (max-width: 900px) {
@@ -986,7 +1018,7 @@ ul {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-color: #337aaa;
-  height: 117vh;
+  height: 100%;
   position: fixed;
   left: 0;
   bottom: 0;
@@ -1064,10 +1096,6 @@ ul {
   color: #337aaa;
 }
 
-.titleColor {
-  color: #337aaa;
-}
-
 .fit-content {
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -1086,5 +1114,9 @@ ul {
 
 .posts-height {
   height: 100vh;
+}
+
+.postDetails__title {
+  font-size: 2.7rem;
 }
 /*# sourceMappingURL=style.css.map */

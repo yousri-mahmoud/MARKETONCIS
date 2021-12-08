@@ -79,11 +79,11 @@ export default function PostDetails() {
     setComment("");
   };
   return (
-    <div className="container">
+    <div className="container  postDetails gap">
       {isPostLoading ? (
         <Loading />
       ) : (
-        <div className="shadow w-75 ms-3 mt-3 p-3">
+        <div className="shadow ms-3 mt-3 p-3">
           <p>
             By{" "}
             <Link
@@ -96,11 +96,11 @@ export default function PostDetails() {
               {postAuthor}{" "}
             </Link>
           </p>
-          <h1 className="row m-0 ms-4 titleColor ">{title}</h1>
+          <h2 className="row m-0 ms-4 postDetails__title titleColor ">{title}</h2>
           <p className="row m-0 ms-4 fs-3 mt-4">{desc}</p>
         </div>
       )}
-      <p className="fw-bold ms-3 mt-1">Comments</p>
+      <p className="fw-bold ms-3 mt-4">Comments</p>
       {isCommentLoading ? (
         <Loading />
       ) : (

@@ -47,6 +47,8 @@ const Whislist = () => {
       </header>
       {isLoading ? (
         <Loading />
+      ) : wList.length === 0 ? (
+        <h3 className="text-dark text-center py-3">no wishes added yet</h3>
       ) : (
         wList.map((item, index) => (
           <Link
