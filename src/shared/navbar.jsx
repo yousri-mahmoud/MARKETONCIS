@@ -51,9 +51,7 @@ function NavbarComponent() {
             </NavLink>
           </Nav>
           <Nav className="align-items-center">
-            {isLoggedIn ? (
-              <></>
-            ) : (
+            {isLoggedIn || (
               <NavLink className="text-dark" to="/login">
                 <Button className="me-2 py-1" variant="primary">
                   Login
