@@ -69,6 +69,7 @@ function SocialMedia({ resource, newFetch }) {
       .then((res) => res.json())
       .then((data) => {
         let newData;
+        console.log(data);
         if (data.length < 5) {
           setFinished(true);
         } else {
@@ -128,9 +129,9 @@ function SocialMedia({ resource, newFetch }) {
   return (
     <section className="row blog gap">
       <div className="col-lg-2">
-      <div className="side">
-        <h2 className="">M A R K E T O N I C S</h2>
-      </div>
+        <div className="side">
+          <h2 className="">M A R K E T O N I C S</h2>
+        </div>
       </div>
       <div className="box mt-3 col-lg col-md-12  order-md-3 order-sm-3 order-2">
         <div className="input__box">

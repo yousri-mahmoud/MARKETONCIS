@@ -56,7 +56,7 @@ const LoginComponent = () => {
 
         <div className="form__content__logo col-lg-3 text-center">
           <div className="form__content__logo__content">
-            <h2>MARKETONICS</h2>
+            <h2>MARKETONCIS</h2>
           </div>
         </div>
         <div className=" form__content__fields col-lg-5">
