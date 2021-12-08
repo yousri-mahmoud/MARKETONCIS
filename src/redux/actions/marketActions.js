@@ -7,7 +7,7 @@ const newDevice = (payload) => {
   };
 };
 
-export const postNewDevice = (device, url) => {
+export const postNewDevice = (device, url, rest) => {
   return async (dispatch) => {
     const user = JSON.parse(localStorage.getItem("user"));
     const response = await fetch("http://localhost:3001/selling-posts", {
@@ -19,6 +19,7 @@ export const postNewDevice = (device, url) => {
         deviceDetail: device,
         email: user.email,
         imageUrl: url,
+        images: rest,
         userId: user.id,
         userName: ` ${user.firstName} ${user.lastName}`,
         sold: false,

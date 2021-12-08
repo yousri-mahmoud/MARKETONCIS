@@ -5,10 +5,9 @@ import { AiOutlineStar, AiFillStar } from "react-icons/ai";
 import { FaWhatsappSquare } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { AddWhish } from "./../../redux/actions/whishAction";
+import { Modal, Button } from "react-bootstrap";
 function SingleProduct() {
   const [isLoading, setIsLoading] = useState(true);
-  const staticImageUrl =
-    'https://www.slashgear.com/wp-content/uploads/2018/02/microsoft-surface-laptop-review-0-980x620.jpg"';
   const initailValue = {
     deviceDetail: {
       deviceName: "",
@@ -30,6 +29,8 @@ function SingleProduct() {
   const [list, setList] = useState([]);
   const [itemsId, setItemsId] = useState([]);
   const whishes = useSelector((wish) => wish.whish);
+  const [previewImg, setPreviewImg] = useState();
+  const [show, setShow] = useState(false);
   let { id } = useParams();
   const getdata = async () => {
     const response = await fetch(`http://localhost:3001/selling-posts/${id}`)
@@ -148,6 +149,34 @@ function SingleProduct() {
             </div>
           </section>
         )}
+      </div>
+      <div className="d-flex align-items-center justify-content-center">
+        {device.images?.map((image) => (
+          <figure
+            onClick={() => {
+              setPreviewImg(image);
+              setShow(true);
+            }}
+            className="w-25 "
+          >
+            <img className="w-100" src={image} />
+          </figure>
+        ))}
+        <Modal size="lg" show={show} onHide={() => setShow(false)}>
+          <Modal.Header closeButton>
+            <Modal.Title>Image</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <figure className="w-100">
+              <img className="w-100" src={previewImg} />
+            </figure>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button variant="secondary" onClick={() => setShow(false)}>
+              Close
+            </Button>
+          </Modal.Footer>
+        </Modal>
       </div>
     </>
   );

@@ -87,7 +87,7 @@ export default function PostsList(props) {
     });
     // console.log(deletedId);
     handleClose();
-    toparent();
+    toparent("delete", id);
   };
 
   const handleLike = async (e) => {
@@ -109,7 +109,7 @@ export default function PostsList(props) {
 
   useEffect(() => {
     fetchLikes();
-  }, []);
+  }, [props.post]);
   useEffect(() => {
     let usersLikes = likes.map((like) => like.likeUserId);
     setLikedUsers(usersLikes);

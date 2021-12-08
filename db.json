@@ -10,27 +10,33 @@
       "confirmPassword": "protected",
       "id": 1,
       "profileImg": ""
-    },
-    {
-      "email": "salehfarag@gmail.com",
-      "password": "$2a$10$LCjZRVjNsATpCOHjikqzeOWgoRh4s2/b9AkriXf8E/YzuZP1/Go6O",
-      "firstName": "Saleh",
-      "lastName": "Farag",
-      "gender": "male",
-      "address": "egypt-suez",
-      "confirmPassword": "protected",
-      "id": 2,
-      "profileImg": ""
     }
   ],
-  "bio": [
-    {
-      "textBio": "sals cjanca [canas[ [cosacj[a ocnsa [cias ocijas[ ojcas ojas[ [ocnas ocsa[s ocjas[ ",
-      "userId": 2,
-      "id": 1
-    }
-  ],
+  "bio": [],
   "selling-posts": [
+    {
+      "deviceDetail": {
+        "deviceName": "xiaomi redmi note 9 pro",
+        "deviceType": "mobile",
+        "description": "asd",
+        "images": "",
+        "devicePrice": 123,
+        "devicePlace": "alexandria",
+        "name": "",
+        "phone": "01093260600",
+        "email": ""
+      },
+      "email": "Saifalaa95@gmail.com",
+      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1638990555/pmflacbqz1ghzjzu3cul.png",
+      "images": [
+        "http://res.cloudinary.com/djup5x8bq/image/upload/v1638990551/xy7pk9qw4mphiu4uwnne.png",
+        "http://res.cloudinary.com/djup5x8bq/image/upload/v1638990555/pmflacbqz1ghzjzu3cul.png"
+      ],
+      "userId": 1,
+      "userName": " Saif Alaa ElDin",
+      "sold": false,
+      "id": 2
+    },
     {
       "deviceDetail": {
         "deviceName": "ps",
@@ -38,21 +44,246 @@
         "description": "asd",
         "images": "",
         "devicePrice": 123,
-        "devicePlace": "sapnkd",
+        "devicePlace": "alexandria",
+        "name": "",
+        "phone": "123",
+        "email": ""
+      },
+      "email": "Saifalaa95@gmail.com",
+      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1638993834/iecls6wpyo8rfpurtj5x.jpg",
+      "images": [
+        "http://res.cloudinary.com/djup5x8bq/image/upload/v1638993833/vxytyg74atjsrkuutozv.png",
+        "http://res.cloudinary.com/djup5x8bq/image/upload/v1638993834/iecls6wpyo8rfpurtj5x.jpg"
+      ],
+      "userId": 1,
+      "userName": " Saif Alaa ElDin",
+      "sold": false,
+      "id": 3
+    },
+    {
+      "deviceDetail": {
+        "deviceName": "hp probook",
+        "deviceType": "laptop",
+        "description": "asd",
+        "images": "",
+        "devicePrice": 123,
+        "devicePlace": "alexandria",
         "name": "",
         "phone": "010234",
         "email": ""
       },
       "email": "Saifalaa95@gmail.com",
-      "imageUrl": [],
+      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1638994616/kde9uvqo6eb21evzizob.jpg",
+      "images": [
+        "http://res.cloudinary.com/djup5x8bq/image/upload/v1638994613/wqg8h0a7butoikrpsayy.jpg",
+        "http://res.cloudinary.com/djup5x8bq/image/upload/v1638994616/kde9uvqo6eb21evzizob.jpg"
+      ],
       "userId": 1,
       "userName": " Saif Alaa ElDin",
       "sold": false,
-      "id": 1
+      "id": 4
     }
   ],
-  "posts": [],
-  "likes": [],
+  "posts": [
+    {
+      "title": "1",
+      "desc": "1",
+      "name": "Saif",
+      "userId": 1,
+      "postDate": "2021 11 8 16 46",
+      "id": 1
+    },
+    {
+      "title": "2",
+      "desc": "2",
+      "name": "Saif",
+      "userId": 1,
+      "postDate": "2021 11 8 16 46",
+      "id": 2
+    },
+    {
+      "title": "3",
+      "desc": "3",
+      "name": "Saif",
+      "userId": 1,
+      "postDate": "2021 11 8 16 46",
+      "id": 3
+    },
+    {
+      "title": "4",
+      "desc": "4",
+      "name": "Saif",
+      "userId": 1,
+      "postDate": "2021 11 8 16 47",
+      "id": 4
+    },
+    {
+      "title": "5",
+      "desc": "5",
+      "name": "Saif",
+      "userId": 1,
+      "postDate": "2021 11 8 17 4",
+      "id": 5
+    },
+    {
+      "title": "6",
+      "desc": "6",
+      "name": "Saif",
+      "userId": 1,
+      "postDate": "2021 11 8 17 4",
+      "id": 6
+    },
+    {
+      "title": "8",
+      "desc": "8",
+      "name": "Saif",
+      "userId": 1,
+      "postDate": "2021 11 8 17 5",
+      "id": 8
+    },
+    {
+      "title": "10",
+      "desc": "10",
+      "name": "Saif",
+      "userId": 1,
+      "postDate": "2021 11 8 17 9",
+      "id": 10
+    },
+    {
+      "title": "11",
+      "desc": "11",
+      "name": "Saif",
+      "userId": 1,
+      "postDate": "2021 11 8 17 20",
+      "id": 11
+    },
+    {
+      "title": "12",
+      "desc": "12",
+      "name": "Saif",
+      "userId": 1,
+      "postDate": "2021 11 8 17 20",
+      "id": 12
+    },
+    {
+      "title": "13",
+      "desc": "13",
+      "name": "Saif",
+      "userId": 1,
+      "postDate": "2021 11 8 17 22",
+      "id": 13
+    },
+    {
+      "title": "14",
+      "desc": "14",
+      "name": "Saif",
+      "userId": 1,
+      "postDate": "2021 11 8 17 22",
+      "id": 14
+    },
+    {
+      "title": "15",
+      "desc": "15",
+      "name": "Saif",
+      "userId": 1,
+      "postDate": "2021 11 8 17 22",
+      "id": 15
+    },
+    {
+      "title": "16",
+      "desc": "16",
+      "name": "Saif",
+      "userId": 1,
+      "postDate": "2021 11 8 17 22",
+      "id": 16
+    },
+    {
+      "title": "18",
+      "desc": "18",
+      "name": "Saif",
+      "userId": 1,
+      "postDate": "2021 11 8 17 26",
+      "id": 18
+    },
+    {
+      "title": "19",
+      "desc": "19",
+      "name": "Saif",
+      "userId": 1,
+      "postDate": "2021 11 8 17 26",
+      "id": 19
+    },
+    {
+      "title": "20",
+      "desc": "20",
+      "name": "Saif",
+      "userId": 1,
+      "postDate": "2021 11 8 17 36",
+      "id": 20
+    },
+    {
+      "title": "21",
+      "desc": "21",
+      "name": "Saif",
+      "userId": 1,
+      "postDate": "2021 11 8 17 36",
+      "id": 21
+    },
+    {
+      "title": "22",
+      "desc": "22",
+      "name": "Saif",
+      "userId": 1,
+      "postDate": "2021 11 8 17 45",
+      "id": 22
+    },
+    {
+      "title": "post abl l 25er",
+      "desc": "asd",
+      "name": "Saif",
+      "userId": 1,
+      "postDate": "2021 11 8 17 54",
+      "id": 27
+    },
+    {
+      "title": "29",
+      "desc": "29",
+      "name": "Saif",
+      "userId": 1,
+      "postDate": "2021 11 8 17 56",
+      "id": 28
+    },
+    {
+      "title": "30",
+      "desc": "30",
+      "name": "Saif",
+      "userId": 1,
+      "postDate": "2021 11 8 22 6",
+      "id": 29
+    },
+    {
+      "title": "sjkef",
+      "desc": "al jd",
+      "name": "Saif",
+      "userId": 1,
+      "postDate": "2021 11 8 22 10",
+      "id": 30
+    }
+  ],
+  "likes": [
+    {
+      "likeUserId": 1,
+      "name": "Saif Alaa ElDin",
+      "postId": "8",
+      "id": 1
+    },
+    {
+      "likeUserId": 1,
+      "name": "Saif Alaa ElDin",
+      "postId": "20",
+      "id": 2
+    }
+  ],
   "whishList": [],
   "comments": []
 }

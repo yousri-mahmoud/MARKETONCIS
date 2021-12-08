@@ -47,7 +47,7 @@ function SocialMedia({ resource, newFetch }) {
           " " +
           date.getMinutes(),
       })
-    ).then(() => fetchPosts(current));
+    ).then(() => fetchPosts("add"));
 
     setTitle("");
     setDesc("");
@@ -57,37 +57,47 @@ function SocialMedia({ resource, newFetch }) {
   //   setIsLoading(true);
   //   fetchPosts();
   // }, [post]);
-  // useEffect(() => {
-  //   setPosts(resource.post.read());
-  // }, [resource.post.read()]);
-  const fetchPosts = (first = 1) => {
-    // console.log(resource.post.read());
-    // newFetch();
-    // setIsLoading(false);
-    console.log(first);
-    fetch(`http://localhost:3001/posts?_page=${first}&_limit=5`)
-      .then((res) => res.json())
-      .then((data) => {
-        let newData;
-        console.log(data);
-        if (data.length < 5) {
-          setFinished(true);
-        } else {
-          setFinished(false);
-          setCurrent(current + 1);
-        }
-        if (finished) newData = data[data.length - 1];
-        if (posts !== data) {
-          if (newData) setPosts([...posts, newData]);
-          else {
-            setPosts([...posts, ...data]);
+
+  const fetchPosts = (status = "scroll", deletedId = null) => {
+    console.log(status);
+    let page = current;
+
+    if (status === "delete") {
+      let newPosts = posts.filter((item) => item.id !== deletedId);
+      setPosts(newPosts);
+    } else if (status === "scroll") {
+      if (deletedId) page = deletedId;
+      fetch(
+        `http://localhost:3001/posts?_page=${page}&_limit=5&_sort=id&_order=desc`
+      )
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.length < 5 && data.length !== 0) {
+            {
+              setFinished(true);
+            }
+          } else if (data.length === 5) {
+            setFinished(false);
+            setCurrent(current + 1);
           }
-        }
-      })
-      .catch((err) => console.log(err))
-      .finally(() => {
-        setIsLoading(false);
-      });
+          if (page === 1) setPosts(data);
+          else setPosts([...posts, ...data]);
+        })
+        .catch((err) => console.log(err))
+        .finally(() => {
+          setIsLoading(false);
+        });
+    } else if (status === "add") {
+      fetch(`http://localhost:3001/posts?_page=1&_limit=5&_sort=id&_order=desc`)
+        .then((res) => res.json())
+        .then((data) => {
+          let newData = [];
+          newData = posts;
+          if (finished) newData.pop();
+          setPosts([data[0], ...newData]);
+        });
+    }
+
     fetch("http://localhost:3001/comments")
       .then((res) => res.json())
       .then((data) => {
@@ -101,7 +111,9 @@ function SocialMedia({ resource, newFetch }) {
   };
   useEffect(() => {
     if (searchText.length > 0) handleSearch();
-    else fetchPosts();
+    else {
+      fetchPosts("scroll", 1);
+    }
   }, [searchText]);
   const handleSearch = async () => {
     if (searchText.length > 0) {
@@ -118,10 +130,10 @@ function SocialMedia({ resource, newFetch }) {
       e.target.scrollHeight - e.target.scrollTop <=
       e.target.clientHeight + 400
     ) {
-      console.log(current);
+      console.log(youWasHere);
       if (!youWasHere && !finished) {
-        fetchPosts(current);
         setYouWasHere(true);
+        fetchPosts("scroll");
       }
     }
   };

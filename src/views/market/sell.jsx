@@ -7,8 +7,10 @@ import { Formik, Form } from "formik";
 import * as yup from "yup";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router";
-import { CloudinaryContext, Image, Cloudinary } from "cloudinary-react";
+
+import Loading from "../../shared/Loading";
 function Sell() {
+  const [isLoading, setIsLoading] = useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [image, setImage] = useState([]);
@@ -35,7 +37,7 @@ function Sell() {
     email: "",
   };
   const onSubmit = (values) => {
-    dispatch(postNewDevice(values, imageURL));
+    dispatch(postNewDevice(values, image, imageURL));
     navigate("/market/buy");
   };
 
@@ -55,19 +57,33 @@ function Sell() {
     //   .required("Email field is required"),
   });
   const handleImage = async (e) => {
-    let imageData = new FormData();
+    setIsLoading(true);
+    let arrayOfImages = [];
     let url = "https://api.Cloudinary.com/v1_1/djup5x8bq/image/upload";
-    imageData.append("file", e.target.files[0]);
-    imageData.append("upload_preset", "rt0s8dsk");
-    const options = { method: "post", body: imageData };
-    const resp = await fetch(url, options)
-      .then((res) => res.json())
-      .then((data) => setImageURL(data.url));
+    for (let i = 0; i < e.target.files.length; i++) {
+      let imageData = new FormData();
+      imageData.append("file", e.target.files[i]);
+      imageData.append("upload_preset", "rt0s8dsk");
+      const options = { method: "post", body: imageData };
+      const resp = await fetch(url, options)
+        .then((res) => res.json())
+        .then((data) => {
+          arrayOfImages.push(data.url);
+        })
+        .catch((err) => alert("please Check your connection " + err))
+        .finally(() => setIsLoading(false));
+    }
+    setImageURL(arrayOfImages);
     // let imageUrl = URL.createObjectURL(e.target.files[0]);
     // console.log(imageUrl);
     // setImageURL(imageUrl);
   };
-
+  useEffect(() => {
+    console.log(imageURL);
+  }, [imageURL]);
+  useEffect(() => {
+    console.log(image);
+  }, [image]);
   return (
     <div className="container sell-form">
       <h2 className="header__sell-form">
@@ -103,8 +119,32 @@ function Sell() {
                   label="Add Images"
                   name="images"
                   type="file"
+                  multiple
                   onChange={handleImage}
                 />
+                {imageURL.length > 0 ? (
+                  <div>
+                    <p>Select Main thumbnail:</p>
+                    {isLoading ? (
+                      <Loading />
+                    ) : (
+                      <div className="d-flex align-items-center">
+                        {imageURL.map((img) => (
+                          <figure
+                            onClick={() => setImage(img)}
+                            className={`ms-2 w-25 selection ${
+                              image === img ? "activeimg" : ""
+                            }`}
+                          >
+                            <img className="w-100" src={img} />
+                          </figure>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <></>
+                )}
                 <FormikField
                   label="Device Price"
                   name="devicePrice"
