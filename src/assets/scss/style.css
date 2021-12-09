@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
 :root {
-  font-family: "Poppins", sans-serif, "Franklin Gothic Medium", "Arial Narrow", Arial;
+  font-family: "Poppins", sans-serif, "Franklin Gothic Medium", "Arial Narrow", Arial;
   font-weight: 500;
 }
 
@@ -355,6 +355,43 @@ svg {
   padding: 7rem 0;
 }
 
+.filtersTypes {
+  color: #fff;
+}
+
+.star {
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 994px) {
+  .star {
+    margin-top: 2rem;
+  }
+}
+
+.gallery {
+  border: 1px solid #ddd9d9;
+  border-radius: 50px;
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 994px) {
+  .gallery {
+    width: 100%;
+  }
+}
+
+.modal-img {
+  width: 50%;
+}
+
+.pagination {
+  border: 1px solid gainsboro;
+  padding: 0.5rem;
+}
+
 .product__img {
   height: 300px;
   -o-object-fit: contain;
@@ -372,7 +409,13 @@ svg {
 .buy {
   background-color: #e5e6e6;
   padding: 2rem;
-  margin-right: 10px;
+  margin-right: 1rem;
+}
+
+@media screen and (max-width: 994px) {
+  .buy {
+    margin-right: 0rem;
+  }
 }
 
 .buy h4 {
@@ -380,8 +423,8 @@ svg {
 }
 
 .sell {
-  margin-left: 10px;
   padding: 2rem;
+  height: 100%;
   background-color: #e5e6e6;
 }
 
@@ -445,12 +488,18 @@ svg {
 }
 
 .product {
-  padding-top: 70px;
+  padding-top: 5rem;
   position: relative;
   z-index: 2;
   width: 90%;
   max-width: 1100px;
   margin: auto;
+}
+
+@media screen and (max-width: 994px) {
+  .product {
+    width: 100%;
+  }
 }
 
 .about_product {
@@ -469,6 +518,15 @@ svg {
           box-shadow: 0 5px 30px rgba(0, 0, 0, 0.16);
 }
 
+@media screen and (max-width: 994px) {
+  .about_product {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .productImg {
   -ms-flex-preferred-size: 50%;
       flex-basis: 50%;
@@ -485,10 +543,15 @@ svg {
           align-items: center;
 }
 
+@media screen and (max-width: 994px) {
+  .productImg {
+    margin-right: 0px;
+  }
+}
+
 .productImg img {
-  max-width: 100%;
-  max-height: 300px;
-  min-height: 230px;
+  height: 100%;
+  width: 100%;
 }
 
 .details {
@@ -500,7 +563,7 @@ svg {
 h6 {
   margin: 0;
   margin-bottom: 8px;
-  font-size: 16px;
+  font-size: 1rem;
   color: #787878;
   font-weight: 500;
 }
@@ -508,17 +571,29 @@ h6 {
 h2 {
   margin: 0;
   margin-bottom: 20px;
-  font-size: 30px;
+  font-size: 1.5rem;
   font-weight: 500;
   color: #337aaa;
   text-transform: capitalize;
 }
 
+@media screen and (max-width: 594px) {
+  h2 {
+    font-size: 1rem;
+  }
+}
+
 .price {
-  font-size: 16px;
+  font-size: 1.3rem;
   font-weight: bold;
-  color: red;
+  color: #10960b;
   margin: 10px 0;
+}
+
+@media screen and (max-width: 394px) {
+  .price {
+    font-size: 1rem;
+  }
 }
 
 .price span {
@@ -542,8 +617,7 @@ p {
 }
 
 .category {
-  background: -webkit-gradient(linear, left top, right top, from(#1f455f), to(rgba(31, 69, 95, 0.5)));
-  background: linear-gradient(to right, #1f455f, rgba(31, 69, 95, 0.5));
+  background: #337aaa;
   padding: 20px 0;
   color: white;
   margin-bottom: 50px;
@@ -553,7 +627,7 @@ p {
   text-align: center;
   font-weight: bold;
   letter-spacing: 5px;
-  font-size: 25px;
+  font-size: 1.7rem;
   margin: 20px 0;
 }
 
@@ -573,9 +647,21 @@ p {
 
 .category ul li {
   display: inline-block;
-  margin: 0 50px;
+  margin: 0 2rem;
   font-weight: 500;
   cursor: pointer;
+}
+
+@media screen and (max-width: 994px) {
+  .category ul li {
+    margin: 0 1.2rem;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .category ul li {
+    margin: 0 0.5rem;
+  }
 }
 
 .category ul li:hover {

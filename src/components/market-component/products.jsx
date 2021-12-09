@@ -176,7 +176,7 @@ function Products() {
   };
   return (
     <>
-      <div className="category">
+      <div className="category mt-3 ">
         <h3>CATEGORIES</h3>
         <div className="search d-flex justify-content-center ">
           {search ? (
@@ -210,7 +210,7 @@ function Products() {
                 setActiceFilter(index);
               }}
             >
-              <Link to={`/market/buy/type/${item}/page/1`}> {item}</Link>
+              <Link className="filtersTypes" to={`/market/buy/type/${item}/page/1`}> {item}</Link>
             </li>
           ))}
         </ul>
@@ -221,7 +221,7 @@ function Products() {
         <div className="row products">
           {devices.map((item) => {
             return (
-              <div key={item.id} className="col-4 my-2">
+              <div key={item.id} className="col-lg-4 col-md-12 my-2">
                 <Card className="position-relative">
                   {itemsId.includes(item.id) ? (
                     <AiFillStar
@@ -245,7 +245,7 @@ function Products() {
                   <Card.Body>
                     <Card.Title className="d-flex justify-content-between align-items-center">
                       {item.deviceDetail.deviceName}{" "}
-                      <small className="text-danger">
+                      <small className="price">
                         {item.deviceDetail.devicePrice} EGP
                       </small>
                     </Card.Title>
@@ -275,7 +275,7 @@ function Products() {
       <div className="d-flex justify-content-center">
         {pages.map((page) => (
           <Link
-            className="ms-3"
+            className="pagination ms-3 mt-5"
             to={
               type === "all" || !type
                 ? `/market/buy/page/${page}`

@@ -4,7 +4,7 @@ import Products from "../../components/market-component/products";
 
 function Buy() {
   return (
-    <div className="container py-5">
+    <div className="container buyBox py-5">
       <Products />
     </div>
   );

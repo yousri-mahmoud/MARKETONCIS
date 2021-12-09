@@ -10,6 +10,17 @@
       "confirmPassword": "protected",
       "id": 1,
       "profileImg": ""
+    },
+    {
+      "email": "salehfarag@gmail.com",
+      "password": "$2a$10$coRXEAvkr8OBUHF3jnWbNuj6VbQrKJtz/QJ7.Tuwh6JrtNuG2hj42",
+      "firstName": "Saleh",
+      "lastName": "Farag",
+      "gender": "male",
+      "address": "egypt-suez",
+      "confirmPassword": "protected",
+      "id": 2,
+      "profileImg": ""
     }
   ],
   "bio": [],
@@ -254,20 +265,21 @@
       "id": 28
     },
     {
-      "title": "30",
-      "desc": "30",
+      "title": "what is the best mobile type in this year",
+      "desc": "i have a samsung note 4 and i want to buy a new phone",
       "name": "Saif",
       "userId": 1,
       "postDate": "2021 11 8 22 6",
       "id": 29
     },
     {
-      "title": "sjkef",
-      "desc": "al jd",
+      "title": "i want to buy a new laptop to for playing games any help ?",
+      "desc": "also I need this device in good price and good quality",
       "name": "Saif",
       "userId": 1,
       "postDate": "2021 11 8 22 10",
-      "id": 30
+      "id": 30,
+      "countComment": 1
     }
   ],
   "likes": [
@@ -282,8 +294,161 @@
       "name": "Saif Alaa ElDin",
       "postId": "20",
       "id": 2
+    },
+    {
+      "likeUserId": 2,
+      "name": "Saleh Farag",
+      "postId": "30",
+      "id": 3
     }
   ],
-  "whishList": [],
-  "comments": []
+  "whishList": [
+    {
+      "deviceInfo": {
+        "deviceName": "xiaomi redmi note 9 pro",
+        "deviceType": "mobile",
+        "description": "asd",
+        "images": "",
+        "devicePrice": 123,
+        "devicePlace": "alexandria",
+        "name": "",
+        "phone": "01093260600",
+        "email": ""
+      },
+      "userId": 1,
+      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1638990555/pmflacbqz1ghzjzu3cul.png",
+      "itemId": 2,
+      "id": 1
+    },
+    {
+      "deviceInfo": {
+        "deviceName": "xiaomi redmi note 9 pro",
+        "deviceType": "mobile",
+        "description": "asd",
+        "images": "",
+        "devicePrice": 123,
+        "devicePlace": "alexandria",
+        "name": "",
+        "phone": "01093260600",
+        "email": ""
+      },
+      "userId": 1,
+      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1638990555/pmflacbqz1ghzjzu3cul.png",
+      "itemId": 2,
+      "id": 2
+    },
+    {
+      "deviceInfo": {
+        "deviceName": "xiaomi redmi note 9 pro",
+        "deviceType": "mobile",
+        "description": "asd",
+        "images": "",
+        "devicePrice": 123,
+        "devicePlace": "alexandria",
+        "name": "",
+        "phone": "01093260600",
+        "email": ""
+      },
+      "userId": 1,
+      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1638990555/pmflacbqz1ghzjzu3cul.png",
+      "itemId": 2,
+      "id": 3
+    },
+    {
+      "deviceInfo": {
+        "deviceName": "xiaomi redmi note 9 pro",
+        "deviceType": "mobile",
+        "description": "asd",
+        "images": "",
+        "devicePrice": 123,
+        "devicePlace": "alexandria",
+        "name": "",
+        "phone": "01093260600",
+        "email": ""
+      },
+      "userId": 1,
+      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1638990555/pmflacbqz1ghzjzu3cul.png",
+      "itemId": 2,
+      "id": 4
+    },
+    {
+      "deviceInfo": {
+        "deviceName": "xiaomi redmi note 9 pro",
+        "deviceType": "mobile",
+        "description": "asd",
+        "images": "",
+        "devicePrice": 123,
+        "devicePlace": "alexandria",
+        "name": "",
+        "phone": "01093260600",
+        "email": ""
+      },
+      "userId": 1,
+      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1638990555/pmflacbqz1ghzjzu3cul.png",
+      "itemId": 2,
+      "id": 5
+    },
+    {
+      "deviceInfo": {
+        "deviceName": "xiaomi redmi note 9 pro",
+        "deviceType": "mobile",
+        "description": "asd",
+        "images": "",
+        "devicePrice": 123,
+        "devicePlace": "alexandria",
+        "name": "",
+        "phone": "01093260600",
+        "email": ""
+      },
+      "userId": 1,
+      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1638990555/pmflacbqz1ghzjzu3cul.png",
+      "itemId": 2,
+      "id": 6
+    },
+    {
+      "deviceInfo": {
+        "deviceName": "xiaomi redmi note 9 pro",
+        "deviceType": "mobile",
+        "description": "asd",
+        "images": "",
+        "devicePrice": 123,
+        "devicePlace": "alexandria",
+        "name": "",
+        "phone": "01093260600",
+        "email": ""
+      },
+      "userId": 1,
+      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1638990555/pmflacbqz1ghzjzu3cul.png",
+      "itemId": 2,
+      "id": 7
+    },
+    {
+      "deviceInfo": {
+        "deviceName": "xiaomi redmi note 9 pro",
+        "deviceType": "mobile",
+        "description": "asd",
+        "images": "",
+        "devicePrice": 123,
+        "devicePlace": "alexandria",
+        "name": "",
+        "phone": "01093260600",
+        "email": ""
+      },
+      "userId": 2,
+      "postedById": 1,
+      "userName": " Saif Alaa ElDin",
+      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1638990555/pmflacbqz1ghzjzu3cul.png",
+      "itemId": 2,
+      "id": 8
+    }
+  ],
+  "comments": [
+    {
+      "postId": "30",
+      "author": "Saleh",
+      "comment": "dell 5050",
+      "commentAuthorId": 2,
+      "id": 1
+    }
+  ]
 }
