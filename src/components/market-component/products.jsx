@@ -210,7 +210,13 @@ function Products() {
                 setActiceFilter(index);
               }}
             >
-              <Link className="filtersTypes" to={`/market/buy/type/${item}/page/1`}> {item}</Link>
+              <Link
+                className="filtersTypes"
+                to={`/market/buy/type/${item}/page/1`}
+              >
+                {" "}
+                {item}
+              </Link>
             </li>
           ))}
         </ul>
@@ -245,9 +251,20 @@ function Products() {
                   <Card.Body>
                     <Card.Title className="d-flex justify-content-between align-items-center">
                       {item.deviceDetail.deviceName}{" "}
-                      <small className="price">
-                        {item.deviceDetail.devicePrice} EGP
-                      </small>
+                      <div>
+                        {item.discount && (
+                          <small className="d-block discount text-danger text-decoration-line-through">
+                            {" "}
+                            {item.deviceDetail.devicePrice} EGP
+                          </small>
+                        )}
+                        <small className="price">
+                          {item.discount
+                            ? item.discount
+                            : item.deviceDetail.devicePrice}{" "}
+                          EGP
+                        </small>
+                      </div>
                     </Card.Title>
 
                     <Card.Text>{item.deviceDetail.description}</Card.Text>

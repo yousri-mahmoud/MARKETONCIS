@@ -1,3 +1,11 @@
+.discount {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.discount_detail {
+  font-weight: 500;
+  font-size: 16px;
+}
 .filtersTypes {
   color: #fff;
 }
@@ -44,7 +52,6 @@
   margin-right: 1rem;
   @media screen and (max-width: 994px) {
     margin-right: 0rem;
-
   }
   h4 {
     color: $c-primary-dark;
@@ -167,7 +174,7 @@ h2 {
   margin: 0;
   margin-bottom: 20px;
   font-size: 1.5rem;
-  
+
   @media screen and (max-width: 594px) {
     font-size: 1rem;
   }
@@ -179,7 +186,6 @@ h2 {
   font-size: 1.3rem;
   @media screen and (max-width: 394px) {
     font-size: 1rem;
-
   }
   font-weight: bold;
   color: rgb(16, 150, 11);
@@ -209,7 +215,7 @@ p {
   padding: 20px 0;
   color: white;
   margin-bottom: 50px;
- 
+
   h3 {
     text-align: center;
     font-weight: bold;

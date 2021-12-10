@@ -2,7 +2,7 @@ import React from "react";
 import sliderOne from "../assets/image/slider_one.PNG";
 import sliderTwo from "../assets/image/slider_two.PNG";
 import sliderThree from "../assets/image/slider_three.PNG";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { Carousel } from "react-bootstrap";
 
