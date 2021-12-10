@@ -1,11 +1,17 @@
 import React from "react";
 import buy from "../../assets/image/buy.jpg";
 import sell from "../../assets/image/sell.jpg";
+import {Helmet} from "react-helmet";
+
 
 import { Link } from "react-router-dom";
 function Market() {
   return (
     <>
+          <Helmet>
+                <meta charSet="utf-8" />
+                <title>Market</title>
+            </Helmet>
       <section className="market gap">
         <div className="container py-5">
           <div className="row">

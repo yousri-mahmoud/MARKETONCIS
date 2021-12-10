@@ -5,12 +5,18 @@ import sliderThree from "../assets/image/slider_three.PNG";
 import { NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { Carousel } from "react-bootstrap";
+import {Helmet} from "react-helmet";
+
 
 const Home = () => {
   const isLoggedIn = useSelector((state) => state.auth.isLogIn);
 
   return (
     <div>
+         <Helmet>
+                <meta charSet="utf-8" />
+                <title>Home</title>
+            </Helmet>
       <div className="home text-center gap">
         <header className="home__header">
           <h1>M A R K E T O N I C S</h1>
