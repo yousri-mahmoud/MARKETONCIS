@@ -31,7 +31,7 @@ function Products() {
   const getData = async () => {
     currentPage = isNaN(currentPage) ? 1 : currentPage;
     const response = await fetch(
-      `http://localhost:3001/selling-posts?_page=${currentPage}&_limit=2&sold=${false}`
+      `http://localhost:3001/selling-posts?_page=${currentPage}&_limit=9&sold=${false}`
     )
       .then((res) => {
         let arr = res.headers.get("link").split(",");
@@ -52,7 +52,7 @@ function Products() {
       str.indexOf("&")
     );
     allPages = parseInt(allPages);
-    console.log(allPages);
+    // console.log(allPages);
     let pagesArray = [];
     for (let i = 1; i <= allPages; i++) pagesArray.push(i);
     setPages(pagesArray);
@@ -69,7 +69,7 @@ function Products() {
   const queryParamsFilter = async (filterName) => {
     // console.log(currentPage, filterName);
     const response = await fetch(
-      `http://localhost:3001/selling-posts?_page=${currentPage}&_limit=2&deviceDetail.deviceType=${filterName}&sold=${false}`
+      `http://localhost:3001/selling-posts?_page=${currentPage}&_limit=9&deviceDetail.deviceType=${filterName}&sold=${false}`
     )
       .then((res) => {
         let arr = res.headers.get("link").split(",");
@@ -93,7 +93,7 @@ function Products() {
   const handelSearch = async () => {
     if (activeFilter === 0) {
       const response = await fetch(
-        `http://localhost:3001/selling-posts?_page=1&_limit=2&q=${searchText}&sold=${false}`
+        `http://localhost:3001/selling-posts?_page=1&_limit=9&q=${searchText}&sold=${false}`
       )
         .then((res) => {
           let arr = res.headers.get("link").split(",");
@@ -121,7 +121,7 @@ function Products() {
   }, [whishes]);
   useEffect(() => {
     if (!type || type === "all") {
-      console.log("it was here");
+      // console.log("it was here");
       setIsLoading(true);
       getData();
     }
@@ -142,7 +142,7 @@ function Products() {
   };
 
   useEffect(() => {
-    console.log(window.location.pathname.slice());
+    // console.log(window.location.pathname.slice());
     let updatedList = list?.filter((whish) => {
       return whish.userId === userId;
     });

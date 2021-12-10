@@ -81,12 +81,7 @@ function Sell() {
     // console.log(imageUrl);
     // setImageURL(imageUrl);
   };
-  useEffect(() => {
-    console.log(imageURL);
-  }, [imageURL]);
-  useEffect(() => {
-    console.log(image);
-  }, [image]);
+
   return (
     <div className="container sell-form gap">
       <h2 className="header__sell-form">
@@ -132,28 +127,24 @@ function Sell() {
                   multiple
                   onChange={handleImage}
                 />
-                {imageURL.length > 0 ? (
+                {isLoading ? (
                   <div>
                     <p>Select Main thumbnail:</p>
-                    {isLoading ? (
-                      <Loading />
-                    ) : (
-                      <div className="d-flex align-items-center">
-                        {imageURL.map((img) => (
-                          <figure
-                            onClick={() => setImage(img)}
-                            className={`ms-2 w-25 selection ${
-                              image === img ? "activeimg" : ""
-                            }`}
-                          >
-                            <img className="w-100" src={img} />
-                          </figure>
-                        ))}
-                      </div>
-                    )}
+                    {imageURL.length === 0 ? <Loading /> : <></>}
                   </div>
                 ) : (
-                  <></>
+                  <div className="d-flex align-items-center">
+                    {imageURL.map((img) => (
+                      <figure
+                        onClick={() => setImage(img)}
+                        className={`ms-2 w-25 selection ${
+                          image === img ? "activeimg" : ""
+                        }`}
+                      >
+                        <img className="w-100" src={img} />
+                      </figure>
+                    ))}
+                  </div>
                 )}
                 <FormikField
                   label="Device Price"
@@ -171,7 +162,11 @@ function Sell() {
                 <FormikField label="Email" name="email" type="email" /> */}
                 <FormikField label="Phone" name="phone" type="text" />
 
-                <button className="submit__sell-form" type="submit">
+                <button
+                  disabled={imageURL.length === 0}
+                  className="submit__sell-form"
+                  type="submit"
+                >
                   Submit
                 </button>
               </div>

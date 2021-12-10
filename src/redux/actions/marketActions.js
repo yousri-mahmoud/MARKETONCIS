@@ -8,6 +8,7 @@ const newDevice = (payload) => {
 };
 
 export const postNewDevice = (device, url, rest) => {
+  console.log("url " + url);
   return async (dispatch) => {
     const user = JSON.parse(localStorage.getItem("user"));
     const response = await fetch("http://localhost:3001/selling-posts", {
