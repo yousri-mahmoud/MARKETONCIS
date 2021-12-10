@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { FaTrash } from "react-icons/fa";
+
 import Loading from "../../shared/Loading";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
@@ -41,7 +43,7 @@ const Whislist = () => {
     fetchList();
   };
   return (
-    <section className="whislist mt-4 w-75 m-auto">
+    <section className="whislist mt-4  m-auto">
       <header>
         <h2>My Wishlist</h2>
       </header>
@@ -79,14 +81,10 @@ const Whislist = () => {
               </div>
 
               <p className="whislist__content__box__price">
-                {item.deviceInfo.devicePrice}
+                {item.deviceInfo.devicePrice} EGP
               </p>
-              <button
-                onClick={(e) => handleDelete(e, item)}
-                className="btn btn-danger"
-              >
-                DELETE
-              </button>
+            
+                <FaTrash className="whislist__content__box__trash" color="red"  onClick={(e) => handleDelete(e, item)}/>
             </div>
           </Link>
         ))

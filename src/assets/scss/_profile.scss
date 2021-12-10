@@ -6,7 +6,7 @@ ul {
     position: absolute;
     left: 0px;
     top: -25px;
-    @media screen and (max-width: 900px) {
+    @media screen and (max-width: 994px) {
       left: -5px;
       top: -35px;
     }
@@ -14,7 +14,7 @@ ul {
 .add-img {
   position: absolute;
   right: 0;
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 994px) {
     right: 30%;
   }
 }
@@ -76,15 +76,10 @@ ul {
       &__box {
         display: flex;
         flex-direction: column;
-        @media screen and (max-width: 900px) {
-          align-items: center;
-          flex-direction: row;
-          justify-content: space-around;
-        }
         &__paragraph {
           &__text {
             font-size: 1rem;
-            @media screen and (max-width: 900px) {
+            @media screen and (max-width: 994px) {
               width: 90%;
               margin: 0 auto;
             }
@@ -96,15 +91,14 @@ ul {
           h3 {
             color: $c-primary;
           }
-          @media screen and (max-width: 900px) {
+          @media screen and (max-width: 994px) {
             margin-top: 3rem;
           }
           &__text {
             font-size: 1rem;
           }
 
-          @media screen and (max-width: 900px) {
-            margin-right: 3rem;
+          @media screen and (max-width: 994px) {
             h3 {
               font-size: 1.15rem;
             }
@@ -164,6 +158,10 @@ ul {
 }
 
 .whislist {
+  width: 85%;
+  @media screen and (max-width: 994px) {
+    width: 95%;
+  }
   header h2 {
     color: black;
   }
@@ -171,6 +169,7 @@ ul {
     &__box {
       border: 1px solid gainsboro;
       border-radius: 20px;
+      padding: 1rem;
       &__info {
         img {
           width: 70%;
@@ -184,6 +183,9 @@ ul {
       }
       &__price {
         font-weight: bold;
+      }
+      &__trash {
+        margin-bottom: 1.6rem;
       }
     }
   }

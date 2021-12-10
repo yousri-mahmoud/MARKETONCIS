@@ -23,7 +23,13 @@
       "profileImg": ""
     }
   ],
-  "bio": [],
+  "bio": [
+    {
+      "textBio": "sadls ckasmk ckmams csmao ocsma ocas ocmams ocsam[",
+      "userId": 2,
+      "id": 1
+    }
+  ],
   "selling-posts": [
     {
       "deviceDetail": {
@@ -434,12 +440,29 @@
         "phone": "01093260600",
         "email": ""
       },
+      "userId": 1,
+      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1638990555/pmflacbqz1ghzjzu3cul.png",
+      "itemId": 2,
+      "id": 8
+    },
+    {
+      "deviceInfo": {
+        "deviceName": "xiaomi redmi note 9 pro",
+        "deviceType": "mobile",
+        "description": "asd",
+        "images": "",
+        "devicePrice": 123,
+        "devicePlace": "alexandria",
+        "name": "",
+        "phone": "01093260600",
+        "email": ""
+      },
       "userId": 2,
       "postedById": 1,
       "userName": " Saif Alaa ElDin",
       "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1638990555/pmflacbqz1ghzjzu3cul.png",
       "itemId": 2,
-      "id": 8
+      "id": 9
     }
   ],
   "comments": [

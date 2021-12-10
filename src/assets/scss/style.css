@@ -222,9 +222,23 @@ svg {
 }
 
 .search_input {
-  width: 250px;
+  width: 100%;
   outline: none;
   border: none;
+}
+
+@media screen and (max-width: 994px) {
+  .nav-links {
+    padding-left: 2rem !important;
+    margin-top: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 994px) {
+  .nav-links-profile {
+    padding: 1rem;
+    margin-top: -0.1rem;
+  }
 }
 
 .footer {
@@ -355,10 +369,6 @@ svg {
   padding: 7rem 0;
 }
 
-.filtersTypes {
-  color: #fff;
-}
-
 .star {
   font-size: 2rem;
 }
@@ -367,6 +377,21 @@ svg {
   .star {
     margin-top: 2rem;
   }
+}
+
+.sell-fields {
+  width: 75%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 994px) {
+  .sell-fields {
+    width: 100%;
+  }
+}
+
+.vistMarket {
+  text-align: end;
 }
 
 .gallery {
@@ -387,9 +412,38 @@ svg {
   width: 50%;
 }
 
+.addProduct {
+  text-align: end;
+  margin-right: 1rem;
+}
+
+.addProduct__btn {
+  background-color: #fff;
+  color: #000;
+  font-weight: 600;
+}
+
 .pagination {
   border: 1px solid gainsboro;
-  padding: 0.5rem;
+  padding: 0.3rem 0.7rem;
+  font-size: 1.3rem;
+  margin-top: 2rem;
+}
+
+.is-not-active {
+  color: #bbbbbb;
+}
+
+.is-active {
+  color: #0a58ca;
+}
+
+.typesFilter:hover {
+  color: #fff;
+}
+
+.is-active-cat {
+  color: #fff;
 }
 
 .product__img {
@@ -668,10 +722,6 @@ p {
   color: #5cb2fd;
 }
 
-.active_filter {
-  color: #5cb2fd;
-}
-
 .whatsApp_icon {
   color: green;
   font-size: 50px;
@@ -814,7 +864,7 @@ ul {
   top: -25px;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 994px) {
   .fa-edit {
     left: -5px;
     top: -35px;
@@ -826,7 +876,7 @@ ul {
   right: 0;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 994px) {
   .add-img {
     right: 30%;
   }
@@ -919,25 +969,11 @@ ul {
           flex-direction: column;
 }
 
-@media screen and (max-width: 900px) {
-  .user__content__biography__box {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-}
-
 .user__content__biography__box__paragraph__text {
   font-size: 1rem;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 994px) {
   .user__content__biography__box__paragraph__text {
     width: 90%;
     margin: 0 auto;
@@ -948,7 +984,7 @@ ul {
   color: #337aaa;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 994px) {
   .user__content__biography__box__location {
     margin-top: 3rem;
   }
@@ -958,10 +994,7 @@ ul {
   font-size: 1rem;
 }
 
-@media screen and (max-width: 900px) {
-  .user__content__biography__box__location {
-    margin-right: 3rem;
-  }
+@media screen and (max-width: 994px) {
   .user__content__biography__box__location h3 {
     font-size: 1.15rem;
   }
@@ -1014,6 +1047,16 @@ ul {
   background-color: #f0f0f0;
 }
 
+.whislist {
+  width: 85%;
+}
+
+@media screen and (max-width: 994px) {
+  .whislist {
+    width: 95%;
+  }
+}
+
 .whislist header h2 {
   color: black;
 }
@@ -1021,6 +1064,7 @@ ul {
 .whislist__content__box {
   border: 1px solid gainsboro;
   border-radius: 20px;
+  padding: 1rem;
 }
 
 .whislist__content__box__info img {
@@ -1035,6 +1079,10 @@ ul {
 
 .whislist__content__box__price {
   font-weight: bold;
+}
+
+.whislist__content__box__trash {
+  margin-bottom: 1.6rem;
 }
 
 .activity header h2 {
@@ -1100,6 +1148,10 @@ ul {
 
 .blog .icon {
   font-size: 1.3rem;
+}
+
+.add {
+  background-color: #337aaa !important;
 }
 
 .post__card {
@@ -1215,6 +1267,36 @@ ul {
 }
 
 .postDetails__title {
-  font-size: 2.7rem;
+  font-size: 3rem;
+  line-height: 3.5rem;
+}
+
+@media screen and (max-width: 994px) {
+  .postDetails__title {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 594px) {
+  .postDetails__title {
+    line-height: 3rem;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .postDetails__title {
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+  }
+}
+
+.postDetails__des {
+  font-size: 1.3rem;
+}
+
+@media screen and (max-width: 300px) {
+  .postDetails__des {
+    font-size: 1rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */

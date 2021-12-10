@@ -1,12 +1,22 @@
-.filtersTypes {
-  color: #fff;
-}
+
+
 .star {
   font-size: 2rem;
 
   @media screen and (max-width: 994px) {
     margin-top: 2rem;
   }
+}
+.sell-fields {
+  width: 75%;
+  margin: 0 auto;
+  @media screen and (max-width: 994px) {
+    width: 100%;
+  }
+}
+.vistMarket {
+  text-align: end;
+  
 }
 .gallery {
   border: 1px solid rgb(221, 217, 217);
@@ -17,16 +27,40 @@
   }
   margin: 0 auto;
   margin-top: 1rem;
-  img {
-  }
+ 
 }
 .modal-img {
   width: 50%;
 }
+.addProduct {
+  text-align: end;
+  margin-right: 1rem;
+  &__btn {
+  background-color: #fff;
+  color: #000;
+  font-weight: 600;
+  }
+}
 .pagination {
   border: 1px solid gainsboro;
-  padding: 0.5rem;
+  padding: 0.3rem 0.7rem;
+  font-size: 1.3rem;
+  margin-top: 2rem;
 }
+.is-not-active {
+  color: #bbbbbb;
+}
+.is-active {
+  color: #0a58ca;
+}
+.typesFilter:hover {
+  color: #fff;
+
+}
+.is-active-cat {
+  color: #fff;
+}
+
 .product__img {
   height: 300px;
   object-fit: contain;
@@ -241,9 +275,8 @@ p {
   }
 }
 
-.active_filter {
-  color: $c-primary-light;
-}
+
+
 
 .whatsApp_icon {
   color: green;
