@@ -1,13 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
 :root {
-<<<<<<< HEAD
   font-family: "Poppins", sans-serif, "Franklin Gothic Medium", "Arial Narrow", Arial;
-||||||| 9c1ffc7
-  font-family: "Poppins", sans-serif, "Franklin Gothic Medium", "Arial Narrow",
- Arial;
-=======
-  font-family: "Poppins", sans-serif, "Franklin Gothic Medium", "Arial Narrow", Arial;
->>>>>>> 62dc6de2077b7c2d17e0d30a3dc7fc35a30dfd47
   font-weight: 500;
 }
 
@@ -412,10 +405,6 @@ svg {
   color: #fff;
 }
 
-<<<<<<< HEAD
-||||||| 9c1ffc7
-
-=======
 .Device-img {
   color: #337aaa;
   font-weight: 600;
@@ -426,7 +415,6 @@ svg {
   font-weight: 400;
 }
 
->>>>>>> 62dc6de2077b7c2d17e0d30a3dc7fc35a30dfd47
 .star {
   font-size: 2rem;
 }
@@ -1206,6 +1194,10 @@ ul {
 
 .activity__content__box__footer svg {
   font-size: 1rem;
+}
+
+.up {
+  padding-bottom: 7.5rem;
 }
 
 .blog {

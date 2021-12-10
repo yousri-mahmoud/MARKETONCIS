@@ -3,13 +3,13 @@ ul {
 }
 
 .fa-edit {
-    position: absolute;
-    left: 0px;
-    top: -25px;
-    @media screen and (max-width: 994px) {
-      left: -5px;
-      top: -35px;
-    }
+  position: absolute;
+  left: 0px;
+  top: -25px;
+  @media screen and (max-width: 994px) {
+    left: -5px;
+    top: -35px;
+  }
 }
 .add-img {
   position: absolute;
@@ -26,7 +26,6 @@ ul {
       border-right: 1px solid $c-gray-4;
       flex-direction: column;
       position: relative;
-  
 
       &__img {
         width: 100%;
@@ -84,7 +83,6 @@ ul {
               margin: 0 auto;
             }
           }
-         
         }
 
         &__location {
@@ -240,4 +238,7 @@ ul {
       }
     }
   }
+}
+.up {
+  padding-bottom: 7.5rem;
 }

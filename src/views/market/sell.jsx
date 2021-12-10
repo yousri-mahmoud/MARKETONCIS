@@ -2,8 +2,7 @@ import React, { useState, useEffect } from "react";
 import FormikField from "../../shared/formik/FormikField";
 import SelectFormikFiels from "../../shared/formik/SelectFormikFiels";
 import { Button } from "react-bootstrap";
-import {Helmet} from "react-helmet";
-
+import { Helmet } from "react-helmet";
 
 // import { FaRegTimesCircle } from "react-icons/fa";
 import { postNewDevice } from "../../redux/actions/marketActions";
@@ -85,12 +84,11 @@ function Sell() {
   };
 
   return (
-    
     <div className="container sell-form gap">
-           <Helmet>
-                <meta charSet="utf-8" />
-                <title>Market</title>
-            </Helmet>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Market</title>
+      </Helmet>
       <h2 className="header__sell-form">
         Enter the required information about your device
       </h2>
@@ -171,7 +169,12 @@ function Sell() {
                 {/* <FormikField label="Name" name="name" type="text" />
                 <FormikField label="Email" name="email" type="email" /> */}
 
-                <FormikField label="Phone" textMuted="(Notice: Usres will contact you)" name="phone" type="text" />
+                <FormikField
+                  label="Phone"
+                  textMuted="(Notice: Users will contact you through this number)"
+                  name="phone"
+                  type="text"
+                />
 
                 <button
                   disabled={imageURL.length === 0}

@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "users": [
     {
       "email": "Saifalaa97@gmail.com",
@@ -24,25 +23,7 @@
       "profileImg": ""
     }
   ],
-||||||| 9c1ffc7
-  "users": [],
-=======
-  "users": [
-    {
-      "email": "salehfarag@gmail.com",
-      "password": "$2a$10$.o.7AbvdrVzMc29Hy83rGu.B01KTRVqH5dOA3G9ZUq38ewqd94cq.",
-      "firstName": "Saleh",
-      "lastName": "Farag",
-      "gender": "male",
-      "address": "egypt-suez",
-      "confirmPassword": "protected",
-      "id": 1,
-      "profileImg": ""
-    }
-  ],
->>>>>>> 62dc6de2077b7c2d17e0d30a3dc7fc35a30dfd47
   "bio": [],
-<<<<<<< HEAD
   "selling-posts": [
     {
       "deviceDetail": {
@@ -322,151 +303,7 @@
     }
   ],
   "posts": [],
-||||||| 9c1ffc7
-  "selling-posts": [],
-  "posts": [],
-=======
-  "selling-posts": [
-    {
-      "deviceDetail": {
-        "deviceName": "dell 5053",
-        "deviceType": "laptop",
-        "description": "cascsa",
-        "images": "",
-        "devicePrice": 2321,
-        "devicePlace": "232",
-        "name": "",
-        "phone": "9321",
-        "email": ""
-      },
-      "email": "salehfarag@gmail.com",
-      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1639149036/zeq2oucbmmwttdbhqt1q.jpg",
-      "images": [
-        "http://res.cloudinary.com/djup5x8bq/image/upload/v1639149036/zeq2oucbmmwttdbhqt1q.jpg"
-      ],
-      "userId": 1,
-      "userName": " Saleh Farag",
-      "sold": false,
-      "discount": false,
-      "id": 1
-    },
-    {
-      "deviceDetail": {
-        "deviceName": "dell 50501",
-        "deviceType": "mobile",
-        "description": "sncsao",
-        "images": "",
-        "devicePrice": 232,
-        "devicePlace": "suez",
-        "name": "",
-        "phone": "010",
-        "email": ""
-      },
-      "email": "salehfarag@gmail.com",
-      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1639149078/okzhja3g3ksjxrys2thi.jpg",
-      "images": [
-        "http://res.cloudinary.com/djup5x8bq/image/upload/v1639149078/okzhja3g3ksjxrys2thi.jpg"
-      ],
-      "userId": 1,
-      "userName": " Saleh Farag",
-      "sold": false,
-      "discount": false,
-      "id": 2
-    },
-    {
-      "deviceDetail": {
-        "deviceName": "kncs",
-        "deviceType": "mobile",
-        "description": "csas",
-        "images": "",
-        "devicePrice": 2312,
-        "devicePlace": "2e421",
-        "name": "",
-        "phone": "4214",
-        "email": ""
-      },
-      "email": "salehfarag@gmail.com",
-      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1639149114/jmfyqbeippuxrj1k8eb9.jpg",
-      "images": [
-        "http://res.cloudinary.com/djup5x8bq/image/upload/v1639149114/jmfyqbeippuxrj1k8eb9.jpg"
-      ],
-      "userId": 1,
-      "userName": " Saleh Farag",
-      "sold": false,
-      "discount": false,
-      "id": 3
-    }
-  ],
-  "posts": [
-    {
-      "title": "what is the best laptop for programming ?   ",
-      "desc": "in last few days i search about the best laptops for programming are you guys have any suggestion ",
-      "name": "Saleh",
-      "userId": 1,
-      "postDate": "2021 11 10 21 21",
-      "id": 1,
-      "countComment": 1
-    }
-  ],
->>>>>>> 62dc6de2077b7c2d17e0d30a3dc7fc35a30dfd47
   "likes": [],
-<<<<<<< HEAD
   "whishList": [],
   "comments": []
 }
-||||||| 9c1ffc7
-  "whishList": [],
-  "comments": []
-}
-=======
-  "whishList": [
-    {
-      "deviceInfo": {
-        "deviceName": "dell 5053",
-        "deviceType": "laptop",
-        "description": "cascsa",
-        "images": "",
-        "devicePrice": 2321,
-        "devicePlace": "232",
-        "name": "",
-        "phone": "9321",
-        "email": ""
-      },
-      "userId": 1,
-      "postedById": 1,
-      "userName": " Saleh Farag",
-      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1639149036/zeq2oucbmmwttdbhqt1q.jpg",
-      "itemId": 1,
-      "id": 1
-    },
-    {
-      "deviceInfo": {
-        "deviceName": "kncs",
-        "deviceType": "mobile",
-        "description": "csas",
-        "images": "",
-        "devicePrice": 2312,
-        "devicePlace": "2e421",
-        "name": "",
-        "phone": "4214",
-        "email": ""
-      },
-      "userId": 1,
-      "postedById": 1,
-      "userName": " Saleh Farag",
-      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1639149114/jmfyqbeippuxrj1k8eb9.jpg",
-      "itemId": 3,
-      "id": 2
-    }
-  ],
-  "comments": [
-    {
-      "postId": "1",
-      "author": "Saleh",
-      "comment": "saleh\n",
-      "commentAuthorId": 1,
-      "id": 1
-    }
-  ]
-}
->>>>>>> 62dc6de2077b7c2d17e0d30a3dc7fc35a30dfd47
