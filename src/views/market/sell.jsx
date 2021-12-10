@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from "react";
 import FormikField from "../../shared/formik/FormikField";
 import SelectFormikFiels from "../../shared/formik/SelectFormikFiels";
+import { Button } from "react-bootstrap";
+
 // import { FaRegTimesCircle } from "react-icons/fa";
 import { postNewDevice } from "../../redux/actions/marketActions";
 import { Formik, Form } from "formik";
 import * as yup from "yup";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router";
+import { Link } from "react-router-dom";
 
 import Loading from "../../shared/Loading";
 function Sell() {
@@ -85,10 +88,17 @@ function Sell() {
     console.log(image);
   }, [image]);
   return (
-    <div className="container sell-form">
+    <div className="container sell-form gap">
       <h2 className="header__sell-form">
         Enter the required information about your device
       </h2>
+      <div className="vistMarket">
+        <Link to="/market/buy">
+          <Button variant="primary" className="addProduct__btn">
+            Vist The Market
+          </Button>
+        </Link>
+      </div>
       <Formik
         initialValues={initialValues}
         onSubmit={onSubmit}
@@ -97,7 +107,7 @@ function Sell() {
         {(forimk) => {
           return (
             <Form>
-              <div className="w-50 m-auto" style={{ padding: 20 }}>
+              <div className="sell-fields" style={{ padding: 20 }}>
                 <FormikField
                   label="Device Name"
                   name="deviceName"

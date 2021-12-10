@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Modal, Button } from "react-bootstrap";
 import Loading from "../../shared/Loading";
 import { useSelector, useDispatch } from "react-redux";
+import { Helmet } from "react-helmet";
 import { PostInfo } from "../../redux/actions/PostAction";
 import PostsList from "./PostsList";
 function SocialMedia({ resource, newFetch }) {
@@ -140,6 +141,14 @@ function SocialMedia({ resource, newFetch }) {
 
   return (
     <section className="row blog gap">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Blog</title>
+        <meta
+          name="description"
+          content="MARKETONICS has a blog where you can share your opinions on products with others"
+        />
+      </Helmet>
       <div className="col-lg-2">
         <div className="side">
           <h2 className="">M A R K E T O N I C S</h2>
@@ -185,7 +194,7 @@ function SocialMedia({ resource, newFetch }) {
         )}
       </div>
       <div className="col-lg-2 mt-3 col-md-12 text-end   order-md-2   order-lg-3">
-        <Button variant="primary" onClick={handleShow}>
+        <Button variant="primary" className="add" onClick={handleShow}>
           Add new Topic
         </Button>
         <Modal show={show} onHide={handleClose}>

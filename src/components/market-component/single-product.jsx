@@ -35,14 +35,18 @@ function SingleProduct() {
   const getdata = async () => {
     const response = await fetch(`http://localhost:3001/selling-posts/${id}`)
       .then((res) => res.json())
-      .then((data) => setDevice(data))
+      .then((data) => {
+        setDevice(data);
+      })
       .catch((err) => console.log(err))
       .finally(() => setIsLoading(false));
   };
   const getWishes = async () => {
     const response = await fetch(`http://localhost:3001/whishList`)
       .then((res) => res.json())
-      .then((list) => setList(list));
+      .then((list) => {
+        setList(list);
+      });
   };
   useEffect(() => {
     setIsLoading(true);
@@ -53,25 +57,30 @@ function SingleProduct() {
   }, [whishes]);
   let user = JSON.parse(localStorage.getItem("user"));
   useEffect(() => {
+    // console.log(list);
     let updatedList = list?.filter((whish) => {
+      console.log(whish.userId, user.id);
       return whish.userId === user.id;
     });
+    // console.log(updatedList);
     setWList(updatedList);
   }, [list]);
   useEffect(() => {
+    // console.log(wList);
     let newItemsID = wList.map((item) => item.itemId);
     setItemsId(newItemsID);
   }, [wList]);
-  useEffect(() => {}, [itemsId]);
-  const handleWhish = async (item) => {
+
+  const handleWhish = (item) => {
     dispatch(
       AddWhish({
         deviceInfo: item.deviceDetail,
-        userId: item.userId,
+        userId: user.id,
+        postedById: item.userId,
         imageUrl: item.imageUrl,
         itemId: item.id,
       })
-    );
+    ).then(() => getWishes());
   };
   const handleDeleteWhish = async (item) => {
     let deletedId = wList.filter((it) => it.itemId === item.id);
@@ -80,8 +89,7 @@ function SingleProduct() {
       {
         method: "DELETE",
       }
-    );
-    getWishes();
+    ).then(() => getWishes());
   };
   return (
     <>
