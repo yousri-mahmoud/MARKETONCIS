@@ -18,7 +18,7 @@ export const postNewDevice = (device, url, rest) => {
       body: JSON.stringify({
         deviceDetail: device,
         email: user.email,
-        imageUrl: url,
+        imageUrl: url.length > 0 ? url : rest[0],
         images: rest,
         userId: user.id,
         userName: ` ${user.firstName} ${user.lastName}`,

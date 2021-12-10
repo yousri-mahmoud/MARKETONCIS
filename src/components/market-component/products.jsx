@@ -179,13 +179,12 @@ function Products() {
     <>
       <div className="category mt-5 ">
         <div className="addProduct">
-        <Link to="/market/sell">
-
-         <Button variant="primary" className="addProduct__btn">
-        Post a Product
-         </Button>
-         </Link>
-         </div>
+          <Link to="/market/sell">
+            <Button variant="primary" className="addProduct__btn">
+              Post a Product
+            </Button>
+          </Link>
+        </div>
         <h3>CATEGORIES</h3>
         <div className="search d-flex justify-content-center ">
           {search ? (
@@ -220,12 +219,14 @@ function Products() {
             >
               <Link
                 className={`${
-                  activeFilter === index ? "is-active-cat typesFilter" : "is-not-active  typesFilter" 
+                  activeFilter === index
+                    ? "is-active-cat typesFilter"
+                    : "is-not-active  typesFilter"
                 }`}
                 to={`/market/buy/type/${item}/page/1`}
               >
                 {" "}
-                {item}
+                {item.slice(0, 1).toUpperCase() + item.slice(1)}
               </Link>
             </li>
           ))}
@@ -292,9 +293,10 @@ function Products() {
         {pages.map((page, index) => (
           <NavLink
             className={`${
-              page == window.location.pathname.slice(-1) 
-                ? "is-active pagination ms-3" 
-                : page === 1 && window.location.pathname  == "/market/buy" ? "is-active pagination ms-3"
+              page == window.location.pathname.slice(-1)
+                ? "is-active pagination ms-3"
+                : page === 1 && window.location.pathname == "/market/buy"
+                ? "is-active pagination ms-3"
                 : "is-not-active pagination ms-3"
             }`}
             to={
