@@ -47,7 +47,24 @@ const TableComponents = ({ trColor, products }) => {
                   </td>
 
                   <td>{item.deviceDetail.deviceName}</td>
-                  <td>{item.deviceDetail.devicePrice} EGP</td>
+                  <td>
+                    <div
+                      className={
+                        item.discount ? "text-decoration-line-through" : ""
+                      }
+                    >
+                      {item.deviceDetail.devicePrice} EGP{" "}
+                    </div>
+                    {item.discount && (
+                      <div>
+                        {" "}
+                        offer :{" "}
+                        <span className="text-success">
+                          {item.discount} EGP
+                        </span>{" "}
+                      </div>
+                    )}
+                  </td>
                 </tr>
               </tbody>
             );

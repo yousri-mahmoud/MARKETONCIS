@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap");
 :root {
-  font-family: "Poppins", sans-serif, "Franklin Gothic Medium", "Arial Narrow", Arial;
+  font-family: "Poppins", sans-serif, "Franklin Gothic Medium", "Arial Narrow",
+ Arial;
   font-weight: 500;
 }
 
@@ -62,6 +63,27 @@ p {
 
 a {
   text-decoration: none;
+}
+
+.slider_shadow {
+  -webkit-box-shadow: 6px 0 6px rgba(0, 0, 0, 0.4);
+          box-shadow: 6px 0 6px rgba(0, 0, 0, 0.4);
+}
+
+.slider_img {
+  height: 450px;
+}
+
+.slide h5 {
+  color: #1f455f;
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.slide p {
+  color: black;
+  font-weight: bold;
 }
 
 .home {
@@ -368,6 +390,22 @@ svg {
 .login {
   padding: 7rem 0;
 }
+
+
+.discount {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.discount_detail {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.filtersTypes {
+  color: #fff;
+}
+
 
 .star {
   font-size: 2rem;

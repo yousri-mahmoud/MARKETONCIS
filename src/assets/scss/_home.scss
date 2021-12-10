@@ -1,68 +1,85 @@
-.home {
-    animation: content 1s normal;
-    transition: all 1s ease-in-out;
-    img {
-        width: 40%;
-        border: 1px solid $c-gray-4;
-        border-radius: 20px;
-        @media screen and (max-width: 994px) {
-            width: 90%;
-          }
-    }
-    &__header {
-        margin-top: 3rem;
-    
-        h1 {
-            color: $c-primary;
-            font-size: 3.2rem;
-            @media screen and (max-width: 550px) {
-                font-size: 2rem;
-              }
-        }
-        p {
-            margin: 0 auto;
-            margin-bottom: 2rem;
-            margin-top: 1rem;
-            width: 55%;
-            font-size: 1.3rem;
-            color: $c-secondary-dark;
-            @media screen and (max-width: 994px) {
-                width: 90%;
-              }
-        }
-    }
-
-    &__content {
-    
-        h2 {
-            color: #000;
-            margin-top: 5rem;
-            font-size: 1.8rem;
-            span {
-                color: $c-primary;
-            }
-            @media screen and (max-width: 550px) {
-                font-size: 1.5rem;
-              }
-        }
-        h3 {
-            color: $c-secondary-dark;
-            margin-bottom: 1rem;
-            span {
-                color: $c-primary;
-            }
-        }
-    }
+.slider_shadow {
+  box-shadow: 6px 0 6px rgba(black, 0.4);
 }
+.slider_img {
+  height: 450px;
+}
+.slide {
+  h5 {
+    color: $c-primary-dark;
 
-
-@keyframes content {
-    0% {
-      transform: translatex(900px);
-      opacity: 0;
-    }
-    100% {
-      transform: translatex(0px);
-      opacity: 1;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+  p {
+    color: black;
+    font-weight: bold;
+  }
+}
+.home {
+  animation: content 1s normal;
+  transition: all 1s ease-in-out;
+  img {
+    width: 40%;
+    border: 1px solid $c-gray-4;
+    border-radius: 20px;
+    @media screen and (max-width: 994px) {
+      width: 90%;
     }
   }
+  &__header {
+    margin-top: 3rem;
+
+    h1 {
+      color: $c-primary;
+      font-size: 3.2rem;
+      @media screen and (max-width: 550px) {
+        font-size: 2rem;
+      }
+    }
+    p {
+      margin: 0 auto;
+      margin-bottom: 2rem;
+      margin-top: 1rem;
+      width: 55%;
+      font-size: 1.3rem;
+      color: $c-secondary-dark;
+      @media screen and (max-width: 994px) {
+        width: 90%;
+      }
+    }
+  }
+
+  &__content {
+    h2 {
+      color: #000;
+      margin-top: 5rem;
+      font-size: 1.8rem;
+      span {
+        color: $c-primary;
+      }
+      @media screen and (max-width: 550px) {
+        font-size: 1.5rem;
+      }
+    }
+    h3 {
+      color: $c-secondary-dark;
+      margin-bottom: 1rem;
+      span {
+        color: $c-primary;
+      }
+    }
+  }
+}
+
+@keyframes content {
+  0% {
+    transform: translatex(900px);
+    opacity: 0;
+  }
+  100% {
+    transform: translatex(0px);
+    opacity: 1;
+  }
+}

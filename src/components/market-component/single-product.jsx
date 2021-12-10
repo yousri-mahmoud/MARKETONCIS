@@ -117,10 +117,22 @@ function SingleProduct() {
 
             <div class="details">
               <h6>{device.deviceDetail.deviceType}</h6>
-              <div className="d-flex justify-content-between align-items-start">
+              <div className="d-flex justify-content-between align-items-center">
                 <h2>{device.deviceDetail.deviceName}</h2>
-
-                <div class="price">{device.deviceDetail.devicePrice} EGP</div>
+                <div>
+                  {device.discount && (
+                    <div className="discount_detail text-danger text-decoration-line-through">
+                      {" "}
+                      {device.deviceDetail.devicePrice} EGP
+                    </div>
+                  )}
+                  <div className="price">
+                    {device.discount
+                      ? device.discount
+                      : device.deviceDetail.devicePrice}{" "}
+                    EGP
+                  </div>
+                </div>
               </div>
               <p>{device.deviceDetail.description}</p>
               <div className="d-flex justify-content-between align-items-center">
@@ -167,10 +179,10 @@ function SingleProduct() {
             }}
             className="w-25 ms-3 "
           >
-            <img className="w-100" alt="img" src={image}  />
+            <img className="w-100" alt="img" src={image} />
           </figure>
         ))}
-        <Modal  size="lg" show={show} onHide={() => setShow(false)}>
+        <Modal size="lg" show={show} onHide={() => setShow(false)}>
           <Modal.Header closeButton>
             <Modal.Title>Image</Modal.Title>
           </Modal.Header>

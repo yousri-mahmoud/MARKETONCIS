@@ -1,7 +1,8 @@
-import { Table } from "react-bootstrap";
+import { Table, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import CheckBox from "./CheckBox";
+import EditPrice from "./EditPrice";
 
 const TableComponents = ({ trColor, products }) => {
   useEffect(() => {});
@@ -43,7 +44,9 @@ const TableComponents = ({ trColor, products }) => {
                   </td>
 
                   <td>{item.deviceDetail.deviceName}</td>
-                  <td>{item.deviceDetail.devicePrice} EGP</td>
+                  <td>
+                    <EditPrice item={item} />
+                  </td>
                 </tr>
               </tbody>
             );
