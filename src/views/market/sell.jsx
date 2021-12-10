@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import FormikField from "../../shared/formik/FormikField";
 import SelectFormikFiels from "../../shared/formik/SelectFormikFiels";
 import { Button } from "react-bootstrap";
+import {Helmet} from "react-helmet";
+
 
 // import { FaRegTimesCircle } from "react-icons/fa";
 import { postNewDevice } from "../../redux/actions/marketActions";
@@ -83,7 +85,12 @@ function Sell() {
   };
 
   return (
+    
     <div className="container sell-form gap">
+           <Helmet>
+                <meta charSet="utf-8" />
+                <title>Market</title>
+            </Helmet>
       <h2 className="header__sell-form">
         Enter the required information about your device
       </h2>
@@ -120,13 +127,16 @@ function Sell() {
                   name="description"
                   type="textarea"
                 />
+                <figcaption className="Device-img">Device Image</figcaption>
                 <input
                   label="Add Images"
                   name="images"
+                  className="my-2"
                   type="file"
                   multiple
                   onChange={handleImage}
                 />
+
                 {isLoading ? (
                   <div>
                     <p>Select Main thumbnail:</p>
@@ -137,11 +147,11 @@ function Sell() {
                     {imageURL.map((img) => (
                       <figure
                         onClick={() => setImage(img)}
-                        className={`ms-2 w-25 selection ${
+                        className={`ms-2 mt-2 w-25 selection ${
                           image === img ? "activeimg" : ""
                         }`}
                       >
-                        <img className="w-100" src={img} />
+                        <img className="w-100" src={img} alt="proudct-img" />
                       </figure>
                     ))}
                   </div>
@@ -160,7 +170,8 @@ function Sell() {
 
                 {/* <FormikField label="Name" name="name" type="text" />
                 <FormikField label="Email" name="email" type="email" /> */}
-                <FormikField label="Phone" name="phone" type="text" />
+
+                <FormikField label="Phone" textMuted="(Notice: Usres will contact you)" name="phone" type="text" />
 
                 <button
                   disabled={imageURL.length === 0}

@@ -35,22 +35,23 @@ function EditPrice({ item }) {
       )}
       <Button
         onClick={() => setIsOffer(!isOffer)}
-        className="my-3 text-white d-block"
-        variant="warning"
+        className="mt-3 mb-3 add new-offer text-white d-block"
+        variant=""
       >
         new offer
       </Button>
 
       {isOffer && (
-        <form onSubmit={handelSubmit}>
+        <form className="d-flex" onSubmit={handelSubmit}>
           <input
             value={newPrice}
             onChange={(e) => setNewPrice(e.target.value)}
             type="number"
+            className="w-75"
             placeholder="add new price"
             required
           />
-          <Button className="mt-1" type="submit" variant="danger">
+          <Button className="add-offer add" type="submit" variant="">
             add
           </Button>
         </form>

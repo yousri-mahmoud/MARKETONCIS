@@ -198,7 +198,7 @@ const ProfileBase = () => {
                   <button
                     type="submit"
                     className={`btn  py-0  mx-auto d-block ${
-                      isEditing ? "btn-danger" : "btn-primary"
+                      isEditing ? "btn-danger" : "add"
                     }`}
                   >
                     {isEditing ? "Edit" : "Add"}

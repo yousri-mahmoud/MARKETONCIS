@@ -5,15 +5,16 @@ import FormikErrorMessage from "./FormikErrorMessage";
 /**
  * FormikField Component
  */
-const FormikField = ({ name, type, label }) => {
+const FormikField = ({ name, type, label, textMuted  }) => {
   return (
     <Field name={name}>
       {(formikField) => {
         return (
           <>
             <label htmlFor={name} style={{ display: "block" }}>
-              {label}
+              {label}  <span className="text-muted textMuted">{textMuted}</span>
             </label>
+            
 
             {type === "textarea" ? (
               <textarea

@@ -136,6 +136,14 @@ ul {
     }
   }
 }
+.add-offer {
+  padding: 3px;
+  color: #fff;
+}
+.new-offer {
+  font-size: 0.9rem;
+  padding: 4.5px !important;
+}
 
 .table {
   &__head {
@@ -145,9 +153,12 @@ ul {
   &__body {
     font-weight: bold;
     &__img {
-      width: 30%;
-      @media screen and (max-width: 600px) {
-        width: 80%;
+      width: 150px;
+      @media screen and (max-width: 994px) {
+        width: 130px;
+      }
+      @media screen and (max-width: 594px) {
+        width: 100px;
       }
     }
 

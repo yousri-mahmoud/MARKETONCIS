@@ -12,7 +12,7 @@ const BlogCard = ({ question, description, postedBy, id }) => {
               </div>
             </div>
             <hr className="text-black" />
-            <div className="activity__content__box__footer d-flex justify-content-around">
+            <div className="activity__content__box__footer">
               <h5>
                 Posted by <span>{postedBy}</span>
               </h5>
