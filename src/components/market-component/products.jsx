@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Card, Button } from "react-bootstrap";
-import { Link, useParams } from "react-router-dom";
+import { NavLink, Link, useParams } from "react-router-dom";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { useSelector, useDispatch } from "react-redux";
 import { FaSearch, FaRegTimesCircle } from "react-icons/fa";
@@ -142,6 +142,7 @@ function Products() {
   };
 
   useEffect(() => {
+    console.log(window.location.pathname.slice());
     let updatedList = list?.filter((whish) => {
       return whish.userId === userId;
     });
@@ -176,7 +177,15 @@ function Products() {
   };
   return (
     <>
-      <div className="category">
+      <div className="category mt-5 ">
+        <div className="addProduct">
+        <Link to="/market/sell">
+
+         <Button variant="primary" className="addProduct__btn">
+        Post a Product
+         </Button>
+         </Link>
+         </div>
         <h3>CATEGORIES</h3>
         <div className="search d-flex justify-content-center ">
           {search ? (
@@ -204,13 +213,20 @@ function Products() {
         <ul>
           {typesFilter.map((item, index) => (
             <li
-              className={`${activeFilter === index ? "active_filter" : ""}`}
               onClick={() => {
                 // handelFilter(item);
                 setActiceFilter(index);
               }}
             >
-              <Link to={`/market/buy/type/${item}/page/1`}> {item}</Link>
+              <Link
+                className={`${
+                  activeFilter === index ? "is-active-cat typesFilter" : "is-not-active  typesFilter" 
+                }`}
+                to={`/market/buy/type/${item}/page/1`}
+              >
+                {" "}
+                {item}
+              </Link>
             </li>
           ))}
         </ul>
@@ -221,7 +237,7 @@ function Products() {
         <div className="row products">
           {devices.map((item) => {
             return (
-              <div key={item.id} className="col-4 my-2">
+              <div key={item.id} className="col-lg-4 col-md-12 my-2">
                 <Card className="position-relative">
                   {itemsId.includes(item.id) ? (
                     <AiFillStar
@@ -245,7 +261,7 @@ function Products() {
                   <Card.Body>
                     <Card.Title className="d-flex justify-content-between align-items-center">
                       {item.deviceDetail.deviceName}{" "}
-                      <small className="text-danger">
+                      <small className="price">
                         {item.deviceDetail.devicePrice} EGP
                       </small>
                     </Card.Title>
@@ -273,9 +289,14 @@ function Products() {
         </div>
       )}
       <div className="d-flex justify-content-center">
-        {pages.map((page) => (
-          <Link
-            className="ms-3"
+        {pages.map((page, index) => (
+          <NavLink
+            className={`${
+              page == window.location.pathname.slice(-1) 
+                ? "is-active pagination ms-3" 
+                : page === 1 && window.location.pathname  == "/market/buy" ? "is-active pagination ms-3"
+                : "is-not-active pagination ms-3"
+            }`}
             to={
               type === "all" || !type
                 ? `/market/buy/page/${page}`
@@ -283,7 +304,7 @@ function Products() {
             }
           >
             {page}
-          </Link>
+          </NavLink>
         ))}
       </div>
     </>

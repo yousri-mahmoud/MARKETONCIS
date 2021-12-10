@@ -1,3 +1,66 @@
+
+
+.star {
+  font-size: 2rem;
+
+  @media screen and (max-width: 994px) {
+    margin-top: 2rem;
+  }
+}
+.sell-fields {
+  width: 75%;
+  margin: 0 auto;
+  @media screen and (max-width: 994px) {
+    width: 100%;
+  }
+}
+.vistMarket {
+  text-align: end;
+  
+}
+.gallery {
+  border: 1px solid rgb(221, 217, 217);
+  border-radius: 50px;
+  width: 60%;
+  @media screen and (max-width: 994px) {
+    width: 100%;
+  }
+  margin: 0 auto;
+  margin-top: 1rem;
+ 
+}
+.modal-img {
+  width: 50%;
+}
+.addProduct {
+  text-align: end;
+  margin-right: 1rem;
+  &__btn {
+  background-color: #fff;
+  color: #000;
+  font-weight: 600;
+  }
+}
+.pagination {
+  border: 1px solid gainsboro;
+  padding: 0.3rem 0.7rem;
+  font-size: 1.3rem;
+  margin-top: 2rem;
+}
+.is-not-active {
+  color: #bbbbbb;
+}
+.is-active {
+  color: #0a58ca;
+}
+.typesFilter:hover {
+  color: #fff;
+
+}
+.is-active-cat {
+  color: #fff;
+}
+
 .product__img {
   height: 300px;
   object-fit: contain;
@@ -12,14 +75,19 @@
 .buy {
   background-color: $c-gray-4;
   padding: 2rem;
-  margin-right: 10px;
+  margin-right: 1rem;
+  @media screen and (max-width: 994px) {
+    margin-right: 0rem;
+
+  }
   h4 {
     color: $c-primary-dark;
   }
 }
 .sell {
-  margin-left: 10px;
   padding: 2rem;
+  height: 100%;
+
   background-color: $c-gray-4;
   h4 {
     color: $c-secondary-dark;
@@ -80,12 +148,15 @@
 
 // singel product
 .product {
-  padding-top: 70px;
+  padding-top: 5rem;
   position: relative;
   z-index: 2;
   width: 90%;
   max-width: 1100px;
   margin: auto;
+  @media screen and (max-width: 994px) {
+    width: 100%;
+  }
 }
 .about_product {
   margin: auto;
@@ -96,19 +167,24 @@
   width: 100%;
   background-color: #fff;
   box-shadow: 0 5px 30px rgba(0, 0, 0, 0.16);
+  @media screen and (max-width: 994px) {
+    flex-direction: column;
+  }
 }
 .productImg {
   flex-basis: 50%;
   padding: 0;
   margin-right: 30px;
+  @media screen and (max-width: 994px) {
+    margin-right: 0px;
+  }
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .productImg img {
-  max-width: 100%;
-  max-height: 300px;
-  min-height: 230px;
+  height: 100%;
+  width: 100%;
 }
 .details {
   flex-basis: 50%;
@@ -117,22 +193,30 @@
 h6 {
   margin: 0;
   margin-bottom: 8px;
-  font-size: 16px;
+  font-size: 1rem;
   color: #787878;
   font-weight: 500;
 }
 h2 {
   margin: 0;
   margin-bottom: 20px;
-  font-size: 30px;
+  font-size: 1.5rem;
+  
+  @media screen and (max-width: 594px) {
+    font-size: 1rem;
+  }
   font-weight: 500;
   color: $c-primary;
   text-transform: capitalize;
 }
 .price {
-  font-size: 16px;
+  font-size: 1.3rem;
+  @media screen and (max-width: 394px) {
+    font-size: 1rem;
+
+  }
   font-weight: bold;
-  color: red;
+  color: rgb(16, 150, 11);
   margin: 10px 0;
 }
 
@@ -155,15 +239,16 @@ p {
 }
 // category
 .category {
-  background: $gradient;
+  background: $c-primary;
   padding: 20px 0;
   color: white;
   margin-bottom: 50px;
+ 
   h3 {
     text-align: center;
     font-weight: bold;
     letter-spacing: 5px;
-    font-size: 25px;
+    font-size: 1.7rem;
     margin: 20px 0;
   }
   ul {
@@ -174,7 +259,13 @@ p {
     margin: 20px 0;
     li {
       display: inline-block;
-      margin: 0 50px;
+      margin: 0 2rem;
+      @media screen and (max-width: 994px) {
+        margin: 0 1.2rem;
+      }
+      @media screen and (max-width: 300px) {
+        margin: 0 0.5rem;
+      }
       font-weight: 500;
       cursor: pointer;
       &:hover {
@@ -184,9 +275,8 @@ p {
   }
 }
 
-.active_filter {
-  color: $c-primary-light;
-}
+
+
 
 .whatsApp_icon {
   color: green;

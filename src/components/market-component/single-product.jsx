@@ -93,7 +93,7 @@ function SingleProduct() {
   };
   return (
     <>
-      <div className="container product">
+      <div className="container  product">
         {isLoading ? (
           <Loading />
         ) : (
@@ -101,12 +101,12 @@ function SingleProduct() {
             {itemsId.includes(parseInt(id)) ? (
               <AiFillStar
                 onClick={() => handleDeleteWhish(device)}
-                className="text-warning position-absolute top-0 end-0 "
+                className="text-warning position-absolute star top-0 end-0 "
               />
             ) : (
               <AiOutlineStar
                 onClick={() => handleWhish(device)}
-                className="text-warning position-absolute top-0 end-0 "
+                className="text-warning position-absolute star top-0 end-0 "
               />
             )}
             <div class="productImg">
@@ -158,25 +158,25 @@ function SingleProduct() {
           </section>
         )}
       </div>
-      <div className="d-flex align-items-center justify-content-center">
+      <div className="d-flex gallery align-items-center justify-content-center">
         {device.images?.map((image) => (
           <figure
             onClick={() => {
               setPreviewImg(image);
               setShow(true);
             }}
-            className="w-25 "
+            className="w-25 ms-3 "
           >
-            <img className="w-100" src={image} />
+            <img className="w-100" alt="img" src={image}  />
           </figure>
         ))}
-        <Modal size="lg" show={show} onHide={() => setShow(false)}>
+        <Modal  size="lg" show={show} onHide={() => setShow(false)}>
           <Modal.Header closeButton>
             <Modal.Title>Image</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <figure className="w-100">
-              <img className="w-100" src={previewImg} />
+            <figure className="w-100 text-center">
+              <img className="modal-img" src={previewImg} />
             </figure>
           </Modal.Body>
           <Modal.Footer>

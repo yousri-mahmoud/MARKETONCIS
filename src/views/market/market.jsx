@@ -9,16 +9,16 @@ function Market() {
       <section className="market gap">
         <div className="container py-5">
           <div className="row">
-            <div className="col buy">
+            <div className="col-lg mb-5 col-md-12 buy">
               <Link to="/market/buy">
                 <img className="w-100 " src={buy} alt="" />
               </Link>
               <h4>buy your new device</h4>
             </div>
-            <div className="col sell">
+            <div className="col-lg col-md-12 sell">
               {" "}
               <Link to="/market/sell">
-                <img className="w-100 " src={sell} alt="" />
+                <img className="w-100" src={sell} alt="" />
               </Link>
               <h4>sell your old device</h4>
             </div>

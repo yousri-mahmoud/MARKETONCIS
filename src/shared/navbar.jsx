@@ -31,7 +31,7 @@ function NavbarComponent() {
         </NavLink>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
+          <Nav className="me-auto nav-links bg-dark">
             <NavLink className="nav-link navItem" to="/">
               Home
             </NavLink>
@@ -50,7 +50,7 @@ function NavbarComponent() {
               About
             </NavLink>
           </Nav>
-          <Nav className="align-items-center">
+          <Nav className="nav-links-profile bg-dark">
             {isLoggedIn || (
               <NavLink className="text-dark" to="/login">
                 <Button className="me-2 py-1" variant="primary">

@@ -96,8 +96,8 @@ export default function PostDetails() {
               {postAuthor}{" "}
             </Link>
           </p>
-          <h2 className="row m-0 ms-4 postDetails__title titleColor ">{title}</h2>
-          <p className="row m-0 ms-4 fs-3 mt-4">{desc}</p>
+          <h3 className="row m-0 ms-4 postDetails__title titleColor ">{title}</h3>
+          <p className="row postDetails__des m-0 ms-4  mt-4">{desc}</p>
         </div>
       )}
       <p className="fw-bold ms-3 mt-4">Comments</p>
@@ -133,7 +133,7 @@ export default function PostDetails() {
         />
         <Button
           disabled={!comment ? true : false}
-          className="w-25 mt-1 btn-primary"
+          className="mt-1 btn-primary"
           onClick={handleComment}
         >
           Comment

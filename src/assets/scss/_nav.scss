@@ -20,7 +20,21 @@ svg {
   color: red;
 }
 .search_input {
-  width: 250px;
+  width: 100%;
+
   outline: none;
   border: none;
+}
+.nav-links {
+  @media screen and (max-width: 994px) {
+    padding-left: 2rem !important;
+    margin-top: 0.9rem;
+  }
+}
+
+.nav-links-profile {
+  @media screen and (max-width: 994px) {
+    padding: 1rem;
+    margin-top: -0.1rem;
+  }
 }
