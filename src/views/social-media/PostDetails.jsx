@@ -83,8 +83,8 @@ export default function PostDetails() {
       {isPostLoading ? (
         <Loading />
       ) : (
-        <div className="shadow ms-3 mt-3 p-3">
-          <p>
+        <div className=" postDetails__box ms-3 mt-3">
+          <p className="postDetails__box__by">
             By{" "}
             <Link
               to={
@@ -124,9 +124,9 @@ export default function PostDetails() {
           ))}
         </div>
       )}
-      <div className="d-flex flex-column w-50 align-items-end ms-3 mb-3">
+      <div className="d-flex flex-column  align-items-end ms-3 mb-3">
         <textarea
-          className="w-100 mt-3"
+          className="w-100 mt-2"
           placeholder="Add Comment"
           value={comment}
           onChange={(e) => setComment(e.target.value)}

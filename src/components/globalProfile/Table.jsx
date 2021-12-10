@@ -9,7 +9,7 @@ const TableComponents = ({ trColor, products }) => {
         <thead className="table__head">
           <tr className={trColor}>
             <th>#</th>
-            <th className="table__head__fristTitle"> photo</th>
+            <th className="table__head__fristTitle"> Photo</th>
             <th className="table__head__secondTitle"> Name</th>
             <th className="table__head__thirdTitle"> Price</th>
           </tr>

@@ -1202,10 +1202,12 @@ ul {
 
 .blog h2 {
   font-size: 1.4rem;
+  color: black;
 }
 
 .blog p {
   font-size: 1rem;
+  margin: 0;
 }
 
 .blog .icon {
@@ -1329,9 +1331,20 @@ ul {
   height: 100vh;
 }
 
+.postDetails__box {
+  padding: 2.5rem;
+  border: 1px solid gainsboro;
+  border-radius: 25px;
+}
+
+.postDetails__box__by {
+  font-weight: bold;
+}
+
 .postDetails__title {
   font-size: 3rem;
   line-height: 3.5rem;
+  color: black;
 }
 
 @media screen and (max-width: 994px) {
@@ -1342,6 +1355,7 @@ ul {
 
 @media screen and (max-width: 594px) {
   .postDetails__title {
+    font-size: 2rem;
     line-height: 3rem;
   }
 }

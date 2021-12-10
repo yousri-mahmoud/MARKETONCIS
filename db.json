@@ -84,7 +84,17 @@
       "id": 3
     }
   ],
-  "posts": [],
+  "posts": [
+    {
+      "title": "what is the best laptop for programming ?   ",
+      "desc": "in last few days i search about the best laptops for programming are you guys have any suggestion ",
+      "name": "Saleh",
+      "userId": 1,
+      "postDate": "2021 11 10 21 21",
+      "id": 1,
+      "countComment": 1
+    }
+  ],
   "likes": [],
   "whishList": [
     {
@@ -126,5 +136,13 @@
       "id": 2
     }
   ],
-  "comments": []
+  "comments": [
+    {
+      "postId": "1",
+      "author": "Saleh",
+      "comment": "saleh\n",
+      "commentAuthorId": 1,
+      "id": 1
+    }
+  ]
 }

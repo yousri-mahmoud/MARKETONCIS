@@ -132,7 +132,7 @@ export default function PostsList(props) {
     setShowLikes(true);
   };
   return (
-    <div className="shadow px-4 py-2 w-100 mb-4">
+    <div className="shadow post-box px-4 py-2  mb-4">
       {isItMe ? (
         <div className="d-flex justify-content-end">
           <FaTrash
@@ -185,7 +185,7 @@ export default function PostsList(props) {
           </Button>
         </Modal.Footer>
       </Modal>
-      <Link to={`/social-media/post/${id}`}>
+      <Link  to={`/social-media/post/${id}`}>
         <div>
           <h2>{title}</h2>
           <p>{desc}</p>
@@ -211,7 +211,7 @@ export default function PostsList(props) {
           )}
         </div>
         <hr />
-        <div className="d-flex justify-content-around">
+        <div className="d-flex justify-content-around pb-2">
           <p>
             Posted By{" "}
             <Link
