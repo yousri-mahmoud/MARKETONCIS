@@ -52,7 +52,7 @@ const Whislist = () => {
       ) : (
         wList.map((item, index) => (
           <Link
-            to={`/market/buy/${item.itemId}`}
+            to={`/market/buy/item/${item.itemId}`}
             key={index}
             className="whislist__content mt-4"
           >
