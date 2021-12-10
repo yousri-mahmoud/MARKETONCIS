@@ -218,11 +218,15 @@ function Products() {
               }}
             >
               <Link
+
+                className="filtersTypes"
+
                 className={`${
                   activeFilter === index
                     ? "is-active-cat typesFilter"
                     : "is-not-active  typesFilter"
                 }`}
+
                 to={`/market/buy/type/${item}/page/1`}
               >
                 {" "}
@@ -262,9 +266,20 @@ function Products() {
                   <Card.Body>
                     <Card.Title className="d-flex justify-content-between align-items-center">
                       {item.deviceDetail.deviceName}{" "}
-                      <small className="price">
-                        {item.deviceDetail.devicePrice} EGP
-                      </small>
+                      <div>
+                        {item.discount && (
+                          <small className="d-block discount text-danger text-decoration-line-through">
+                            {" "}
+                            {item.deviceDetail.devicePrice} EGP
+                          </small>
+                        )}
+                        <small className="price">
+                          {item.discount
+                            ? item.discount
+                            : item.deviceDetail.devicePrice}{" "}
+                          EGP
+                        </small>
+                      </div>
                     </Card.Title>
 
                     <Card.Text>{item.deviceDetail.description}</Card.Text>
