@@ -1,7 +1,307 @@
 {
-  "users": [],
+  "users": [
+    {
+      "email": "Saifalaa97@gmail.com",
+      "password": "$2a$10$24HEhiOS7KnPG7jwlUWEE.QVDBAMm4iScmcsDYYETWbYDmGlPQGFi",
+      "firstName": "alaa",
+      "lastName": "Alaa ElDin",
+      "gender": "male",
+      "address": "Essawy, Miami",
+      "confirmPassword": "protected",
+      "id": 1,
+      "profileImg": ""
+    },
+    {
+      "email": "Saifalaa98@gmail.com",
+      "password": "$2a$10$0Kwuz6QbN.pUtmdjUZusUOj4GuDzjohGAeBkaoKg.KBVufrErvz2.",
+      "firstName": "alaa",
+      "lastName": "ElDin",
+      "gender": "male",
+      "address": "Essawy, Miami",
+      "confirmPassword": "protected",
+      "id": 2,
+      "profileImg": ""
+    }
+  ],
   "bio": [],
-  "selling-posts": [],
+  "selling-posts": [
+    {
+      "deviceDetail": {
+        "deviceName": "xiaomi redmi note 9 pro",
+        "deviceType": "mobile",
+        "description": "ad",
+        "images": "",
+        "devicePrice": 123,
+        "devicePlace": "123",
+        "name": "",
+        "phone": "01093260600",
+        "email": ""
+      },
+      "email": "Saifalaa97@gmail.com",
+      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1639140241/apjebul4bayvdt4y8ym1.jpg",
+      "images": [
+        "http://res.cloudinary.com/djup5x8bq/image/upload/v1639140241/apjebul4bayvdt4y8ym1.jpg"
+      ],
+      "userId": 1,
+      "userName": " Saif Alaa ElDin",
+      "sold": false,
+      "discount": false,
+      "id": 1
+    },
+    {
+      "deviceDetail": {
+        "deviceName": "asd",
+        "deviceType": "mobile",
+        "description": "asd",
+        "images": "",
+        "devicePrice": 23,
+        "devicePlace": "123",
+        "name": "",
+        "phone": "010234",
+        "email": ""
+      },
+      "email": "Saifalaa97@gmail.com",
+      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1639140309/x6iofhaketg4ultmtzdr.jpg",
+      "images": [
+        "http://res.cloudinary.com/djup5x8bq/image/upload/v1639140309/x6iofhaketg4ultmtzdr.jpg"
+      ],
+      "userId": 1,
+      "userName": " Saif Alaa ElDin",
+      "sold": false,
+      "discount": false,
+      "id": 2
+    },
+    {
+      "deviceDetail": {
+        "deviceName": "ps",
+        "deviceType": "mobile",
+        "description": "asd",
+        "images": "",
+        "devicePrice": 123,
+        "devicePlace": "123",
+        "name": "",
+        "phone": "123",
+        "email": ""
+      },
+      "email": "Saifalaa97@gmail.com",
+      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1639140388/gytplx39gs5osuodvph9.png",
+      "images": [
+        "http://res.cloudinary.com/djup5x8bq/image/upload/v1639140388/gytplx39gs5osuodvph9.png"
+      ],
+      "userId": 1,
+      "userName": " Saif Alaa ElDin",
+      "sold": false,
+      "discount": false,
+      "id": 3
+    },
+    {
+      "deviceDetail": {
+        "deviceName": "hp probook",
+        "deviceType": "laptop",
+        "description": "123",
+        "images": "",
+        "devicePrice": 123,
+        "devicePlace": "123",
+        "name": "",
+        "phone": "010234",
+        "email": ""
+      },
+      "email": "Saifalaa97@gmail.com",
+      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1639140410/a9ld8jwhkg35hlg1alkv.jpg",
+      "images": [
+        "http://res.cloudinary.com/djup5x8bq/image/upload/v1639140410/a9ld8jwhkg35hlg1alkv.jpg"
+      ],
+      "userId": 1,
+      "userName": " Saif Alaa ElDin",
+      "sold": false,
+      "discount": false,
+      "id": 4
+    },
+    {
+      "deviceDetail": {
+        "deviceName": "newDeviceImage",
+        "deviceType": "accessories",
+        "description": "asd",
+        "images": "",
+        "devicePrice": 123,
+        "devicePlace": "123",
+        "name": "",
+        "phone": "13",
+        "email": ""
+      },
+      "email": "Saifalaa97@gmail.com",
+      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1639140443/gk71scnzteh4dzotbdzw.jpg",
+      "images": [
+        "http://res.cloudinary.com/djup5x8bq/image/upload/v1639140443/gk71scnzteh4dzotbdzw.jpg"
+      ],
+      "userId": 1,
+      "userName": " Saif Alaa ElDin",
+      "sold": false,
+      "discount": false,
+      "id": 5
+    },
+    {
+      "deviceDetail": {
+        "deviceName": "yosry",
+        "deviceType": "mobile",
+        "description": "asd",
+        "images": "",
+        "devicePrice": 123,
+        "devicePlace": "123",
+        "name": "",
+        "phone": "123",
+        "email": ""
+      },
+      "email": "Saifalaa97@gmail.com",
+      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1639140473/xwrp3w1rnh4zmx8cwgoa.png",
+      "images": [
+        "http://res.cloudinary.com/djup5x8bq/image/upload/v1639140473/xwrp3w1rnh4zmx8cwgoa.png"
+      ],
+      "userId": 1,
+      "userName": " Saif Alaa ElDin",
+      "sold": false,
+      "discount": false,
+      "id": 6
+    },
+    {
+      "deviceDetail": {
+        "deviceName": "xiaomi redmi note 9 pro",
+        "deviceType": "mobile",
+        "description": "ad",
+        "images": "",
+        "devicePrice": 123,
+        "devicePlace": "123",
+        "name": "",
+        "phone": "01093260600",
+        "email": ""
+      },
+      "email": "Saifalaa97@gmail.com",
+      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1639140241/apjebul4bayvdt4y8ym1.jpg",
+      "images": [
+        "http://res.cloudinary.com/djup5x8bq/image/upload/v1639140241/apjebul4bayvdt4y8ym1.jpg"
+      ],
+      "userId": 1,
+      "userName": " Saif Alaa ElDin",
+      "sold": false,
+      "discount": false,
+      "id": 7
+    },
+    {
+      "deviceDetail": {
+        "deviceName": "xiaomi redmi note 9 pro",
+        "deviceType": "mobile",
+        "description": "ad",
+        "images": "",
+        "devicePrice": 123,
+        "devicePlace": "123",
+        "name": "",
+        "phone": "01093260600",
+        "email": ""
+      },
+      "email": "Saifalaa97@gmail.com",
+      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1639140241/apjebul4bayvdt4y8ym1.jpg",
+      "images": [
+        "http://res.cloudinary.com/djup5x8bq/image/upload/v1639140241/apjebul4bayvdt4y8ym1.jpg"
+      ],
+      "userId": 1,
+      "userName": " Saif Alaa ElDin",
+      "sold": false,
+      "discount": false,
+      "id": 8
+    },
+    {
+      "deviceDetail": {
+        "deviceName": "xiaomi redmi note 9 pro",
+        "deviceType": "mobile",
+        "description": "ad",
+        "images": "",
+        "devicePrice": 123,
+        "devicePlace": "123",
+        "name": "",
+        "phone": "01093260600",
+        "email": ""
+      },
+      "email": "Saifalaa97@gmail.com",
+      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1639140241/apjebul4bayvdt4y8ym1.jpg",
+      "images": [
+        "http://res.cloudinary.com/djup5x8bq/image/upload/v1639140241/apjebul4bayvdt4y8ym1.jpg"
+      ],
+      "userId": 1,
+      "userName": " Saif Alaa ElDin",
+      "sold": false,
+      "discount": false,
+      "id": 9
+    },
+    {
+      "deviceDetail": {
+        "deviceName": "xiaomi redmi note 9 pro",
+        "deviceType": "mobile",
+        "description": "ad",
+        "images": "",
+        "devicePrice": 123,
+        "devicePlace": "123",
+        "name": "",
+        "phone": "01093260600",
+        "email": ""
+      },
+      "email": "Saifalaa97@gmail.com",
+      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1639140241/apjebul4bayvdt4y8ym1.jpg",
+      "images": [
+        "http://res.cloudinary.com/djup5x8bq/image/upload/v1639140241/apjebul4bayvdt4y8ym1.jpg"
+      ],
+      "userId": 1,
+      "userName": " Saif Alaa ElDin",
+      "sold": false,
+      "discount": false,
+      "id": 10
+    },
+    {
+      "deviceDetail": {
+        "deviceName": "xiaomi redmi note 9 pro",
+        "deviceType": "mobile",
+        "description": "ad",
+        "images": "",
+        "devicePrice": 123,
+        "devicePlace": "123",
+        "name": "",
+        "phone": "01093260600",
+        "email": ""
+      },
+      "email": "Saifalaa97@gmail.com",
+      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1639140241/apjebul4bayvdt4y8ym1.jpg",
+      "images": [
+        "http://res.cloudinary.com/djup5x8bq/image/upload/v1639140241/apjebul4bayvdt4y8ym1.jpg"
+      ],
+      "userId": 1,
+      "userName": " Saif Alaa ElDin",
+      "sold": false,
+      "discount": false,
+      "id": 11
+    },
+    {
+      "deviceDetail": {
+        "deviceName": "xiaomi redmi note 9 pro",
+        "deviceType": "mobile",
+        "description": "ad",
+        "images": "",
+        "devicePrice": 123,
+        "devicePlace": "123",
+        "name": "",
+        "phone": "01093260600",
+        "email": ""
+      },
+      "email": "Saifalaa97@gmail.com",
+      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1639140241/apjebul4bayvdt4y8ym1.jpg",
+      "images": [
+        "http://res.cloudinary.com/djup5x8bq/image/upload/v1639140241/apjebul4bayvdt4y8ym1.jpg"
+      ],
+      "userId": 1,
+      "userName": " Saif Alaa ElDin",
+      "sold": false,
+      "discount": false,
+      "id": 12
+    }
+  ],
   "posts": [],
   "likes": [],
   "whishList": [],

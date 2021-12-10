@@ -6,6 +6,8 @@ import { userLogin } from "../../redux/actions/authActions";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import { useState } from "react";
 const LoginComponent = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -18,6 +20,7 @@ const LoginComponent = () => {
   };
 
   const onSubmit = (values) => {
+    setDef(false);
     dispatch(userLogin(values));
   };
 
@@ -28,6 +31,10 @@ const LoginComponent = () => {
       .email("Please enter a valid email address")
       .required("Email field is required"),
   });
+  const [def, setDef] = useState();
+  useEffect(() => {
+    setDef(true);
+  }, []);
   return (
     <div className="form ">
       <div className="form__content d-flex justify-content-between align-items-center">
@@ -76,7 +83,12 @@ const LoginComponent = () => {
                     name="password"
                     type="password"
                   />
-                  <small className="text-danger error">{state.message}</small>
+                  {def ? (
+                    <></>
+                  ) : (
+                    <small className="text-danger error">{state.message}</small>
+                  )}
+
                   <button className="submit__form" type="submit">
                     Sign In
                   </button>

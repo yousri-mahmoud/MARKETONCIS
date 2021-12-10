@@ -37,7 +37,10 @@ const TableComponents = ({ trColor, products }) => {
                   </td>
 
                   <td>
-                    <Link className="noneHover" to={`/market/buy/${item.id}`}>
+                    <Link
+                      className="noneHover"
+                      to={`/market/buy/item/${item.id}`}
+                    >
                       <img
                         src={item.imageUrl}
                         className="table__body__img"
