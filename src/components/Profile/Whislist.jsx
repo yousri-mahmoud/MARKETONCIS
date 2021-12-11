@@ -13,20 +13,17 @@ const Whislist = () => {
     setIsLoading(true);
     fetchList();
   }, [userId]);
-  useEffect(() => {
-    console.log(wList);
-  }, [wList]);
+
   const fetchList = async () => {
     let user = localStorage.getItem("user");
     setUserId(JSON.parse(user).id);
     const commentsResponse = await fetch("http://localhost:3001/whishList")
       .then((res) => res.json())
       .then((data) => {
-        console.log(data, userId);
         let updatedList = data?.filter((whish) => {
           return whish.userId === userId;
         });
-        console.log(updatedList);
+
         setWList(updatedList);
       })
       .catch((err) => console.log(err))
@@ -83,8 +80,12 @@ const Whislist = () => {
               <p className="whislist__content__box__price">
                 {item.deviceInfo.devicePrice} EGP
               </p>
-            
-                <FaTrash className="whislist__content__box__trash" color="red"  onClick={(e) => handleDelete(e, item)}/>
+
+              <FaTrash
+                className="whislist__content__box__trash"
+                color="red"
+                onClick={(e) => handleDelete(e, item)}
+              />
             </div>
           </Link>
         ))

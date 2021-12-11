@@ -81,7 +81,6 @@ export default function PostsList(props) {
       .then((data) => setCount(data.countComment));
   };
   const handleDelete = async () => {
-    console.log(id);
     const response = await fetch(`http://localhost:3001/posts/${id}`, {
       method: "DELETE",
     });
@@ -118,7 +117,7 @@ export default function PostsList(props) {
   const handleUnLike = async (e) => {
     e.preventDefault();
     let likedIdDelete = likes.filter((like) => like.likeUserId === user);
-    console.log(likedIdDelete[0].id);
+
     const response = await fetch(
       `http://localhost:3001/likes/${likedIdDelete[0].id}`,
       {
@@ -185,7 +184,7 @@ export default function PostsList(props) {
           </Button>
         </Modal.Footer>
       </Modal>
-      <Link  to={`/social-media/post/${id}`}>
+      <Link to={`/social-media/post/${id}`}>
         <div>
           <h2>{title}</h2>
           <p>{desc}</p>

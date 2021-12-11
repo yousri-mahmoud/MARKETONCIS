@@ -1,5 +1,5 @@
 import React from "react";
-import sliderOne from "../assets/image/slider_one.PNG";
+import sliderOne from "../assets/image/Blog.gif";
 import sliderTwo from "../assets/image/slider_two.PNG";
 import sliderThree from "../assets/image/slider_three.PNG";
 import sliderFour from "../assets/image/logo.png";
@@ -17,66 +17,66 @@ const Home = () => {
         <meta charSet="utf-8" />
         <title>Home</title>
       </Helmet>
-      <div className="home text-center gap">
+      <div className="home text-center gap ">
         <header className="home__header">
           <h1>M A R K E T O N I C S</h1>
-          <p className="">
+        </header>
+      </div>
+      <Carousel className=" w-100 border slider_shadow" variant="dark">
+        <Carousel.Item interval={2000}>
+          <img
+            className="d-block w-50 mx-auto up slider_img"
+            src={sliderFour}
+            alt="Third slide"
+          />
+          <Carousel.Caption>
+            <h5>Just What You Need And Nothing More</h5>
+            <p>Join Us Now</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item interval={2300}>
+          <img
+            className="d-block w-75 mx-auto slider_img"
+            src={sliderOne}
+            alt="First slide"
+          />
+        </Carousel.Item>
+        <Carousel.Item interval={2300}>
+          <img
+            className="d-block w-100 slider_img"
+            src={sliderTwo}
+            alt="Second slide"
+          />
+          <Carousel.Caption>
+            <h5>Market</h5>
+            <p>Where you could Buy/Sell your devices</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item interval={2000}>
+          <img
+            className="d-block w-100 slider_img"
+            src={sliderThree}
+            alt="Third slide"
+          />
+          <Carousel.Caption>
+            <h5>Profile</h5>
+            <p>
+              Your history of shopping, Blog activity, Bio and Profile picture
+              in one Place
+            </p>
+          </Carousel.Caption>
+        </Carousel.Item>
+      </Carousel>
+
+      <div className="home text-center ">
+        <header className="home__header">
+          <p>
             It is a website that helps you to buy or sell used devices and also
             allows you to join to our blog to give your opinion on the products
           </p>
         </header>
       </div>
-      <div className="container slide">
-        <Carousel className="border slider_shadow" variant="dark">
-          <Carousel.Item interval={2000}>
-            <img
-              className="d-block w-75 mx-auto up slider_img"
-              src={sliderFour}
-              alt="Third slide"
-            />
-            <Carousel.Caption>
-              <h5>Just What You Need And Nothing More</h5>
-              <p>Join Us Now</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item interval={2000}>
-            <img
-              className="d-block w-100 slider_img"
-              src={sliderOne}
-              alt="First slide"
-            />
-            <Carousel.Caption>
-              <h5>Join our community</h5>
-              <p>You will find the answers you are looking for and more</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item interval={2000}>
-            <img
-              className="d-block w-100 slider_img"
-              src={sliderTwo}
-              alt="Second slide"
-            />
-            <Carousel.Caption>
-              <h5>Market</h5>
-              <p>Where you could Buy/Sell your devices</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item interval={2000}>
-            <img
-              className="d-block w-100 slider_img"
-              src={sliderThree}
-              alt="Third slide"
-            />
-            <Carousel.Caption>
-              <h5>Profile</h5>
-              <p>
-                Your history of shopping, Blog activity, Bio and Profile picture
-                in one Place
-              </p>
-            </Carousel.Caption>
-          </Carousel.Item>
-        </Carousel>
-      </div>
+
       <div className="home text-center">
         <div className="home__content__register mt-4">
           {isLoggedIn ? (

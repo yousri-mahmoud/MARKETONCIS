@@ -185,6 +185,10 @@ a {
   }
 }
 
+.slider-gap {
+  margin-top: 4.5rem;
+}
+
 .about__header h2 {
   color: #000;
 }

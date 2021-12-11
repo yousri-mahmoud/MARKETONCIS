@@ -6,7 +6,6 @@ const PostTopic = (topic) => {
   };
 };
 export const PostInfo = (topic) => {
-  console.log(topic);
   return async (dispatch) => {
     const response = await fetch("http://localhost:3001/posts", {
       method: "POST",

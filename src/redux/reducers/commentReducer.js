@@ -1,5 +1,4 @@
 export const CommentReducer = (state = [{}], action) => {
-  console.log(state);
   switch (action.type) {
     case "POSTCOMMENT":
       return [

@@ -6,7 +6,6 @@ const PostComment = (body) => {
   };
 };
 export const CommentInfo = (body) => {
-  console.log(body);
   return async (dispatch) => {
     const response = await fetch("http://localhost:3001/comments", {
       method: "POST",

@@ -60,7 +60,6 @@ function SocialMedia({ resource, newFetch }) {
   // }, [post]);
 
   const fetchPosts = (status = "scroll", deletedId = null) => {
-    console.log(status);
     let page = current;
 
     if (status === "delete") {
@@ -95,7 +94,7 @@ function SocialMedia({ resource, newFetch }) {
           let newData = [];
           newData = posts;
           if (finished) newData.pop();
-          setPosts([data[0], ...newData]);
+          setPosts([data[0], ...posts]);
         });
     }
 
@@ -110,6 +109,7 @@ function SocialMedia({ resource, newFetch }) {
       })
       .catch((err) => console.log(err));
   };
+
   useEffect(() => {
     if (searchText.length > 0) handleSearch();
     else {

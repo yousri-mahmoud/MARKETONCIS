@@ -1,5 +1,4 @@
 export const whishReducer = (state = [{}], action) => {
-  console.log(state);
   switch (action.type) {
     case "ADDWHISH":
       return [

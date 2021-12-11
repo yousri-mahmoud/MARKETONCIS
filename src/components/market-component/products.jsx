@@ -128,7 +128,6 @@ function Products() {
   }, [state, currentPage]);
 
   const handleWhish = async (item) => {
-    console.log(item);
     dispatch(
       AddWhish({
         deviceInfo: item.deviceDetail,
@@ -162,10 +161,9 @@ function Products() {
   };
   const handleDeleteWhish = async (item) => {
     let deletedId = wList.filter((it) => {
-      console.log(it, item);
       return it.itemId === item.id;
     });
-    console.log(deletedId);
+
     const response = await fetch(
       `http://localhost:3001/whishList/${deletedId[0].id}`,
       {
@@ -218,15 +216,12 @@ function Products() {
               }}
             >
               <Link
-
                 className="filtersTypes"
-
                 className={`${
                   activeFilter === index
                     ? "is-active-cat typesFilter"
                     : "is-not-active  typesFilter"
                 }`}
-
                 to={`/market/buy/type/${item}/page/1`}
               >
                 {" "}

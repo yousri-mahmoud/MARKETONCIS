@@ -59,7 +59,6 @@ function SingleProduct() {
   useEffect(() => {
     // console.log(list);
     let updatedList = list?.filter((whish) => {
-      console.log(whish.userId, user.id);
       return whish.userId === user.id;
     });
     // console.log(updatedList);

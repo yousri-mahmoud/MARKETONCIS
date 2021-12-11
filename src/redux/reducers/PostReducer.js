@@ -1,5 +1,4 @@
 export const PostReducer = (state = [{}], action) => {
-  console.log(state);
   switch (action.type) {
     case "POSTTOPIC":
       return [

@@ -25,7 +25,6 @@ export default function PostDetails() {
     setName(JSON.parse(nme).firstName);
   }, []);
   useEffect(() => {
-    console.log("opaa");
     fetchComment();
   }, [commentStore]);
   useEffect(() => {
@@ -39,7 +38,6 @@ export default function PostDetails() {
     const commentsResponse = await fetch("http://localhost:3001/comments")
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         let updatedComments = data?.filter((comm) => {
           return comm.postId === id;
         });
@@ -96,7 +94,9 @@ export default function PostDetails() {
               {postAuthor}{" "}
             </Link>
           </p>
-          <h3 className="row m-0 ms-4 postDetails__title titleColor ">{title}</h3>
+          <h3 className="row m-0 ms-4 postDetails__title titleColor ">
+            {title}
+          </h3>
           <p className="row postDetails__des m-0 ms-4  mt-4">{desc}</p>
         </div>
       )}

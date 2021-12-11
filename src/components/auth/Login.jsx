@@ -83,7 +83,7 @@ const LoginComponent = () => {
                     name="password"
                     type="password"
                   />
-                  {def ? (
+                  {def && !state.isLogIn ? (
                     <></>
                   ) : (
                     <small className="text-danger error">{state.message}</small>

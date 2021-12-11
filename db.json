@@ -21,166 +21,211 @@
       "confirmPassword": "protected",
       "id": 2,
       "profileImg": ""
+    },
+    {
+      "email": "Saifalaa@gmail.com",
+      "password": "$2a$10$F.5BXFfzYj1JiaWC4jdE8.xc5/LsXdy.SZoPbJIsg6ekolGzqPdWy",
+      "firstName": "alaa",
+      "lastName": "alaa",
+      "gender": "male",
+      "address": "alex",
+      "confirmPassword": "protected",
+      "id": 3,
+      "profileImg": ""
+    },
+    {
+      "email": "Saifalaa99@gmail.com",
+      "password": "$2a$10$12ZVnn1bRKSsonR5KTF28Ore6Vh1fRSpQbRO2nOb/xWtWMLeQozQG",
+      "firstName": "Saif",
+      "lastName": "Alaa ElDin",
+      "gender": "male",
+      "address": "Essawy, Miami",
+      "confirmPassword": "protected",
+      "id": 4,
+      "profileImg": ""
+    },
+    {
+      "email": "mahmod@gmail.com",
+      "password": "$2a$10$nJg0pZTKFjGAnLWejzWUju2/xbc4V0qVYlq65NGCcOJY/UEnGpr2G",
+      "firstName": "mahmoud",
+      "lastName": "ahmed",
+      "gender": "male",
+      "address": "Essawy, Miami",
+      "confirmPassword": "protected",
+      "id": 5,
+      "profileImg": "http://res.cloudinary.com/djup5x8bq/image/upload/v1639190073/lvxnq69mzoepjtndels8.png"
     }
   ],
-  "bio": [],
+  "bio": [
+    {
+      "textBio": "asdasdas",
+      "userId": 5,
+      "id": 1
+    }
+  ],
   "selling-posts": [
     {
       "deviceDetail": {
         "deviceName": "xiaomi redmi note 9 pro",
         "deviceType": "mobile",
-        "description": "ad",
+        "description": "used",
         "images": "",
-        "devicePrice": 123,
-        "devicePlace": "123",
+        "devicePrice": 3000,
+        "devicePlace": "alexandria",
+        "name": "",
+        "phone": "01093260600",
+        "email": ""
+      },
+      "email": "Saifalaa99@gmail.com",
+      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1639183297/fq3gx85jndefs7kzrau4.jpg",
+      "images": [
+        "http://res.cloudinary.com/djup5x8bq/image/upload/v1639183297/fq3gx85jndefs7kzrau4.jpg",
+        "http://res.cloudinary.com/djup5x8bq/image/upload/v1639183298/zdxtleogewxt4rnzj7ud.jpg"
+      ],
+      "userId": 4,
+      "userName": " Saif Alaa ElDin",
+      "sold": false,
+      "discount": "2000",
+      "id": 1
+    },
+    {
+      "deviceDetail": {
+        "deviceName": "xiaomi redmi note 6",
+        "deviceType": "mobile",
+        "description": "In a good condition",
+        "images": "",
+        "devicePrice": 3000,
+        "devicePlace": "alexandria",
         "name": "",
         "phone": "01093260600",
         "email": ""
       },
       "email": "Saifalaa97@gmail.com",
-      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1639140241/apjebul4bayvdt4y8ym1.jpg",
+      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1639185000/gfwrqu8ovci9vyyf6vz8.jpg",
       "images": [
-        "http://res.cloudinary.com/djup5x8bq/image/upload/v1639140241/apjebul4bayvdt4y8ym1.jpg"
+        "http://res.cloudinary.com/djup5x8bq/image/upload/v1639184999/vbi2khgrodldppetzbi5.jpg",
+        "http://res.cloudinary.com/djup5x8bq/image/upload/v1639185000/gfwrqu8ovci9vyyf6vz8.jpg"
       ],
       "userId": 1,
-      "userName": " Saif Alaa ElDin",
-      "sold": false,
-      "discount": false,
-      "id": 1
-    },
-    {
-      "deviceDetail": {
-        "deviceName": "asd",
-        "deviceType": "mobile",
-        "description": "asd",
-        "images": "",
-        "devicePrice": 23,
-        "devicePlace": "123",
-        "name": "",
-        "phone": "010234",
-        "email": ""
-      },
-      "email": "Saifalaa97@gmail.com",
-      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1639140309/x6iofhaketg4ultmtzdr.jpg",
-      "images": [
-        "http://res.cloudinary.com/djup5x8bq/image/upload/v1639140309/x6iofhaketg4ultmtzdr.jpg"
-      ],
-      "userId": 1,
-      "userName": " Saif Alaa ElDin",
+      "userName": " alaa Alaa ElDin",
       "sold": false,
       "discount": false,
       "id": 2
     },
     {
       "deviceDetail": {
-        "deviceName": "ps",
-        "deviceType": "mobile",
-        "description": "asd",
+        "deviceName": "Dell Latitude E5570",
+        "deviceType": "laptop",
+        "description": "old one but in good condition",
         "images": "",
-        "devicePrice": 123,
-        "devicePlace": "123",
+        "devicePrice": 1500,
+        "devicePlace": "alexandria",
         "name": "",
-        "phone": "123",
+        "phone": "01093260600",
         "email": ""
       },
       "email": "Saifalaa97@gmail.com",
-      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1639140388/gytplx39gs5osuodvph9.png",
+      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1639185097/pgkeqcwdkrweag0htpnn.jpg",
       "images": [
-        "http://res.cloudinary.com/djup5x8bq/image/upload/v1639140388/gytplx39gs5osuodvph9.png"
+        "http://res.cloudinary.com/djup5x8bq/image/upload/v1639185095/knnzmevps2s2axujgyvs.jpg",
+        "http://res.cloudinary.com/djup5x8bq/image/upload/v1639185097/pgkeqcwdkrweag0htpnn.jpg"
       ],
       "userId": 1,
-      "userName": " Saif Alaa ElDin",
+      "userName": " alaa Alaa ElDin",
       "sold": false,
       "discount": false,
       "id": 3
     },
     {
       "deviceDetail": {
-        "deviceName": "hp probook",
-        "deviceType": "laptop",
-        "description": "123",
+        "deviceName": "HeadPhones ",
+        "deviceType": "accessories",
+        "description": "One of the speakers is not working have some scratches",
         "images": "",
-        "devicePrice": 123,
-        "devicePlace": "123",
+        "devicePrice": 500,
+        "devicePlace": "alexandria",
         "name": "",
-        "phone": "010234",
+        "phone": "01093260600",
         "email": ""
       },
       "email": "Saifalaa97@gmail.com",
-      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1639140410/a9ld8jwhkg35hlg1alkv.jpg",
+      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1639185212/vmysmmj1z3v9qnvrlkgp.jpg",
       "images": [
-        "http://res.cloudinary.com/djup5x8bq/image/upload/v1639140410/a9ld8jwhkg35hlg1alkv.jpg"
+        "http://res.cloudinary.com/djup5x8bq/image/upload/v1639185212/vmysmmj1z3v9qnvrlkgp.jpg",
+        "http://res.cloudinary.com/djup5x8bq/image/upload/v1639185212/ovarjqldfngl1kowqcyi.jpg"
       ],
       "userId": 1,
-      "userName": " Saif Alaa ElDin",
+      "userName": " alaa Alaa ElDin",
       "sold": false,
       "discount": false,
       "id": 4
     },
     {
       "deviceDetail": {
-        "deviceName": "newDeviceImage",
-        "deviceType": "accessories",
-        "description": "asd",
+        "deviceName": "IPhone 7 plus",
+        "deviceType": "mobile",
+        "description": "Have Some Scratches in the back",
         "images": "",
-        "devicePrice": 123,
-        "devicePlace": "123",
+        "devicePrice": 5000,
+        "devicePlace": "alexandria",
         "name": "",
-        "phone": "13",
+        "phone": "01093260600",
         "email": ""
       },
       "email": "Saifalaa97@gmail.com",
-      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1639140443/gk71scnzteh4dzotbdzw.jpg",
+      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1639185289/xspnk4c5p0a6lloot45p.jpg",
       "images": [
-        "http://res.cloudinary.com/djup5x8bq/image/upload/v1639140443/gk71scnzteh4dzotbdzw.jpg"
+        "http://res.cloudinary.com/djup5x8bq/image/upload/v1639185289/xspnk4c5p0a6lloot45p.jpg",
+        "http://res.cloudinary.com/djup5x8bq/image/upload/v1639185289/a9ecxnnj146xqvs94cox.jpg"
       ],
       "userId": 1,
-      "userName": " Saif Alaa ElDin",
+      "userName": " alaa Alaa ElDin",
       "sold": false,
       "discount": false,
       "id": 5
     },
     {
       "deviceDetail": {
-        "deviceName": "yosry",
+        "deviceName": "nova 3i",
         "deviceType": "mobile",
-        "description": "asd",
+        "description": "broken Screen",
         "images": "",
-        "devicePrice": 123,
-        "devicePlace": "123",
+        "devicePrice": 2000,
+        "devicePlace": "alexandria",
         "name": "",
-        "phone": "123",
+        "phone": "01093260600",
         "email": ""
       },
       "email": "Saifalaa97@gmail.com",
-      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1639140473/xwrp3w1rnh4zmx8cwgoa.png",
+      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1639185392/irofakbbkdvxhzxdgveo.jpg",
       "images": [
-        "http://res.cloudinary.com/djup5x8bq/image/upload/v1639140473/xwrp3w1rnh4zmx8cwgoa.png"
+        "http://res.cloudinary.com/djup5x8bq/image/upload/v1639185392/irofakbbkdvxhzxdgveo.jpg"
       ],
       "userId": 1,
-      "userName": " Saif Alaa ElDin",
+      "userName": " alaa Alaa ElDin",
       "sold": false,
       "discount": false,
       "id": 6
     },
     {
       "deviceDetail": {
-        "deviceName": "xiaomi redmi note 9 pro",
-        "deviceType": "mobile",
-        "description": "ad",
+        "deviceName": "AirPods",
+        "deviceType": "accessories",
+        "description": "Very Well with good Quality",
         "images": "",
-        "devicePrice": 123,
-        "devicePlace": "123",
+        "devicePrice": 2500,
+        "devicePlace": "alexandria",
         "name": "",
         "phone": "01093260600",
         "email": ""
       },
-      "email": "Saifalaa97@gmail.com",
-      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1639140241/apjebul4bayvdt4y8ym1.jpg",
+      "email": "Saifalaa99@gmail.com",
+      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1639185516/wqhzxsiwurfwhqwqrghr.jpg",
       "images": [
-        "http://res.cloudinary.com/djup5x8bq/image/upload/v1639140241/apjebul4bayvdt4y8ym1.jpg"
+        "http://res.cloudinary.com/djup5x8bq/image/upload/v1639185516/wqhzxsiwurfwhqwqrghr.jpg",
+        "http://res.cloudinary.com/djup5x8bq/image/upload/v1639185517/nieofv1uidlzraevr7k7.jpg"
       ],
-      "userId": 1,
+      "userId": 4,
       "userName": " Saif Alaa ElDin",
       "sold": false,
       "discount": false,
@@ -188,22 +233,22 @@
     },
     {
       "deviceDetail": {
-        "deviceName": "xiaomi redmi note 9 pro",
-        "deviceType": "mobile",
-        "description": "ad",
+        "deviceName": "PC",
+        "deviceType": "pc",
+        "description": "Gaming Pc",
         "images": "",
-        "devicePrice": 123,
-        "devicePlace": "123",
+        "devicePrice": 3000,
+        "devicePlace": "alexandria",
         "name": "",
         "phone": "01093260600",
         "email": ""
       },
-      "email": "Saifalaa97@gmail.com",
-      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1639140241/apjebul4bayvdt4y8ym1.jpg",
+      "email": "Saifalaa99@gmail.com",
+      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1639185587/bbczypvk15ux342evlhj.jpg",
       "images": [
-        "http://res.cloudinary.com/djup5x8bq/image/upload/v1639140241/apjebul4bayvdt4y8ym1.jpg"
+        "http://res.cloudinary.com/djup5x8bq/image/upload/v1639185587/bbczypvk15ux342evlhj.jpg"
       ],
-      "userId": 1,
+      "userId": 4,
       "userName": " Saif Alaa ElDin",
       "sold": false,
       "discount": false,
@@ -211,99 +256,202 @@
     },
     {
       "deviceDetail": {
-        "deviceName": "xiaomi redmi note 9 pro",
-        "deviceType": "mobile",
-        "description": "ad",
+        "deviceName": "new PC",
+        "deviceType": "pc",
+        "description": "for designers and programmers",
         "images": "",
-        "devicePrice": 123,
-        "devicePlace": "123",
+        "devicePrice": 800,
+        "devicePlace": "alexandria",
         "name": "",
         "phone": "01093260600",
         "email": ""
       },
-      "email": "Saifalaa97@gmail.com",
-      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1639140241/apjebul4bayvdt4y8ym1.jpg",
+      "email": "mahmod@gmail.com",
+      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1639185698/fhyomyohadwgb2q4w3oz.jpg",
       "images": [
-        "http://res.cloudinary.com/djup5x8bq/image/upload/v1639140241/apjebul4bayvdt4y8ym1.jpg"
+        "http://res.cloudinary.com/djup5x8bq/image/upload/v1639185698/fhyomyohadwgb2q4w3oz.jpg"
       ],
-      "userId": 1,
-      "userName": " Saif Alaa ElDin",
+      "userId": 5,
+      "userName": " mahmoud ahmed",
       "sold": false,
       "discount": false,
       "id": 9
     },
     {
       "deviceDetail": {
-        "deviceName": "xiaomi redmi note 9 pro",
-        "deviceType": "mobile",
-        "description": "ad",
+        "deviceName": "hp probook",
+        "deviceType": "laptop",
+        "description": "450 g2",
         "images": "",
-        "devicePrice": 123,
-        "devicePlace": "123",
+        "devicePrice": 5000,
+        "devicePlace": "alexandria",
         "name": "",
         "phone": "01093260600",
         "email": ""
       },
-      "email": "Saifalaa97@gmail.com",
-      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1639140241/apjebul4bayvdt4y8ym1.jpg",
+      "email": "mahmod@gmail.com",
+      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1639185757/igrxby8cjhgsz68evpf5.jpg",
       "images": [
-        "http://res.cloudinary.com/djup5x8bq/image/upload/v1639140241/apjebul4bayvdt4y8ym1.jpg"
+        "http://res.cloudinary.com/djup5x8bq/image/upload/v1639185757/igrxby8cjhgsz68evpf5.jpg",
+        "http://res.cloudinary.com/djup5x8bq/image/upload/v1639185758/h8qlwk2fvxtblqcqsswx.jpg"
       ],
-      "userId": 1,
-      "userName": " Saif Alaa ElDin",
+      "userId": 5,
+      "userName": " mahmoud ahmed",
       "sold": false,
       "discount": false,
       "id": 10
     },
     {
       "deviceDetail": {
-        "deviceName": "xiaomi redmi note 9 pro",
-        "deviceType": "mobile",
-        "description": "ad",
+        "deviceName": "old PC",
+        "deviceType": "pc",
+        "description": "Normal PC",
         "images": "",
-        "devicePrice": 123,
-        "devicePlace": "123",
+        "devicePrice": 500,
+        "devicePlace": "alexandria",
         "name": "",
         "phone": "01093260600",
         "email": ""
       },
-      "email": "Saifalaa97@gmail.com",
-      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1639140241/apjebul4bayvdt4y8ym1.jpg",
+      "email": "mahmod@gmail.com",
+      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1639185796/qzefiowh4irsdylu1zwa.jpg",
       "images": [
-        "http://res.cloudinary.com/djup5x8bq/image/upload/v1639140241/apjebul4bayvdt4y8ym1.jpg"
+        "http://res.cloudinary.com/djup5x8bq/image/upload/v1639185796/qzefiowh4irsdylu1zwa.jpg"
       ],
-      "userId": 1,
-      "userName": " Saif Alaa ElDin",
+      "userId": 5,
+      "userName": " mahmoud ahmed",
       "sold": false,
       "discount": false,
       "id": 11
+    }
+  ],
+  "posts": [
+    {
+      "title": "What can I buy with 3000-4000 EGP",
+      "desc": "I need a device that can handle many tasks with this range",
+      "name": "alaa",
+      "userId": 1,
+      "postDate": "2021 11 11 1 24",
+      "id": 1
     },
     {
-      "deviceDetail": {
+      "title": "عايز اشتري لابتوب للفوتوشوب ",
+      "desc": "محتاج امكانيات ايه و سعره تقريبا كام؟",
+      "name": "alaa",
+      "userId": 1,
+      "postDate": "2021 11 11 1 26",
+      "id": 2,
+      "countComment": 1
+    },
+    {
+      "title": "I need a laptop for gaming ",
+      "desc": "what is the best specification i can get ?",
+      "name": "mahmoud",
+      "userId": 5,
+      "postDate": "2021 11 11 8 56",
+      "id": 3
+    },
+    {
+      "title": "How can i know if an airpods is original",
+      "desc": "I've found many airpods but i don't know if this is original or not",
+      "name": "mahmoud",
+      "userId": 5,
+      "postDate": "2021 11 11 9 0",
+      "id": 4
+    },
+    {
+      "title": "لو عايز موبايل علي قد مكالمات و تصفح",
+      "desc": "محتاج موبايل يكون كويس رانج فلوس مش عالي",
+      "name": "Saif",
+      "userId": 4,
+      "postDate": "2021 11 11 9 2",
+      "id": 5
+    },
+    {
+      "title": "I need an Iphone ",
+      "desc": "Is there any Iphones in range 4000",
+      "name": "Saif",
+      "userId": 4,
+      "postDate": "2021 11 11 9 3",
+      "id": 6
+    },
+    {
+      "title": "Mobile phone in 2000 range",
+      "desc": "I need a mobile phone in 2000 2500 as max what can i get",
+      "name": "Saif",
+      "userId": 4,
+      "postDate": "2021 11 11 9 9",
+      "id": 7
+    },
+    {
+      "title": "what is the range of xiami earbuds",
+      "desc": "there is an xiami airpods but what it cost",
+      "name": "alaa",
+      "userId": 3,
+      "postDate": "2021 11 11 9 11",
+      "id": 8
+    },
+    {
+      "title": "ليه موبيلات الهواوي رخيصه",
+      "desc": "ليه امكانيات الهواوي عاليه و رخيصه",
+      "name": "alaa",
+      "userId": 3,
+      "postDate": "2021 11 11 9 12",
+      "id": 9
+    },
+    {
+      "title": "لابتوب فرانج 3000 ",
+      "desc": "انا داخل مجال البرمجه و عايز حاجه تكون كويسه و ايه اصلا الاكانيات المحتاجها",
+      "name": "alaa",
+      "userId": 3,
+      "postDate": "2021 11 11 9 14",
+      "id": 10
+    },
+    {
+      "title": "Is Nvidia really matters in Gaming",
+      "desc": "I want to buy a Laptop with Nvidia Graphic card is it good",
+      "name": "alaa",
+      "userId": 3,
+      "postDate": "2021 11 11 9 17",
+      "id": 11
+    }
+  ],
+  "likes": [
+    {
+      "likeUserId": 4,
+      "name": "Saif Alaa ElDin",
+      "postId": "2",
+      "id": 1
+    }
+  ],
+  "whishList": [
+    {
+      "deviceInfo": {
         "deviceName": "xiaomi redmi note 9 pro",
         "deviceType": "mobile",
-        "description": "ad",
+        "description": "used",
         "images": "",
-        "devicePrice": 123,
-        "devicePlace": "123",
+        "devicePrice": 3000,
+        "devicePlace": "alexandria",
         "name": "",
         "phone": "01093260600",
         "email": ""
       },
-      "email": "Saifalaa97@gmail.com",
-      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1639140241/apjebul4bayvdt4y8ym1.jpg",
-      "images": [
-        "http://res.cloudinary.com/djup5x8bq/image/upload/v1639140241/apjebul4bayvdt4y8ym1.jpg"
-      ],
-      "userId": 1,
+      "userId": 4,
+      "postedById": 4,
       "userName": " Saif Alaa ElDin",
-      "sold": false,
-      "discount": false,
-      "id": 12
+      "imageUrl": "http://res.cloudinary.com/djup5x8bq/image/upload/v1639183297/fq3gx85jndefs7kzrau4.jpg",
+      "itemId": 1,
+      "id": 1
     }
   ],
-  "posts": [],
-  "likes": [],
-  "whishList": [],
-  "comments": []
+  "comments": [
+    {
+      "postId": "2",
+      "author": "Saif",
+      "comment": "فحدود 4000ج",
+      "commentAuthorId": 4,
+      "id": 1
+    }
+  ]
 }
